@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.17)  23 JAN 2025 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.17)  23 JAN 2025 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,10 +712,6 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
  (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 101.
-
 [3
 
 ]
@@ -794,13 +790,13 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `PAPER.out' has not changed.
-(rerunfilecheck)             Checksum: EB2AB07DA6998A09C6927622CCCDDA91;3165.
+(rerunfilecheck)             Checksum: F7DD41306483F37DBB7980A6674FADD0;3160.
  ) 
 Here is how much of TeX's memory you used:
- 16480 strings out of 474486
- 256737 string characters out of 5743755
+ 16477 strings out of 474486
+ 256665 string characters out of 5743755
  1953542 words of memory out of 5000000
- 38426 multiletter control sequences out of 15000+600000
+ 38423 multiletter control sequences out of 15000+600000
  620576 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,15n,81p,433b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -817,7 +813,7 @@ Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/tange/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/tange/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/tange/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (9 pages, 161392 bytes).
+Output written on PAPER.pdf (9 pages, 161361 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  67 named destinations out of 1000 (max. 500000)
