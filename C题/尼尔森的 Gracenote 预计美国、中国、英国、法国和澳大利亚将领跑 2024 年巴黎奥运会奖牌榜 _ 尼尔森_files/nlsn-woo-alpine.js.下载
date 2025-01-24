@@ -1,0 +1,87 @@
+document.addEventListener("alpine:init", () => {
+    Alpine.data("wooBuyNowDataLayer", () => ({
+        triggerDL() {
+            const variation = this.$el.closest('form').querySelector('select')?.value;
+            const variationDL =
+                variation === undefined
+                    ? "N/A"
+                    : variation === ""
+                    ? "N/S"
+                    : variation;
+            const item_price = this.$el.dataset?.item_price;
+            // add the current price only if a variation is selected
+            // will need to change this, if we are adding more than 1 Qty
+            let cart_total_DL = (variationDL==="N/S") ? 0 : Number(item_price);
+            const item_id = this.$el.dataset?.item_sku;
+            const item_id_DL =
+                item_id === undefined || item_id === "" ? "N/A" : item_id;
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: "add_to_cart",
+                click_text: "Buy Now",
+                click_url: this.$el.dataset.item_permalink ?? 'N/A',
+                currency: "USD",
+                value: String(cart_total_DL),
+                items: [
+                    {
+                        item_id: item_id_DL,
+                        item_name: this.$el.dataset?.item_name ?? "N/A",
+                        item_category: this.$el.dataset?.item_category ?? "N/A",
+                        item_variant: variationDL,
+                        quantity: String(1),
+                        price: this.$el.dataset?.item_price ?? "N/A",
+                    },
+                ],
+            });
+            this.$el.setAttribute("data-cart_total", cart_total_DL); // update the cart value
+        },
+    }));
+    Alpine.data("wooSeeMoreDataLayer", () => ({
+        triggerDL() {
+            const item_category_DL = this.$el.dataset.item_category??'N/A';
+            let item_list_name_DL = '';
+            switch(item_category_DL){
+                case 'dma':
+                    item_list_name_DL = "ZIP Code by DMA";
+                    break;
+                case 'competitive-ad-spend':
+                        item_list_name_DL = "Competitive ad spend";
+                        break;
+                default:
+                    item_list_name_DL = item_category_DL;
+            }
+            const closest_ul = this.$el.closest('ul');
+            const childs = closest_ul?.childNodes;
+            let index_DL = 1;
+            for (let child of childs) {
+                if(child.classList.contains('post-'+String(this.$el.dataset.item_id))){
+                    break;
+                }
+                index_DL+=1;
+            }
+            const item_id = this.$el.dataset?.item_sku;
+            const item_id_DL =
+                item_id === undefined || item_id === "" ? "N/A" : item_id;
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: "select_item",
+                click_text: this.$el.dataset.click_text,
+                click_element: this.$el.dataset.click_element,
+                click_url: this.$el.href ?? "N/A",
+                currency: "USD",
+                items: [
+                    {
+                        item_id: item_id_DL,
+                        item_name: this.$el.dataset.item_name ?? 'N/A',
+                        item_category: item_category_DL,
+                        quantity: 1,
+                        price: this.$el.dataset.item_price,
+                        item_list_id: this.$el.dataset.item_list_id,
+                        item_list_name: item_list_name_DL,
+                        index: index_DL,
+                    },
+                ],
+            });
+        },
+    }));
+});

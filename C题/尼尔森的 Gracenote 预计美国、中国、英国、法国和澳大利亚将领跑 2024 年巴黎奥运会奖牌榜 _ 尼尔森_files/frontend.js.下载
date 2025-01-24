@@ -1,0 +1,14 @@
+jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
+
+    /**
+     * ndcwp-1322
+     * if ninja forms field has class nlsn-referrer
+     * update it with the referrer value
+     */
+    if( document.referrer ){
+        jQuery( '.nlsn-referrer' ).val( document.referrer ).trigger( 'change' );
+    } else {
+        jQuery( '.nlsn-referrer' ).val( 'No referrer' ).trigger( 'change' );
+    }
+    
+});

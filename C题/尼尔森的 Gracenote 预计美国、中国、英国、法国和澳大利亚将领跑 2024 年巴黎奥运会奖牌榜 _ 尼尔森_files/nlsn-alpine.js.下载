@@ -1,0 +1,427 @@
+document.addEventListener("alpine:init", () => {
+
+    Alpine.store('viewport', {
+        mobileMenu: false
+    })
+
+    Alpine.store('fitlerList', {
+        results: [],
+    })
+
+    Alpine.data("search", (locations) => ({
+        locations: Object.values(locations),
+        locationsSelected: "All Regions",
+        locationsOpen: false,
+        searchQuery: "",
+
+        updateSearchQuery(searchQuery, locationsSelected) {
+            let items = [];
+            document.querySelectorAll('.list-card').forEach(el => {
+                let checkSearch = searchQuery === "" || el.innerText.toLowerCase().includes(searchQuery.toLowerCase());
+                let checkLocations = locationsSelected === "All Regions" || el.dataset.locations.toString().toLowerCase().includes(locationsSelected.toLowerCase());
+                if (checkSearch && checkLocations) {
+                    items.push(el);
+                    el.style.display = 'flex';
+                } else {
+                    el.style.display = 'none';
+                }
+            })
+            Alpine.store('fitlerList').results = items;
+
+            document.querySelectorAll('.wp-block-nlsn-accordion-tab').forEach(el => {
+                let childCards = [].slice.call(el.querySelectorAll('.list-card'));
+                let activeChildCards = childCards.filter(el => el.style.display === "flex");
+                if (activeChildCards.length > 0) {
+                    el.style.display = 'block'
+                } else {
+                    el.style.display = 'none'
+                }
+            })
+        },
+
+        init() {
+            this.locations.unshift({ name: "All Regions", slug: "all-regions", term_id: false });
+            this.updateSearchQuery(this.searchQuery, this.locationsSelected);
+            this.$watch('searchQuery', (searchQuery) => {
+                this.updateSearchQuery(searchQuery, this.locationsSelected);
+                this.searchQuery = searchQuery;
+            })
+            this.$watch('locationsSelected', (locationsSelected) => {
+                this.updateSearchQuery(this.searchQuery, locationsSelected);
+                this.locationsSelected = locationsSelected;
+            })
+        }
+    }));
+
+    Alpine.data("accordion", (initialOpenState = false) => ({
+        isOpen: initialOpenState,
+
+        init() {
+            this.isOpen = ( encodeURIComponent(window.location.hash) === "%23" + this.$el.id) ? true : false;
+        }
+    }));
+
+    /**
+     * used by all nlsn popups & modals
+     * parameters :
+     * isOpen = false, isGated = false, initialBackdropState = true, triggerType = 'button', timeoutSeconds = 5
+     */
+    Alpine.data("modal", (...modalArgs) => ({
+        isOpen: modalArgs[0] ?? false,
+        isGated: modalArgs[1] ?? false,
+        isDisabled: false,
+        hasBackdrop: modalArgs[2] ?? true,
+        timerID: null,
+        triggerType : modalArgs[3] ?? 'button', // default trigger type is onClick of button
+        timeoutSeconds : modalArgs[4] ?? 5, // The pop up will close after '5 seconds'(default).
+        buttonPosition: 'N/A',
+        init() {
+            this.isOpen = ( encodeURIComponent(window.location.hash) === "%23" + this.$el.id) ? true : this.isOpen;
+            if (this.isOpen) {
+                this.open();
+            }
+            const pop_up_cookies = document.cookie.split('; ').filter((cookie_string) => cookie_string.startsWith('nlsn-pop-up'));
+            let form_ids = pop_up_cookies?.map((cookie) => cookie.split('=')[0]?.split('|')[1]);
+            let modal_form_id = this.$el.querySelector('.nf-form-cont')?.getAttribute('id')?.split('-')[2];
+            let hasFormCookie = form_ids.some(form_id => form_id === (modal_form_id));
+            if (hasFormCookie) {
+                this.isGated = false;
+                if (this.triggerType !== 'button') {
+                    this.isDisabled = true; // this should be enabled only for scroll and onload
+                }
+                let form_div = this.$el.querySelector('.nf-form-cont');
+                if (form_div) {
+                    let thankYouMessage = nfForms?.find(nfForm => nfForm.id === modal_form_id)?.fields?.find(field => field.key.includes('message'))?.value;
+                    let div_thank_you_msg = document.createElement('div');
+                    div_thank_you_msg.innerHTML = DOMPurify.sanitize(thankYouMessage ?? 'Thank you'); //fallback thank you message if custom thank you message/NF thank you message is empty
+                    form_div.parentNode.insertBefore(div_thank_you_msg, form_div);
+                    form_div.classList.add('hidden');
+                }
+            }
+        },
+        open(eventDetails=null) {
+            if (this.isDisabled) {
+                this.$el.classList.toggle("animate-shake");
+                return;
+            }
+            this.isOpen = true;
+            //pop up open datalayer
+            let formID = this.$el.querySelector('.nf-form-cont')?.getAttribute('id')?.split('-')[2];
+            let buttonPosition; // for datalayer trigger
+            if (eventDetails === null || (Object.keys(eventDetails).length === 0)) {
+                buttonPosition = this.$el.querySelector('[btnPosition]')?.getAttribute('btnPosition');
+            }
+            else{
+                buttonPosition = eventDetails.buttonPosition;
+            }
+            this.buttonPosition = buttonPosition;
+            popup_datalayer(formID, 'open', buttonPosition);//Data layer event popup_open
+            if (this.hasBackdrop) {
+                document.body.classList.add('overflow-hidden');
+                window.dispatchEvent(new CustomEvent('backdrop', { detail: { open: true } }));
+            }
+
+            //keyboard accessibility
+            let firstFocusableElement = this.$el.querySelector('button');
+            let lastFocusableElement = this.$el.querySelector('input[type="submit"]');
+            //focus the first element when the pop up opens
+            setTimeout(() => {
+                firstFocusableElement.focus();
+            },500); //A nominal delay for stability
+            //accessibility for screen reader
+            let wp_blocks = document.querySelector('.wp-site-blocks');
+            if(wp_blocks) {
+                wp_blocks.setAttribute('aria-hidden',true);
+            }
+            if(!lastFocusableElement && (firstFocusableElement.getAttribute('listener-present') === null)){
+                    firstFocusableElement.setAttribute('listener-present','true')
+                    firstFocusableElement.addEventListener('keydown', (e)=>{
+                        let tabPressed = (e.key == "Tab" || e.key == 9);
+                        if (tabPressed) {
+                            e.preventDefault();
+                        }
+                    });
+            }
+            if(lastFocusableElement) {
+                let lastElementID = lastFocusableElement.getAttribute('id');
+                let focusableElements = this.$el.querySelectorAll('input:not([type="hidden"]),textarea,a');
+                let elPrevSubmitButton = focusableElements[focusableElements.length-3];
+
+                firstFocusableElement.addEventListener('keydown', (e)=>{
+                    if ( firstFocusableElement.getAttribute('listener-added') === true) return;
+                    firstFocusableElement.setAttribute('listener-added',true);
+                    let submitButton = document.getElementById(lastElementID);
+                    let isDisabled = submitButton.getAttribute('disabled');
+                    let tabPressed = (e.key == "Tab" || e.key == 9);
+                    let shiftPressed = (e.shiftKey);
+                    if (tabPressed && shiftPressed) {
+                        e.preventDefault();
+                        (isDisabled === 'true') ? elPrevSubmitButton.focus() : submitButton.focus();
+                    }
+                })
+                lastFocusableElement.addEventListener('keydown', (e)=>{
+                    if ( e.target.getAttribute('listener-added') === true) return;
+                    e.target.setAttribute('listener-added',true);
+                    let tabPressed = (e.key == "Tab" || e.key == 9);
+                    let shiftPressed = (e.shiftKey);
+                    if (tabPressed && !shiftPressed) {
+                        e.preventDefault();
+                        firstFocusableElement.focus();
+                    }
+                })
+                elPrevSubmitButton.addEventListener('keydown', (e) => {
+                    if ( elPrevSubmitButton.getAttribute('listener-added') === true) return;
+                    elPrevSubmitButton.setAttribute('listener-added',true);
+                    let submitButton = document.getElementById(lastElementID);
+                    let isDisabled = submitButton.getAttribute('disabled');
+                    let tabPressed = (e.key == "Tab" || e.key == 9);
+                    let shiftPressed = (e.shiftKey);
+                    if (tabPressed && !shiftPressed) {
+                        e.preventDefault();
+                        if (isDisabled === 'true') {
+                            firstFocusableElement.focus()
+                        } else {
+                            submitButton.focus();
+                            document.getElementById(lastElementID).addEventListener('keydown',(e)=>{
+                                if ( e.target.getAttribute('listener-added') === true) return;
+                                e.target.setAttribute('listener-added',true);
+                                let tabPressed = (e.key == "Tab" || e.key == 9);
+                                let shiftPressed = (e.shiftKey);
+                                if (tabPressed && !shiftPressed) {
+                                    e.preventDefault();
+                                    firstFocusableElement.focus();
+                                }
+                            })
+                        }
+                    }
+                })
+                //add checks for submitButton and elPrevSubmitButton
+            }
+        },
+        disableGate() {
+            let popUpContainer = this.$el.firstElementChild.firstElementChild;
+            if (popUpContainer !== null) {
+                let timerBar = document.createElement('div');
+                timerBar.classList.add('timer-bar','h-2','bg-blurple-300','relative','w-[96%]','left-[2%]','rounded-large');
+                timerBar.setAttribute('style', '--duration:'+this.timeoutSeconds);
+                popUpContainer?.prepend(timerBar);
+            }
+            this.isGated = false;
+            if (String(this.timeoutSeconds) === '0') {
+                this.close();
+            }
+            else {
+                this.timerID = setTimeout(() => {
+                    this.close();
+                    let timerBar = this.$el.querySelector('.timer-bar')
+                    timerBar && timerBar.remove();
+                }, parseInt(this.timeoutSeconds) * 1000);
+            }
+        },
+        close(buttonTriggered = false) {
+            if (this.isGated) {
+                this.$root.classList.add("animate-shake");
+                setInterval(() => { this.$root.classList.remove("animate-shake"); }, 800)
+                return;
+            }
+            if (this.hasBackdrop) {
+                window.dispatchEvent(new CustomEvent('backdrop', { detail: { open: false } }));
+            }
+            this.isOpen = false;
+            //pop up exit datalayer
+            if (buttonTriggered) {
+                let formID = this.$el.parentNode.querySelector('.nf-form-cont')?.getAttribute('id')?.split('-')[2];
+                // data layer event popup_exit
+                // buttonPosition is set, when the popup opens.
+                popup_datalayer(formID, 'exit' , this.buttonPosition);
+            }
+            document.body.classList.remove('overflow-hidden');
+            if (this.timerID) {
+                clearTimeout(this.timerID); // clear timeout for gated content if pop-up is closed manually
+                let timerBar = this.$el.parentNode.querySelector('.timer-bar')
+                timerBar && timerBar.remove();
+            }
+            //accessibility for screen reader
+            let wp_blocks = document.querySelector('.wp-site-blocks');
+            if(wp_blocks) {
+                wp_blocks.setAttribute('aria-hidden',false);
+            }
+        }
+    }));
+
+    Alpine.data("menubar", () => ({
+        activeNavDropdown: null, 
+        trianglePosition: false, 
+        triangleColor: false,
+
+        openSubmenu(navLink) {
+            this.activeNavDropdown = navLink;
+            this.$el.setAttribute('aria-expanded', true);
+            this.trianglePosition = (this.$el.getBoundingClientRect().left + this.$el.getBoundingClientRect().right) / 2;
+            this.triangleColor = (this.$el.dataset.color);
+            const next = this.$el.parentElement.querySelector('.nav-link-dropdown-container')
+            next.querySelector('a').focus()
+        },
+
+        closeSubmenu() {
+            this.$el.setAttribute('aria-expanded', false);
+            this.activeNavDropdown = null;
+        },
+
+        focusNextItem() {
+            const allMenuItems = [...document.querySelectorAll('.wp-block-nlsn-nav-link > .top-level-nav')];
+            const currentIndex = allMenuItems.indexOf(document.activeElement);
+            const nextIndex = (currentIndex + 1) % allMenuItems.length;
+            allMenuItems[nextIndex].focus();
+        },
+
+        focusPrevItem() {
+            const allMenuItems = [...document.querySelectorAll('.wp-block-nlsn-nav-link > .top-level-nav')];
+            const currentIndex = allMenuItems.indexOf(document.activeElement);
+            const prevIndex = (currentIndex - 1 + allMenuItems.length) % allMenuItems.length;
+            allMenuItems[prevIndex].style.display = "inline";
+            allMenuItems[prevIndex].focus();
+        },
+
+        handleKeyDownSubItem(event) {
+            switch (event.key) {
+                case "ArrowDown":
+                    event.preventDefault();
+                    this.focusDownSubItem();
+                    break;
+                case "ArrowUp":
+                    event.preventDefault();
+                    this.focusUpSubItem();
+                    break;
+                case "ArrowLeft":
+                    event.preventDefault();
+                    this.focusLeftSubItem();
+                    break;
+                case "ArrowRight":
+                    event.preventDefault();
+                    this.focusRightSubItem();
+                    break;
+                case "Escape":
+                    event.preventDefault();
+                    this.closeSubmenu();
+                    break;
+                default:
+                    return null;
+            }
+        },
+
+        focusDownSubItem() {
+            const allMenuItems = [...document.querySelectorAll('.nav-link-dropdown-container a')];
+            const currentIndex = allMenuItems.indexOf(document.activeElement);
+            const nextIndex = (currentIndex + 1) % allMenuItems.length;
+            allMenuItems[nextIndex].focus();
+        },
+
+        focusUpSubItem() {
+            const allMenuItems = [...document.querySelectorAll('.nav-link-dropdown-container a')];
+            const currentIndex = allMenuItems.indexOf(document.activeElement);
+            const prevIndex = (currentIndex - 1 + allMenuItems.length) % allMenuItems.length;
+            allMenuItems[prevIndex].focus();
+        },
+
+        focusRightSubItem() {
+            const allMenuItems = [...document.querySelectorAll('.wp-block-nlsn-nav-link > .top-level-nav')];
+            const nextIndex = (this.activeNavDropdown.slice(-1) * 2) % allMenuItems.length;
+            allMenuItems[nextIndex].focus();
+        },
+
+        focusLeftSubItem() {
+            const allMenuItems = [...document.querySelectorAll('.wp-block-nlsn-nav-link > .top-level-nav')];
+            const prevIndex = (this.activeNavDropdown.slice(-1) * 2 - 1 + allMenuItems.length) % allMenuItems.length;
+            allMenuItems[prevIndex].focus();
+        },
+    }))
+
+    Alpine.data("carousel", () => ({
+        slideCount: 0,
+        activeIndex: 0,
+        childWidth: 0,
+        gapWidth: 24,
+
+        init() {
+            this.slideCount = this.$refs.carouselInner.childElementCount;
+            this.childWidth = this.$refs.carouselInner.getElementsByClassName('flex-col')[0].offsetWidth;
+        },
+
+        prev(carouselInner) {
+            if (this.activeIndex > 0) {
+                carouselInner.scrollLeft = (this.childWidth + this.gapWidth) * (this.activeIndex - 1);
+                this.activeIndex--;
+            }
+        },
+
+        next(carouselInner) {
+            if (this.activeIndex < this.slideCount - 1) {
+                carouselInner.scrollLeft = (this.childWidth + this.gapWidth) * (this.activeIndex + 1);
+                this.activeIndex++;
+            }
+        },
+
+        updateIndex(target) {
+            this.activeIndex = Math.round(target.scrollLeft / this.childWidth);
+        },
+
+    }));
+    Alpine.data("navSearch", () => ({
+        mobileMenu: false,
+        search: false,
+        searchText : '' , // it's a reactive prop.
+        searchResults: [],
+        siteURL : "",
+        setSiteURL(siteURL){
+            this.siteURL = siteURL;
+        },
+        fetchResults(searchText) {
+            const desktopCursorPointer = document.getElementById('desktop-cursor-pointer');
+            if(searchText.length == 0){
+                this.searchResults = [];
+                if (desktopCursorPointer && desktopCursorPointer.getAttribute('is-submit') == 'true') {
+                    desktopCursorPointer.setAttribute('is-submit','false');
+                    desktopCursorPointer.setAttribute('x-on:click', 'search = !search; document.getElementById("nav-search").focus();');
+                }
+            }
+            if(searchText.length >= 2){
+         
+             window.fetch('/wp-json/wp/v2/search?search='+searchText+'&_fields=title,url&page=1&per_page=5&vip-search-enabled=1')
+            .then(response => response.json())
+            .then(json => {
+                const words = searchText.split(' ').filter(word => word.trim() !== ''); 
+                const regex = new RegExp(`(${words.join('|')})`, 'gi'); 
+                this.searchResults = json.map(result => { 
+                    const underlinedTitle = result.title.replace(regex, match => `<u>${match}</u>`); 
+                return { ...result, title: underlinedTitle }; 
+            });
+                    if (desktopCursorPointer && desktopCursorPointer.getAttribute('is-submit') == 'false') {
+                        desktopCursorPointer.setAttribute('is-submit','true');
+                        desktopCursorPointer.removeAttribute('x-on:click');
+                    }
+            })
+            .catch(err => console.log(err))
+            }else{
+                this.searchResults =[];
+            }
+        },
+        addSearchkeyToDataLayer(){
+            const dataLayer = { 'event': 'search','searchTerm': this.searchText};
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(dataLayer);
+
+        }
+
+    }));
+
+});
+
+jQuery(document).ready(function() {
+        jQuery('#desktop-cursor-pointer').on('click', function() {
+            if (jQuery(this).attr('is-submit') == 'true') {
+                jQuery('.searchform').submit();
+            }
+            
+        });
+    });
