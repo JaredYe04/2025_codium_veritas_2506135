@@ -39,9 +39,11 @@ result = pd.DataFrame(result,columns=['Year','New','Leave'])
 col_width=2
 #绘制柱形图，增加的人数和离开的人数叠加显示，新增的人在左边，离开的人在右边
 plt.figure(figsize=(10,6))
-plt.bar(result['Year'],result['Leave'],label='Leave',width=col_width,color='blue')
+#颜色为默认的蓝色
+plt.bar(result['Year'],result['Leave'],label='Leave',width=col_width,color='C1')
 #给出年份
-plt.bar(result['Year'],result['New'],label='New',bottom=result['Leave'],width=col_width,color='orange')
+#颜色为默认的橙色
+plt.bar(result['Year'],result['New'],label='New',bottom=result['Leave'],width=col_width,color='C0')
 plt.bar(result['Year'],np.abs(result['New']-result['Leave']),label='Variation',color=(result['New']-result['Leave']>0).map({True:'g',False:'r'}),width=1)
 
 plt.xlabel('Year')
