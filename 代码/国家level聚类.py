@@ -82,8 +82,4 @@ fig.set_size_inches(18.5, 10.5)
 plt.show()
 
 
-#由于kmeans的标签是无序的，我们需要对标签进行排序，例如level=5的国家是总奖牌数最少的，level=1的国家是总奖牌数最多的
-#我们可以对level进行排序，然后重新赋值
-#我们只需要对某一level中奖牌最多的国家挑出，进行排序，就可以知道某一level代表什么档次的国家，此后重新进行赋值
-
-data.to_csv('./data/country_level.csv')
+# data.to_csv('./data/country_level_.csv')
