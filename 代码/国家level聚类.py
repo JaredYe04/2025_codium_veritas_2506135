@@ -77,9 +77,18 @@ ax.grid(True)
 #图片背景颜色选用好看的淡橙色
 ax.set_facecolor('peachpuff')
 
-#图片尺寸应最大化，防止标签重叠
-fig.set_size_inches(18.5, 10.5)
-plt.show()
+# #图片尺寸应最大化，防止标签重叠
+# fig.set_size_inches(18.5, 10.5)
+# plt.show()
 
 
+#按照金牌银牌铜牌总数排序
+data = data.sort_values(by='Total', ascending=False)
+#第二关键字
+data = data.sort_values(by='Gold', ascending=False)
+#第三关键字
+data = data.sort_values(by='Silver', ascending=False)
+#第四关键字
+data = data.sort_values(by='Bronze', ascending=False)
+#导出数据
 data.to_csv('./data/country_level_.csv')
