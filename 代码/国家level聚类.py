@@ -10,8 +10,8 @@ import pandas as pd
 data = pd.read_csv('./data/summerOly_medal_counts.csv')
 data = data.dropna()
 
-#Year<1992的数据不要
-data = data[data['Year']>=1992]
+# #Year<1992的数据不要
+# data = data[data['Year']>=1992]
 
 
 #首先对数据进行求和，里面包含了历届奥运会的数据，我们需要groupby国家，然后对铜牌列，银牌列，金牌列，总数进行求和
@@ -82,8 +82,4 @@ fig.set_size_inches(18.5, 10.5)
 plt.show()
 
 
-#由于kmeans的标签是无序的，我们需要对标签进行排序，例如level=5的国家是总奖牌数最少的，level=1的国家是总奖牌数最多的
-#我们可以对level进行排序，然后重新赋值
-#我们只需要对某一level中奖牌最多的国家挑出，进行排序，就可以知道某一level代表什么档次的国家，此后重新进行赋值
-
-data.to_csv('./data/country_level.csv')
+data.to_csv('./data/country_level_.csv')
