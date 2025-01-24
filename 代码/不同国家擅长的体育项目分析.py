@@ -5,45 +5,45 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-# #读取数据
-# data=pd.read_csv('./data/summerOly_athletes.csv')
+#读取数据
+data=pd.read_csv('./data/summerOly_athletes.csv')
 
-# #数据预处理
-# #去除重复值
-# data.drop_duplicates(inplace=True)
-# #去除缺失值
-# data.dropna(inplace=True)
-
-
-# #数据分析
-# #不同国家擅长的体育项目
-# #目标国家
-# target_country='United States'#对应列为Team
-
-# #目标国家奖牌数
-# #Medal列中，No medal表示没有奖牌，Bronze表示铜牌，Silver表示银牌，Gold表示金牌
-# #筛选出目标国家不同项目的奖牌数，注意要排除No medal
-# target_country_medals=data[(data['Team']==target_country)&(data['Medal']!='No medal')].groupby('Sport').size()
-# #所有国家奖牌数
-# all_country_medals=data[data['Medal']!='No medal'].groupby('Sport').size()
-# #目标国家奖牌数占比
-# medal_rate=target_country_medals/all_country_medals
-# #排序
-# medal_rate=medal_rate.sort_values(ascending=False)
+#数据预处理
+#去除重复值
+data.drop_duplicates(inplace=True)
+#去除缺失值
+data.dropna(inplace=True)
 
 
-# #如果小于0.005，不显示
-# medal_rate=medal_rate[medal_rate>0.005]
-# #只显示前20个
-# medal_rate=medal_rate[:20]
-# #绘制图表
-# plt.figure(figsize=(10,6))
-# sns.barplot(x=medal_rate.values,y=medal_rate.index)
-# plt.title('Percentage of Medals of Different Sports in '+target_country)
+#数据分析
+#不同国家擅长的体育项目
+#目标国家
+target_country='United States'#对应列为Team
 
-# plt.show()
+#目标国家奖牌数
+#Medal列中，No medal表示没有奖牌，Bronze表示铜牌，Silver表示银牌，Gold表示金牌
+#筛选出目标国家不同项目的奖牌数，注意要排除No medal
+target_country_medals=data[(data['Team']==target_country)&(data['Medal']!='No medal')].groupby('Sport').size()
+#所有国家奖牌数
+all_country_medals=data[data['Medal']!='No medal'].groupby('Sport').size()
+#目标国家奖牌数占比
+medal_rate=target_country_medals/all_country_medals
+#排序
+medal_rate=medal_rate.sort_values(ascending=False)
 
-# pass
+
+#如果小于0.005，不显示
+medal_rate=medal_rate[medal_rate>0.005]
+#只显示前20个
+medal_rate=medal_rate[:20]
+#绘制图表
+plt.figure(figsize=(10,6))
+sns.barplot(x=medal_rate.values,y=medal_rate.index)
+plt.title('Percentage of Medals of Different Sports in '+target_country)
+
+plt.show()
+
+pass
 
 
 
