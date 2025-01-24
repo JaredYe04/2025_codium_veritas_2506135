@@ -64,9 +64,15 @@ data.dropna(inplace=True)
 #数据分析
 #不同国家擅长的体育项目
 
-countries=data['Team'].unique()
+# #注意，Team字段可能有一些冗余字符，例如South Korea可能会有-2 -3 -4 -11之类的-数字，所以需要截断至-之前的字符
+
+# data['Team']=data['Team'].apply(lambda x:x.split('-')[0])
+
+# countries=data['Team'].unique()
+countries=data['NOC'].unique()
 result=[]
 
+idx=0
 for country in countries:
     #目标国家
     target_country=country
@@ -74,18 +80,19 @@ for country in countries:
     #目标国家奖牌数
     #Medal列中，No medal表示没有奖牌，Bronze表示铜牌，Silver表示银牌，Gold表示金牌
     #筛选出目标国家不同项目的奖牌数，注意要排除No medal
-    target_country_medals=data[(data['Team']==target_country)&(data['Medal']!='No medal')].groupby('Sport').size()
+    target_country_medals=data[(data['NOC']==target_country)&(data['Medal']!='No medal')].groupby('Sport').size()
     #所有国家奖牌数
     all_country_medals=data[data['Medal']!='No medal'].groupby('Sport').size()
     #目标国家奖牌数占比
     medal_rate=target_country_medals/all_country_medals
     #排序
     medal_rate=medal_rate.sort_values(ascending=False)
-    
     #添加到结果中
     for sport in medal_rate.index:
         result.append([target_country,sport,medal_rate[sport]])
+    idx+=1
+    print('正在处理',idx,',共',len(countries),'个国家')
         
 #导出结果
-result=pd.DataFrame(result,columns=['Team','Sport','Adeptness'])
+result=pd.DataFrame(result,columns=['NOC','Sport','Adeptness'])
 result.to_csv('./data/country_adeptness.csv',index=False)

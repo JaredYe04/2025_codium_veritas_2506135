@@ -10,8 +10,8 @@ import pandas as pd
 data = pd.read_csv('./data/summerOly_medal_counts.csv')
 data = data.dropna()
 
-#Year<1992的数据不要
-data = data[data['Year']>=1992]
+# #Year<1992的数据不要
+# data = data[data['Year']>=1992]
 
 
 #首先对数据进行求和，里面包含了历届奥运会的数据，我们需要groupby国家，然后对铜牌列，银牌列，金牌列，总数进行求和
@@ -82,4 +82,4 @@ fig.set_size_inches(18.5, 10.5)
 plt.show()
 
 
-# data.to_csv('./data/country_level_.csv')
+data.to_csv('./data/country_level_.csv')
