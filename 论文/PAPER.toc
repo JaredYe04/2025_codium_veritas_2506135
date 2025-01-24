@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {4.1}Basic Data Preprocessing}{4}{subsection.0.4.1}%
 \contentsline {subsection}{\numberline {4.2}Data Mining}{4}{subsection.0.4.2}%
 \contentsline {section}{\numberline {5}Task1:}{4}{section.0.5}%
-\contentsline {subsubsection}{\numberline {5.0.1}Details about Model 1}{4}{subsubsection.0.5.0.1}%
+\contentsline {subsection}{\numberline {5.1}Details about Model 1}{4}{subsection.0.5.1}%
 \contentsline {section}{\numberline {6}Task2:}{4}{section.0.6}%
 \contentsline {subsection}{\numberline {6.1}Conclusion of Model 2}{4}{subsection.0.6.1}%
 \contentsline {subsection}{\numberline {6.2}Commetary on Model 2}{6}{subsection.0.6.2}%

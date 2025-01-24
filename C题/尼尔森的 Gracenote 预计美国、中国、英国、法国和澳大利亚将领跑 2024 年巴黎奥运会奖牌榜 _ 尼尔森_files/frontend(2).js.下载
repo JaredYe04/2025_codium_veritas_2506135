@@ -1,0 +1,1 @@
+document.addEventListener("alpine:init",(()=>{Alpine.data("announcementBar",(()=>console.log("announcement bar test")))}));

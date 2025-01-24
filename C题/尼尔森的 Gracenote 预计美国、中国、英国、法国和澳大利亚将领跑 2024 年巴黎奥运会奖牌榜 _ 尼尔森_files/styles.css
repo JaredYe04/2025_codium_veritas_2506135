@@ -1,0 +1,37 @@
+.nlsn-block-social-share.is-style-nlsn-outlined-btn .wp-block-button__link {
+    transition: width .3s, max-width 0.2s,min-width 0.2s;
+}
+.nlsn-block-social-share .wp-block-button__link a:hover {
+    background: none !important;
+    border: none !important;
+    color: inherit !important;
+}
+.nlsn-block-social-share .wp-block-button__link.bg-transparent:hover:before {
+    width: 0%;
+    background-color: initial;
+}
+.nlsn-block-social-share .wp-block-button__link.bg-transparent:hover {
+    color: var(--wp--preset--color--primary) !important;
+    background-color: initial;
+}
+.social-link:not(:hover) path{
+    transition: fill ease .5s;
+}
+.social-link:not(:hover) path{
+    fill: var(--wp--preset--color--gray-dark)
+}
+.social-link:not(:hover) .svg-mix-screen {
+    mix-blend-mode: screen;
+}
+.social-link:not(:hover) .svg-mix-dodge {
+    mix-blend-mode: color-dodge;
+}
+.nlsn-block-social-share .social-link:hover svg {
+    filter: initial;
+}
+.nlsn-block-social-share .social-link svg {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(81%) saturate(4336%) hue-rotate(252deg) brightness(98%) contrast(99%);
+}
+input#searchval:focus {
+    border: 1px solid rgb(150 130 255 / var(--tw-border-opacity));
+}

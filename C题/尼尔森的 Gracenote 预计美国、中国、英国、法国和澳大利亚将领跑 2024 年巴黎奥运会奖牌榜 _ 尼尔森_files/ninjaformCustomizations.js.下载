@@ -1,0 +1,124 @@
+/*
+ * The following section of code inserts values like category, formats, active language etc to 
+ * Ninjaform fields.
+*/
+jQuery(() => {
+    jQuery('#dataUTM').attr('data-geolocation', country_code_nf);
+    jQuery('#dataUTM').attr('data-pardot-id', pardotId);
+    jQuery('#dataUTM').attr('data-google-analytics-id', google_analytics_id);
+})
+jQuery(document).on('nfFormReady',
+    (e, layoutView) => {
+        var utm_source = jQuery('#dataUTM').attr("data-utm-source");
+        var utm_medium = jQuery('#dataUTM').attr("data-utm-medium");
+        var utm_campaign = jQuery('#dataUTM').attr("data-utm-campaign");
+        var utm_content = jQuery('#dataUTM').attr("data-utm-content");
+        var utm_term = jQuery('#dataUTM').attr("data-utm-term");
+        var active_lang = jQuery('#dataUTM').attr("data-language");
+
+        var data_products = $('#dataUTM').attr("data-products");
+        var data_section = $('#dataUTM').attr("data-section");
+        var data_category = $('#dataUTM').attr("data-category");
+        var data_formats = $('#dataUTM').attr("data-formats");
+        var data_industry = $('#dataUTM').attr("data-industry");
+        var data_media = $('#dataUTM').attr("data-media");
+        var data_related_tags = $('#dataUTM').attr("data-related-tags");
+
+        jQuery('input[value=\"$active_lang\"]').val(active_lang);
+        jQuery('input[value=\"$geolocation\"]').val(country_code_nf);
+        jQuery('input[value=\"$pardot_id\"]').val(pardotId);
+        jQuery('input[value=\"$google_id\"]').val(google_analytics_id);
+
+        jQuery('input[value=\"$utm_source\"]').val(utm_source);
+        jQuery('input[value=\"$utm_medium\"]').val(utm_medium);
+        jQuery('input[value=\"$utm_campaign\"]').val(utm_campaign);
+        jQuery('input[value=\"$utm_content\"]').val(utm_content);
+        jQuery('input[value=\"$utm_term\"]').val(utm_term);
+
+        jQuery('input[value=\"$page_category\"]').val(data_category);
+        jQuery('input[value=\"$page_format\"]').val(data_formats);
+        jQuery('input[value=\"$page_industry\"]').val(data_industry);
+        jQuery('input[value=\"$page_media_type\"]').val(data_media);
+        jQuery('input[value=\"$page_related_tags\"]').val(data_related_tags);
+        jQuery('input[value=\"$page_referrer_url\"]').val(document.referrer);
+
+    }
+);
+
+/*
+ * The following section of code add Nielsen styles to Ninjaform Radio list
+*/
+function hide_unhide() {
+    function visibility_handler() {
+        function hide_onload(item, ind) {
+            var y = null;
+            y = item.nextElementSibling;
+            y.classList.add("invisible");
+        }
+        function hide_onclick(item, ind) {
+            var y = null;
+            y = item.nextElementSibling;
+            item.onclick = () => {
+                (y.classList.contains("invisible")) ? y.classList.remove("invisible") : y.classList.add("invisible");
+            }
+        }
+        var x = document.querySelectorAll(".field-wrap.listradio-wrap .nf-field-label");
+        x.forEach(hide_onload);
+        x.forEach(hide_onclick);
+    }
+
+    var delayInMilliseconds = 2000;
+    setTimeout(visibility_handler, delayInMilliseconds);
+}
+document.addEventListener("DOMContentLoaded", hide_unhide);
+
+/**
+ * Get the UTM cookie value
+ * @return {string} utm_all_2 cookie or 'no_utm_cookie'
+ */
+let getCookie = (cookieName='utm_all_2') => {
+    let cookieString = document.cookie.split('; ').find(cookie => cookie.includes(cookieName));
+    return cookieString ? cookieString.substring(cookieString.indexOf('=')+1) : 'no_cookie-'+cookieName;
+}
+/**
+ * Modify form field value whihch contains "$utm_cookie" or "$custom_lead_id" or "$one_trust_cookie"
+ * and insert the utm cookie or the lead id
+ * @return {string} fieldData - return the modified fieldData
+ */
+let leadIdUtmCookieGenerator = Marionette.Object.extend({
+    fieldType: 'hidden',
+    initialize: function () {
+        Backbone.Radio.channel(this.fieldType).reply('get:submitData', this.getSubmitData);
+    },
+    getSubmitData: function (fieldData) {
+        if (fieldData.value.startsWith('$custom_lead_id')) { // insert lead id
+            let dateTime = new Date();
+            let timeStamp = dateTime.toISOString().replace('T', ' ').substring(0, 19);
+            let randomNumber = Math.floor(Math.random() * 1000000);
+            fieldData.value = `${randomNumber} | ${timeStamp}`;
+        } else if (fieldData.value === '$utm_cookie') { // insert utm cookie
+            fieldData.value = getCookie('utm_all_2');
+        } else if (fieldData.value === '$one_trust_cookie') { //insert One Trust Cookie (OptanonConsent)
+            let cookieValue = decodeURIComponent(getCookie('OptanonConsent'));
+            let start = cookieValue.indexOf('groups');
+            let end = cookieValue.indexOf('&',start);
+            if (start === -1){
+                fieldData.value = 'no_one_trust_group_cookie';
+            }
+            else {
+                if (end === -1) {
+                    fieldData.value = cookieValue.substring(start);
+                }
+                else {
+                    fieldData.value = cookieValue.substring(start,end);
+                }
+            }
+        }
+        return fieldData;
+    }
+
+});
+
+$(function () {
+    new leadIdUtmCookieGenerator();
+})

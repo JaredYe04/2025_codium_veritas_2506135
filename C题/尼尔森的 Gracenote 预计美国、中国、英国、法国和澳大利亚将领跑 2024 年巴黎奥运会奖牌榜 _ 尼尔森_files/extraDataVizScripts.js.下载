@@ -1,0 +1,235 @@
+function redrawTable(refreshType, tableName, chart, label) {
+    if(refreshType === "alternative"){
+        interactionType = 'drill-down';
+        chart.data = eval("secondData_" + tableName);
+    }else{
+        interactionType = 'drill-up';
+        chart.data = eval("firstData_" + tableName);
+    }
+    data_layer_object = {
+        'event': 'visualization_navigation',
+        'clickText': label,
+        'reportSection': chart.canvas.ariaLabel,
+        'visualizationText': chart.canvas.title,
+        'interactionType': interactionType,
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(data_layer_object);
+    chart.update();
+}
+
+function addAdditionalInfoToChart(canvas, colorScheme, sheetTitle, chartId, isTable) {
+    const imageLink = document.createElement('a');
+    const chart = canvas.getContext('2d');
+    const OriginalHeight = canvas.height;
+    const OriginalWidth = canvas.width;
+    const OriginalHeightPixels = canvas.style.height;
+    const OriginalWidthPixels = canvas.style.width;
+    
+    let originalMaxWidth;
+    if(!isTable){
+        originalMaxWidth = canvas.parentElement.style["max-width"];
+    }
+    if(colorScheme === "dark"){
+        textColor = "#C8CBD8";
+        copyrightImage = "copyright2";
+        lineColor = "#4D577D";
+        headerTextC = "#fff";
+        backgroundColor = "#002041";
+    }else{
+        textColor = "#002041";
+        copyrightImage = "copyright3";
+        lineColor = "#4D577D";
+        headerTextC = "#002041";
+        backgroundColor = "#fff";
+    }
+
+    // create a temp canvas (no need to add it to the DOM)
+    var tempCanvas=document.createElement('canvas');
+    var tempCtx=tempCanvas.getContext('2d');
+ 
+
+    let moveDown = 0; 
+    if(!isTable){
+        let uniqueChart = eval(chartId + "_chart");
+        
+        tempCanvas.width = 800;
+        tempCanvas.height = 880;
+        canvas.parentElement.style["max-width"] = "800px";
+        if( document.body.clientWidth > 720 ){
+            canvas.style.height = 400+"px";
+            canvas.style.width = 400+"px";
+            uniqueChart.resize(800,800);
+            moveDown = 45;
+        }else{
+            moveDown = 56;
+            tempCanvas.width = OriginalWidth;
+            tempCanvas.height = OriginalHeight + 100;
+        }
+        var dynamicVariableName = "chartdateColor_" + chartId;
+        // Try to access the dynamically generated variable
+        var dynamicVariableValue = window[dynamicVariableName];
+
+        if (typeof dynamicVariableValue !== 'undefined') {
+            addHeight = 150;
+            tempCanvas.height = tempCanvas.height +50;
+            if( document.body.clientWidth > 720 ){
+                moveDown = 85;
+            }else{
+                moveDown = 102;
+            }
+
+            if(eval("chartdateColor_"+ chartId) === 'white'){
+                fontColor = "#fff";
+            }else{
+                fontColor ="#000";
+            }
+            //Important to have this here so it is behind everything else.
+            tempCtx.fillStyle = backgroundColor;
+            tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height+100);
+
+            text = eval("chartdate_"+ chartId)
+            tempCtx.font = "500 15px inter";
+            tempCtx.fillStyle = fontColor;
+            tempCtx.textAlign = "center";
+            tempCtx.fillText(text, tempCanvas.width/2, 75);
+            
+        }else{
+            tempCanvas.height = tempCanvas.height;
+            addHeight = 150;
+             //Important to have this here so it is behind everything else.
+            tempCtx.fillStyle = backgroundColor;
+            tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height+100);
+        }
+       
+        
+    }else{
+        tempCanvas.width = OriginalWidth;
+        tempCanvas.height = OriginalHeight+100;
+    
+       
+
+        var dynamicVariableName = "chartdateColor_" + chartId;
+        // Try to access the dynamically generated variable
+        var dynamicVariableValue = window[dynamicVariableName];
+
+        if (typeof dynamicVariableValue !== 'undefined') {
+            addHeight = 150;
+            tempCanvas.height = OriginalHeight+120;
+            moveDown = 75;
+             //Important to have this here so it is behind everything else.
+            tempCtx.fillStyle = backgroundColor;
+            tempCtx.fillRect(0, 0, OriginalWidth, OriginalHeight+300);
+
+            if(dynamicVariableValue === 'white'){
+                fontColor = "#fff";
+            }else{
+                fontColor ="#000";
+            }
+            text = eval("chartdate_"+ chartId);
+            tempCtx.font = "500 14px inter";
+            tempCtx.fillStyle = fontColor;
+            tempCtx.textAlign = "center";
+            tempCtx.fillText(text, tempCanvas.width/2, 60);
+        }else{
+             //Important to have this here so it is behind everything else.
+            tempCtx.fillStyle = backgroundColor;
+            tempCtx.fillRect(0, 0, OriginalWidth, OriginalHeight+300);
+            addHeight = 100;
+            moveDown = 48;
+        }
+       
+    }
+
+    // draw the main canvas on top of the temp canvas
+    tempCtx.drawImage(canvas,0,moveDown);
+
+    //Fill in the extra height added
+    tempCtx.fillStyle = backgroundColor;
+    if(!isTable){
+        tempCtx.fillRect(0, OriginalHeight+100, tempCanvas.width, 0);
+    }else{
+        tempCtx.fillRect(0, OriginalHeight+addHeight, OriginalWidth, addHeight);
+    }
+    //Fill in the extra height added
+    tempCtx.fillStyle = backgroundColor;
+    if(!isTable){
+        tempCtx.fillRect(0, 0, tempCanvas.width, 0);
+    }else{
+        tempCtx.fillRect(0, 0, OriginalWidth, 50);
+    }
+
+    var image = document.getElementById("copyright");
+    var image2 = document.getElementById(copyrightImage);
+    //Copyright
+    tempCtx.drawImage(image,
+        tempCanvas.width / 2.7,
+        tempCanvas.height / 2.5
+    );
+    //nielsen Image
+    let nielsenLogoOffset = isTable ? 30 : 50;
+    tempCtx.drawImage(image2,
+        tempCanvas.width - 150,
+        tempCanvas.height - nielsenLogoOffset
+    );
+    //line Breaker
+    let lineBreakOffset = isTable ? 40 : 80;
+    tempCtx.fillStyle = "#4D577D";
+    tempCtx.fillRect(1, tempCanvas.height-lineBreakOffset, tempCanvas.width, 1);
+    tempCtx.restore();
+
+    const d = new Date();
+    let year = d.getFullYear();
+
+    //Copyright Text
+    let copyrightTextOffset = isTable ? 15 : 25;
+    text = "Copyright © "+year+" The Nielsen Company [US], LLC. All Rights Reserved";
+    tempCtx.font = "100 10px sans-serif";
+    tempCtx.fillStyle = textColor;
+    tempCtx.textAlign = "left";
+    tempCtx.fillText(text, 5, tempCanvas.height - copyrightTextOffset);
+    
+    //Header
+    text = sheetTitle;
+    tempCtx.font = "700 32px inter";
+    tempCtx.fillStyle = headerTextC;
+    tempCtx.textAlign = "left";
+    tempCtx.fillText(text, 5, 35);
+
+    imageLink.download = sheetTitle;
+    imageLink.href = tempCanvas.toDataURL('image/png',1);
+    imageLink.click();
+    
+    delete tempCtx;
+    delete tempCanvas;
+
+    //The following resets everything to originals
+    
+    if(!isTable){
+        canvas.style.width = OriginalHeightPixels;
+        canvas.style.width = OriginalWidthPixels;
+        canvas.parentElement.style["max-width"] = originalMaxWidth;
+        uniqueChart.resize(OriginalHeight,OriginalWidth);
+    }
+}
+
+function downloadDataViz(chartId, colorScheme, sheetTitle, isTable = false) {
+    if (isTable) {
+        let changeViewportWidth = (window.screen.width < 960);
+        let viewportWidth;
+        if ( changeViewportWidth) {
+            viewportWidth = document.querySelector('meta[name="viewport"]').getAttribute('content');
+            document.querySelector('meta[name="viewport"]').setAttribute('content','width=1280');
+        }
+        html2canvas(document.getElementById('table-container-'+chartId)).then((canvas) => {
+            addAdditionalInfoToChart(canvas, colorScheme, sheetTitle, chartId, isTable);
+            if(changeViewportWidth) {
+                document.querySelector('meta[name="viewport"]').setAttribute('content',viewportWidth);
+            }
+        });
+    }
+    else {
+        let canvas = document.getElementById(chartId);
+        addAdditionalInfoToChart(canvas, colorScheme, sheetTitle, chartId, isTable);
+    }
+}

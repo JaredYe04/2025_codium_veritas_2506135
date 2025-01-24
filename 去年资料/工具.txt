@@ -1,0 +1,8 @@
+1、算法/数据结构网络图在线可视化【节点图】
+https://csacademy.com/app/graph_editor/
+
+英文修改
+http://www.1checker.com/
+
+模拟气候等自然条件变化后会对原有情况产生影响的软件
+https://naturalcapitalproject.stanford.edu/software/invest

@@ -1,0 +1,61 @@
+function domReady(fn) {
+  document.addEventListener("DOMContentLoaded", fn);
+  if (document.readyState === "interactive" || document.readyState === "complete" ) {
+    fn();
+  }
+}
+
+const randomColor = () => {
+  let color = Math.floor(Math.random() * (5 - 1) + 1);
+  switch (color) {
+    case 1:
+      return "var(--wp--preset--color--accent) !important";
+    case 2: 
+      return "var(--wp--preset--color--primary) !important";
+    case 3:
+      return "var(--wp--preset--color--secondary) !important";
+    case 4:
+      return "var(--wp--preset--color--tertiary) !important";
+  }
+} 
+const addRandomColors = () => {
+  const randomBgColors = document.getElementsByClassName("has-random-brand-background-color");
+  const randomTextColors = document.getElementsByClassName("has-random-brand-color");
+
+  Array.from(randomBgColors).forEach(element => {
+    element.style.backgroundColor = randomColor();
+  });
+  Array.from(randomTextColors).forEach(element => {
+    element.style.color = randomColor();
+  });
+}
+domReady(() => {
+  addRandomColors();
+  document.addEventListener('postsLoaded',addRandomColors);
+});
+  
+// make insights/solutions cards clickable
+let cards = document.querySelectorAll('.enable-datalayer-related-products,.enable-datalayer-related-contents,.enable-datalayer-related-insights,.enable-datalayer-listing-insights,.enable-datalayer-listing,.enable-datalayer-card-news-center,.enable-datalayer-card-data-center');
+for (let card of cards) {
+    let anchor = card.querySelector('.wp-block-post-title > a');
+    if(anchor){
+      let url = anchor.getAttribute('href') ?? '#';
+      card.addEventListener('click', () => {
+          location.href = url
+      })
+    }  
+}
+
+//make related products card clickable
+window.addEventListener("DOMContentLoaded", function() {
+  let nlsnPostCards = document.querySelectorAll('.wp-block-nlsn-post-card');
+  for (let nlsnPostCard of nlsnPostCards) {
+    let anchor = nlsnPostCard.querySelector('.post-card-container a');
+    if (anchor && anchor.innerText.toLowerCase().includes('read more')) {
+        nlsnPostCard.addEventListener('click', () => {
+          window.location.assign(anchor?.getAttribute('href'));
+        })
+    }
+}
+}, false);
+
