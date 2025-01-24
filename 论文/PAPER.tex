@@ -4,10 +4,11 @@
 
 % 本模板不需要填写年份，以当前电脑时间自动生成
 % 请在以下的方括号中填写队伍控制号
-\usepackage[1234567]{easymcm}  % 载入 EasyMCM 模板文件
-\problem{A}  % 请在此处填写题号
+\usepackage[2506135]{easymcm}  % 载入 EasyMCM 模板文件
+\problem{C}  % 请在此处填写题号
 \usepackage{mathptmx}  % 这是 Times 字体，中规中矩 
 %\usepackage{mathpazo}  % 这是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
+\usepackage{amsmath}
 
 \title{An MCM Paper Made by Team 1234567}  % 标题
 
@@ -15,11 +16,13 @@
 %\renewcommand{\contest}{MCM}
 
 % 文档开始
+\newtheorem{keywords}{Keywords}
 \begin{document}
 
 % 此处填写摘要内容
 \begin{abstract}
 
+<<<<<<< Updated upstream
 
 % 注释里面有中文是没有问题的
 
@@ -31,6 +34,8 @@ Wo shi yeahsiao.
 
 I'm JaredYe.
 
+=======
+>>>>>>> Stashed changes
     Here is the abstract of your paper.
 
     Firstly, that is ...
@@ -48,7 +53,8 @@ $f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\ome
     % 请将以下两行的注释号 '%' 去除，以使其生效
     % \vspace{5pt}
     % \textbf{Keywords}: MATLAB, mathematics, LaTeX.
-
+\begin{keywords}
+\end{keywords}
 \end{abstract}
 
 \maketitle  % 生成 Summary Sheet
@@ -63,10 +69,11 @@ Here is the problem background ...
 Two major problems are discussed in this paper, which are:
 \begin{itemize}
     \item Doing the first thing.
-    \item Doing the second thing.
+    \item Doing the second thing.\\doing\\    doing11
+    
 \end{itemize}
 
-\subsection{Literature Review}
+\subsection{Restatement of Problem}
 A literatrue\cite{1} say something about this problem ...
 
 \subsection{Our work}
@@ -78,10 +85,10 @@ We do such things ...
     \item We do ...
 \end{enumerate}
 
-\section{Preparation of the Models}
-\subsection{Assumptions}
+\section{Assumptions}
 
-\subsection{Notations}
+
+\section{Notations}
 The primary notations used in this paper are listed in Table \ref{tb:notation}.
 
 % 三线表示例
@@ -101,16 +108,43 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 \end{center}
 \end{table}
 
-\section{The Models}
-\subsection{Model 1}
+\section{Data Preprocessing}
+\subsection{Basic Data Preprocessing}
+\subsection{Data Mining}
+\section{Task1:}
 \subsubsection{Details about Model 1}
-The detail can be described by equation \eqref{eq:heat}:
-\begin{equation}\label{eq:heat}
-\frac{\partial u}{\partial t} - a^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} \right) = f(x, y, z, t)
+The detail can be described by equation \eqref{eq1}:\autoref{eq1}:
+%带标签的方程
+\begin{equation}\label{eq1}
+\alpha+\beta=\gamma
+\end{equation}
+%不带标签的方程
+\[
+\alpha+\beta=\gamma
+\]
+$$\alpha$$
+
+
+%长等式
+\begin{equation}\label{eq2}
+	\begin{split}
+	&A+B+C+D+E+F\\
+	&=G+Q+W+E+R+T+Y\\
+	&=A+S+D+F+G+H+J
+	\end{split}
+\end{equation}
+%分段方程
+\begin{equation}\label{eq3}
+	F(x)=
+	\begin{cases}
+		0&,\text{if $x<0$}\\
+		x+1&,\text{if $x>0$}\\
+		1&,\text{otherwise}
+			\end{cases}
 \end{equation}
 
-\subsection{Model 2}
-\subsubsection{Conclusion of Model 2}
+\section{Task2:}
+\subsection{Conclusion of Model 2}
 The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in seconds, and $c$ refers to the concentration of water in the boiler.
 
 \begin{figure}[htbp]
@@ -120,7 +154,7 @@ The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in 
 \end{figure}
 
 \clearpage
-\subsubsection{Commetary on Model 2}
+\subsection{Commetary on Model 2}
 The instance of long and wide tables are shown in Table \ref{tb:longtable}.
 
 % 长表格示例，更多用法请参考 longtable 宏包文档
@@ -180,7 +214,13 @@ Figure \ref{fig:subfigures} gives an example of subfigures. Figure \ref{subfig:l
 \caption{Two images}\label{fig:subfigures}
 \end{figure}
 
-\section{Strengths and Weaknesses}
+\section{Task3}
+
+\section{Task4}
+
+\section{Sensitivity Analysis}
+
+\section{Model Evaluation}
 \subsection{Strengths}
 \begin{itemize}
     \item First one...
@@ -191,7 +231,8 @@ Figure \ref{fig:subfigures} gives an example of subfigures. Figure \ref{subfig:l
 \begin{itemize}
     \item Only one ...
  \end{itemize}
-
+ 
+\section{Conclusion}
 
 % 以下为信件/备忘录部分，不需要可自行去掉
 % 如有需要可将整个 letter 环境移动到文章开头或中间
