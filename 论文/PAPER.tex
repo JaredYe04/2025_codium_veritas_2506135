@@ -11,7 +11,23 @@
 \usepackage{amsmath}
 \usepackage{tabularray}
 
-\title{An MCM Paper Made by Team 1234567}  % 标题
+%拉取的一些宏包
+\usepackage{graphicx} 
+%\usepackage{pdfpages}
+\usepackage{longtable}
+%\usepackage{tabu}
+\usepackage{threeparttable} %支持在表格中使用 \tnote 命令添加脚注，并自动编号
+\usepackage{listings} %在文档中插入代码
+%\usepackage{paralist}%创建紧凑的列表，节省垂直空间
+%\usepackage{setspace} %调整文档的行间距
+%\usepackage{booktabs}%用于创建更美观的表格，提供了高质量的表格线条命令，如 \toprule、\midrule 和 \bottomrule
+%\usepackage{makecell} %创建多行单元格，支持复杂的表格布局
+\usepackage{amssymb} %提供了额外的数学符号，通常与 amsmath 宏包一起使用
+\usepackage{appendix} %管理附录部分，自动处理附录的编号和格式
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+
+
+\title{Together, Individuals Make a Difference}  % 标题
 
 % 如需要修改题头（默认为 MCM/ICM），请使用以下命令（此处修改为 MCM）
 %\renewcommand{\contest}{MCM}
@@ -39,8 +55,15 @@ $f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\ome
     % 请将以下两行的注释号 '%' 去除，以使其生效
     % \vspace{5pt}
     % \textbf{Keywords}: MATLAB, mathematics, LaTeX.
-\begin{keywords}
-\end{keywords}
+    
+    
+    \textbf{PCA}\\
+    \%\\
+    % 关键字Keywords
+    \vspace{5pt}
+    \textbf{Keywords}: \textbf{ A, B, C,  }
+    
+	
 \end{abstract}
 
 \maketitle  % 生成 Summary Sheet
@@ -50,21 +73,50 @@ $f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\ome
 % 正文开始
 \section{Introduction}
 \subsection{Problem Background}
-Here is the problem background ...
 
-Two major problems are discussed in this paper, which are:
-\begin{itemize}
-    \item Doing the first thing.
-    \item Doing the second thing.\\doing\\    doing11
-    
-\end{itemize}
 
 \subsection{Restatement of Problem}
 A literatrue\cite{1} say something about this problem ...
+There is a conception named "momentum" in tennis, which has a great impact on players' performance. It is a generalization of the influence in manifold aspects like mental stress and residual energy. So the fluctuation of momentum is the most probable factor that reveals the trend of match. However,the momentum is not easy to be quantified for it includes many subjective indicators, and there are few models that can be directly used, so we decide to cut in the following questions from statistical analysis and data procession:
+
+\begin{itemize}
+	\setlength{\parsep}{0ex} %段落间距
+	\setlength{\topsep}{2ex} %列表到上下文的垂直距离
+	\setlength{\itemsep}{1ex} %条目间距
+	\item Develop a model that captures the flow of play as points occur and apply it to one or more of the matches. Your model should identify which player is performing better at a given time in the match, as well as how much better they are performing. Provide a visualization based on your model to depict the match flow. \textit{Note: in tennis, the player serving has a much higher probability of winning the point/game. You may wish to factor this into your model in some way.}
+	\item A tennis coach is skeptical that “momentum” plays any role in the match. Instead, he postulates that swings in play and runs of success by one player are random. Use your model/metric to assess this claim.
+	\item Coaches would love to know if there are indicators that can help determine when the flow of play is about to change from favoring one player to the other.
+	\begin{itemize}
+		\item[1)]
+		Using the data provided for at least one match, develop a model that predicts these swings in the match. What factors seem most related (if any)?
+	\end{itemize}
+	\begin{itemize}
+		\item[2)]
+		Given the differential in past match “momentum” swings how do you advise a player going into a new match against a different player?
+	\end{itemize}
+	\item Test the model you developed on one or more of the other matches. How well do you predict the swings in the match? If the model performs poorly at times, can you identify any factors that might need to be included in future models? How generalizable is your model to other matches (such as Women’s matches), tournaments, court surfaces, and other sports such as table tennis.
+	\item Produce a report of no more than 25 pages with your findings and include a one- to two-page memo summarizing your results with advice for coaches on the role of“momentum”, and how to prepare players to respond to events that impact the flow of play during a tennis match.
+\end{itemize}
 
 \subsection{Our work}
 We do such things ...
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Percentage of Medals of Different Sports in China.svg}
+%	\caption{Flow Chart of Our Work}
+%	\label{img}
+%\end{figure}
+	\caption{The result of Model 2}\label{fig:result}
+\end{figure}
+%"C:\Users\于灏文1\Desktop\2025_codium_veritas_2506135\论文\img\Percentage of Medals of Different Sports in China.svg"
+%"C:\Users\于灏文1\Desktop\2025_codium_veritas_2506135\论文\img\每届奥运会新增和退役的人数.png"
+%"C:\Users\于灏文1\Desktop\2025_codium_veritas_2506135\论文\img\water.png"
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=.8\textwidth]{water.png}
+	\caption{The result of Model 2}\label{fig:result}
+\end{figure}
 \begin{enumerate}[\bfseries 1.]
     \item We do ...
     \item We do ...
@@ -89,6 +141,7 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 	$A$&the first one\\
 	$b$&the second one\\
 	$\alpha$ &the last one\\
+	$\sum m_{c_{i} S_{j}}$ &the last one\\
 	\bottomrule
 \end{tabular}\label{tb:notation}
 \end{center}
