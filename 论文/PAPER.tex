@@ -9,8 +9,25 @@
 \usepackage{mathptmx}  % 这是 Times 字体，中规中矩 
 %\usepackage{mathpazo}  % 这是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
 \usepackage{amsmath}
+\usepackage{tabularray}
 
-\title{An MCM Paper Made by Team 1234567}  % 标题
+%拉取的一些宏包
+\usepackage{graphicx} 
+%\usepackage{pdfpages}
+\usepackage{longtable}
+%\usepackage{tabu}
+\usepackage{threeparttable} %支持在表格中使用 \tnote 命令添加脚注，并自动编号
+\usepackage{listings} %在文档中插入代码
+%\usepackage{paralist}%创建紧凑的列表，节省垂直空间
+%\usepackage{setspace} %调整文档的行间距
+%\usepackage{booktabs}%用于创建更美观的表格，提供了高质量的表格线条命令，如 \toprule、\midrule 和 \bottomrule
+%\usepackage{makecell} %创建多行单元格，支持复杂的表格布局
+\usepackage{amssymb} %提供了额外的数学符号，通常与 amsmath 宏包一起使用
+\usepackage{appendix} %管理附录部分，自动处理附录的编号和格式
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+
+
+\title{Together, Individuals Make a Difference}  % 标题
 
 % 如需要修改题头（默认为 MCM/ICM），请使用以下命令（此处修改为 MCM）
 %\renewcommand{\contest}{MCM}
@@ -38,8 +55,15 @@ $f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\ome
     % 请将以下两行的注释号 '%' 去除，以使其生效
     % \vspace{5pt}
     % \textbf{Keywords}: MATLAB, mathematics, LaTeX.
-\begin{keywords}
-\end{keywords}
+    
+    
+    \textbf{PCA}\\
+    \%\\
+    % 关键字Keywords
+    \vspace{5pt}
+    \textbf{Keywords}: \textbf{ A, B, C,  }
+    
+	
 \end{abstract}
 
 \maketitle  % 生成 Summary Sheet
@@ -49,21 +73,50 @@ $f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\ome
 % 正文开始
 \section{Introduction}
 \subsection{Problem Background}
-Here is the problem background ...
 
-Two major problems are discussed in this paper, which are:
-\begin{itemize}
-    \item Doing the first thing.
-    \item Doing the second thing.\\doing\\    doing11
-    
-\end{itemize}
 
 \subsection{Restatement of Problem}
 A literatrue\cite{1} say something about this problem ...
+There is a conception named "momentum" in tennis, which has a great impact on players' performance. It is a generalization of the influence in manifold aspects like mental stress and residual energy. So the fluctuation of momentum is the most probable factor that reveals the trend of match. However,the momentum is not easy to be quantified for it includes many subjective indicators, and there are few models that can be directly used, so we decide to cut in the following questions from statistical analysis and data procession:
+
+\begin{itemize}
+	\setlength{\parsep}{0ex} %段落间距
+	\setlength{\topsep}{2ex} %列表到上下文的垂直距离
+	\setlength{\itemsep}{1ex} %条目间距
+	\item Develop a model that captures the flow of play as points occur and apply it to one or more of the matches. Your model should identify which player is performing better at a given time in the match, as well as how much better they are performing. Provide a visualization based on your model to depict the match flow. \textit{Note: in tennis, the player serving has a much higher probability of winning the point/game. You may wish to factor this into your model in some way.}
+	\item A tennis coach is skeptical that “momentum” plays any role in the match. Instead, he postulates that swings in play and runs of success by one player are random. Use your model/metric to assess this claim.
+	\item Coaches would love to know if there are indicators that can help determine when the flow of play is about to change from favoring one player to the other.
+	\begin{itemize}
+		\item[1)]
+		Using the data provided for at least one match, develop a model that predicts these swings in the match. What factors seem most related (if any)?
+	\end{itemize}
+	\begin{itemize}
+		\item[2)]
+		Given the differential in past match “momentum” swings how do you advise a player going into a new match against a different player?
+	\end{itemize}
+	\item Test the model you developed on one or more of the other matches. How well do you predict the swings in the match? If the model performs poorly at times, can you identify any factors that might need to be included in future models? How generalizable is your model to other matches (such as Women’s matches), tournaments, court surfaces, and other sports such as table tennis.
+	\item Produce a report of no more than 25 pages with your findings and include a one- to two-page memo summarizing your results with advice for coaches on the role of“momentum”, and how to prepare players to respond to events that impact the flow of play during a tennis match.
+\end{itemize}
 
 \subsection{Our work}
 We do such things ...
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Percentage of Medals of Different Sports in China.svg}
+%	\caption{Flow Chart of Our Work}
+%	\label{img}
+%\end{figure}
+	\caption{The result of Model 2}\label{fig:result}
+\end{figure}
+%"C:\Users\于灏文1\Desktop\2025_codium_veritas_2506135\论文\img\Percentage of Medals of Different Sports in China.svg"
+%"C:\Users\于灏文1\Desktop\2025_codium_veritas_2506135\论文\img\每届奥运会新增和退役的人数.png"
+%"C:\Users\于灏文1\Desktop\2025_codium_veritas_2506135\论文\img\water.png"
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=.8\textwidth]{water.png}
+	\caption{The result of Model 2}\label{fig:result}
+\end{figure}
 \begin{enumerate}[\bfseries 1.]
     \item We do ...
     \item We do ...
@@ -86,6 +139,7 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 	$A$&the first one\\
 	$b$&the second one\\
 	$\alpha$ &the last one\\
+	$\sum m_{c_{i} S_{j}}$ &the last one\\
 	\bottomrule
 \end{tabular}\label{tb:notation}
 \end{center}
@@ -126,6 +180,28 @@ $$\alpha$$
 			\end{cases}
 \end{equation}
 
+%Table 2 : Variable Name
+\begin{longtblr}[
+	caption = {Variable Name},
+	]{
+		vline{1-4} = {1-10}{},
+		hline{1-11} = {1-3}{},
+	}
+	Variable Name                                                    & \textit{Code}                                                & Definition                                                                      &  \\
+	Whether~Host Country                                             & \textit{is host}                                             & {Whether the country is the host(1 for host,0 for\\~non-host)}                  &  \\
+	{Medal Expectation\\Increment *Personnel\\Expectation lncrement} & {\textit{medal\_increment *}\\\textit{personnel\_increment}} & {Product of medal\\expectation increment and\\personnel expectation\\increment} &  \\
+	{Sport Advantage\\Coefficient}                                 & \textit{sport\_adv}                                           & {Advantage coefficient of\\a specific sport}                                  &  \\
+	Country Level                                                    & \textit{country\_lvl}                                        & {The level of the country in the competition\\(ordered by rank)}                &  \\
+	{Project Medal\\Expectation /Project\\Personnel Expection~}                         & \textit{sport\_medal \_per\_ person}                          & {Ratio of sport medals to projected personnel\\for a specific sport}          &  \\
+	Gold Medal Probability                                           & \textit{gold\_prob}                                          & {Probability of an athlete~\\winning a gold medal}                              &  \\
+	{Silver Medal\\Probability}                                      & \textit{silver\_prob}                                        & Probability of an athlete~ winning a silver medal                               &  \\
+	{Bronze Medal\\Probability}                                      & \textit{silver\_prob}                                        & Probability of an athletewinning a bronze medal                                 &  \\
+	No Medal Probability                                             & \textit{no\_medal\_probe}                                    & Probability of an athlete winning no medal                                      &  \\
+	&                                                              &                                                                                 &  \\
+	&                                                              &                                                                                 &  
+\end{longtblr}
+
+
 \section{Task2:}
 \subsection{Conclusion of Model 2}
 The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in seconds, and $c$ refers to the concentration of water in the boiler.
@@ -143,41 +219,11 @@ The instance of long and wide tables are shown in Table \ref{tb:longtable}.
 % 长表格示例，更多用法请参考 longtable 宏包文档
 % 以下环境及对应参数可实现表格内的自动换行与表格的自动断页
 % 您也可以选择自行载入 tabularx 宏包，并通过 X 参数指定对应列自动换行
-\begin{longtable}{ p{4em} p{14em} p{14em} }
-\caption{Basic Information about Three Main Continents (scratched from Wikipedia)}
-\label{tb:longtable}\\
-\toprule
-Continent & Description & Information \\
-\midrule
-Africa & Africa Continent is surrounded by the Mediterranean Sea to the
-north, the Isthmus of Suez and the Red Sea to the northeast, the Indian
-Ocean to the southeast and the Atlantic Ocean to the west. &
-At about 30.3 million km$^2$ including adjacent islands, it covers 6\%
-of Earth's total surface area and 20\% of its land area. With 1.3
-billion people as of 2018, it accounts for about 16\% of the world's
-human population. \\
-\midrule
-Asia & Asia is Earth's largest and most populous continent which
-located primarily in the Eastern and Northern Hemispheres.
-It shares the continental landmass of Eurasia with the continent
-of Europe and the continental landmass of Afro-Eurasia with both
-Europe and Africa. &
-Asia covers an area of 44,579,000 square kilometres, about 30\%
-of Earth's total land area and 8.7\% of the Earth's total surface
-area. Its 4.5 billion people (as of June 2019) constitute roughly
-60\% of the world's population. \\
-\midrule
-Europe & Europe is a continent located entirely in the Northern
-Hemisphere and mostly in the Eastern Hemisphere. It comprises the
-westernmost part of Eurasia and is bordered by the Arctic Ocean to
-the north, the Atlantic Ocean to the west, the Mediterranean Sea to
-the south, and Asia to the east. &
-Europe covers about 10,180,000 km$^2$, or 2\% of the Earth's surface
-(6.8\% of land area), making it the second smallest
-continent. Europe had a total population of about 741 million (about
-11\% of the world population) as of 2018. \\
-\bottomrule
-\end{longtable}
+
+
+
+
+
 
 Figure \ref{fig:subfigures} gives an example of subfigures. Figure \ref{subfig:left} is on the left, and Figure \ref{subfig:right} is on the right.
 
