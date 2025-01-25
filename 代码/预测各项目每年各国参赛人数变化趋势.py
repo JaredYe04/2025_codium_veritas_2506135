@@ -57,10 +57,33 @@ for name, group in data.groupby(['NOC', 'Sport']):
     #预测
     predict = model.predict([[2028], [2032], [2036]])
     
-    #添加到result
+    #添加到result，注意需要包括
     result.append([name[0], name[1], predict[0][0], predict[1][0], predict[2][0]])
     
     
 #导出结果
 result = pd.DataFrame(result, columns=['NOC', 'Sport', '2028', '2032', '2036'])
-result.to_csv('./data/predict_participants.csv', index=False)
+
+#和原先的数据合并，注意原先的数据格式为
+# NOC,Sport,Year,Athletes
+# CHN,Basketball,1936,13
+# CHN,Basketball,1948,10
+# CHN,Basketball,1984,23
+# CHN,Basketball,1988,22
+#因此，合并result和data时，每一条result数据要拆分成3条数据，分别对应2028,2032,2036年，然后和data合并
+
+#拆分result
+result = pd.melt(result, id_vars=['NOC', 'Sport'], value_vars=['2028', '2032', '2036'], var_name='Year', value_name='Athletes')
+
+#合并
+data['Year'] = data['Year'].astype(str)
+result['Year'] = result['Year'].astype(str)
+data = pd.concat([data, result], axis=0)
+
+#排序数据，根据NOC和Sport排序
+data = data.sort_values(['NOC', 'Sport', 'Year'])
+#导出
+
+data.to_csv('./data/predict_participants.csv', index=False)
+
+#result.to_csv('./data/predict_participants.csv', index=False)

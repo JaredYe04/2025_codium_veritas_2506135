@@ -44,5 +44,12 @@ for index, row in data.iterrows():
 
 #导出结果
 result = pd.DataFrame(result, columns=['Sport', '2028', '2032', '2036'])
-result.to_csv('./data/predict_medal_counts.csv', index=False)
+
+#和原先的数据合并
+data = data.merge(result, on='Sport')
+
+#删除Discipline,Code,Sports Governing Body
+data.drop(['Discipline', 'Code', 'Sports Governing Body'], axis=1, inplace=True)
+
+data.to_csv('./data/predict_medal_counts.csv', index=False)
     
