@@ -38,7 +38,6 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(data['Bronze'], data['Silver'], data['Gold'], c=prediction)
 
-
 #每个散点要显示国家名，这里只显示总奖牌数前10的国家
 top10 = data.sort_values(by='Total', ascending=False).head(10)
 
