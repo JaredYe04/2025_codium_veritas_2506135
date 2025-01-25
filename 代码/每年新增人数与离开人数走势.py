@@ -39,33 +39,51 @@ result = pd.DataFrame(result,columns=['Year','New','Leave'])
 col_width=2.5
 #绘制柱形图，增加的人数和离开的人数叠加显示，新增的人在左边，离开的人在右边
 plt.figure(figsize=(10,6))
-plt.bar(result['Year'],result['New'],label='New',width=col_width)
+plt.bar(result['Year'],result['New'],label='New',width=col_width,color='#4c78a8')
 #给出年份
-plt.bar(result['Year'],result['Leave'],label='Leave',bottom=result['New'],width=col_width)
-plt.bar(result['Year']+col_width*0.7,np.abs(result['New']-result['Leave']),label='Variation',color=(result['New']-result['Leave']>0).map({True:'g',False:'r'}),width=1)
+plt.bar(result['Year'],result['Leave'],label='Leave',bottom=result['New'],width=col_width,color='#e45756')
+plt.bar(result['Year']+col_width*0.7,np.abs(result['New']-result['Leave']),label='Variation',color=(result['New']-result['Leave']>0).map({True:'#439894',False:'#d67195'}),width=1)
 
-plt.xlabel('Year')
-plt.ylabel('Number of Athletes')
-plt.title('Number of New and Leave Athletes in Each Year')
+plt.xlabel('Year',fontsize=20)
+plt.ylabel('Number of Athletes',fontsize=20)
+plt.title('Number of New and Leave Athletes in Each Year',fontsize=20)
 
 
 
 #添加灰色bar用于标注
-plt.bar(1916,8000,color='gray',width=col_width)
-plt.text(1916,8000,'Cancelled due to WWI',ha='center',va='bottom')
+plt.bar(1916,8000,color='#bab0ac',width=col_width)
+plt.text(1916,8000,'Cancelled due to WWI',ha='center',va='bottom',fontsize=14)
 #添加灰色bar用于标注
-plt.bar(1940,8000,color='gray',width=col_width)
-plt.bar(1944,8000,color='gray',width=col_width)
+plt.bar(1940,8000,color='#bab0ac',width=col_width)
+plt.bar(1944,8000,color='#bab0ac',width=col_width)
 #(1944,8000)处有注解，说明1944年奥运会取消了
-plt.text(1940,8000,'Cancelled due to WWII',ha='center',va='bottom')
+plt.text(1940,8000,'Cancelled due to WWII',ha='center',va='bottom',fontsize=14)
 
 #2020年因为疫情推迟到2021年，所以2020年的数据不准确
-plt.text(2020,16000,'Affected by the epidemic',ha='center',va='bottom')
+plt.text(2020,16000,'Affected by the epidemic',ha='center',va='bottom',fontsize=14)
 
+#坐标的值，字体调大
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
 #修改背景样式
 plt.style.use('ggplot')
 #美化图表
 
+#字体改成Times New Roman
+plt.rcParams['font.sans-serif'] = ['Times New Roman']
+plt.rcParams['font.serif'] = ['Times New Roman']
+
+
+#坐标系内的背景色变成淡灰色，而不是外部的图表背景色
+plt.gca().set_facecolor('#f0f0f0')
+
+
+#网格线加粗，黑色，置于底层
+plt.grid(linestyle='--', linewidth=0.5, color='black',zorder=-111)
+
+
+#字体调大
+plt.rcParams.update({'font.size': 16})
 
 plt.legend()
 plt.show()
