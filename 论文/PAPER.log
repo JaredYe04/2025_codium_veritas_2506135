@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  25 JAN 2025 21:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  25 JAN 2025 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -877,26 +877,20 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-
-! LaTeX Error: Unknown graphics extension: .svg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ... Medals of Different Sports in China.svg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<./img/water.png, id=148, 390.45876pt x 281.05pt>
+<./img/Level.png, id=148, 669.2503pt x 467.12016pt>
+File: ./img/Level.png Graphic file (type png)
+<use ./img/Level.png>
+Package pdftex.def Info: ./img/Level.png  used on input line 106.
+(pdftex.def)             Requested size: 472.03123pt x 329.47656pt.
+<./img/water.png, id=149, 390.45876pt x 281.05pt>
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
 Package pdftex.def Info: ./img/water.png  used on input line 117.
 (pdftex.def)             Requested size: 377.62642pt x 271.82478pt.
+
 [3
 
-] [4 <./img/water.png>]
+] [4 <./img/Level.png (PNG copy)> <./img/water.png>] [5]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -914,18 +908,13 @@ Overfull \hbox (49.23586pt too wide) detected at line 204
  [] 
  []
 
-[5]
-Overfull \hbox (49.23586pt too wide) detected at line 204
- [] 
- []
-
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
 Package pdftex.def Info: ./img/water.png  used on input line 213.
 (pdftex.def)             Requested size: 377.62642pt x 271.82478pt.
-[6]
+[6] [7]
 
-LaTeX Warning: Reference `tb:longtable' on page 7 undefined on input line 219.
+LaTeX Warning: Reference `tb:longtable' on page 8 undefined on input line 219.
 
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
@@ -935,7 +924,7 @@ File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
 Package pdftex.def Info: ./img/water.png  used on input line 242.
 (pdftex.def)             Requested size: 188.8096pt x 135.90167pt.
-[7
+[8
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 2
@@ -943,7 +932,7 @@ LaTeX Font Info:    Trying to load font information for T1+txtt on input line 2
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [8
+) [9
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
@@ -977,7 +966,7 @@ ty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) 
 AED: lastpage setting LastPage
-[9
+[10
 
 ] (PAPER.aux)
  ***********
@@ -995,34 +984,30 @@ Package rerunfilecheck Info: File `PAPER.out' has not changed.
 (rerunfilecheck)             Checksum: 8EA1CA80AF27C97C9EF3D41255A049ED;3160.
  ) 
 Here is how much of TeX's memory you used:
- 18571 strings out of 474486
- 313954 string characters out of 5741395
- 1955542 words of memory out of 5000000
- 40504 multiletter control sequences out of 15000+600000
+ 18565 strings out of 474486
+ 313185 string characters out of 5741395
+ 1963542 words of memory out of 5000000
+ 40498 multiletter control sequences out of 15000+600000
  624119 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,15n,110p,570b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{page.10} has been referenced but does not exist, re
-placed by a fixed one
-
-<C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmex10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/于灏文1/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/于灏文1/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/于�
-��文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/U
-sers/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.
-pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/u
-syr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symb
-ol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
-times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1
-/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (9 pages, 167568 bytes).
+ 85i,15n,102p,570b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmex10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/于灏文1/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/于灏文1/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/�
+�灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:
+/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xt
+t.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol
+/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/sy
+mbol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/ur
+w/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/font
+s/type1/urw/times/utmri8a.pfb>
+Output written on PAPER.pdf (10 pages, 291134 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
+ 305 PDF objects out of 1000 (max. 8388607)
  69 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 
