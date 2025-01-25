@@ -9,18 +9,18 @@
 \contentsline {subsection}{\numberline {4.2}Data Mining}{4}{subsection.0.4.2}%
 \contentsline {section}{\numberline {5}Task1:}{4}{section.0.5}%
 \contentsline {subsection}{\numberline {5.1}Details about Model 1}{4}{subsection.0.5.1}%
-\contentsline {section}{\numberline {6}Task2:}{4}{section.0.6}%
-\contentsline {subsection}{\numberline {6.1}Conclusion of Model 2}{4}{subsection.0.6.1}%
+\contentsline {section}{\numberline {6}Task2:}{5}{section.0.6}%
+\contentsline {subsection}{\numberline {6.1}Conclusion of Model 2}{5}{subsection.0.6.1}%
 \contentsline {subsection}{\numberline {6.2}Commetary on Model 2}{6}{subsection.0.6.2}%
-\contentsline {section}{\numberline {7}Task3}{7}{section.0.7}%
-\contentsline {section}{\numberline {8}Task4}{7}{section.0.8}%
-\contentsline {section}{\numberline {9}Sensitivity Analysis}{7}{section.0.9}%
-\contentsline {section}{\numberline {10}Model Evaluation}{7}{section.0.10}%
-\contentsline {subsection}{\numberline {10.1}Strengths}{7}{subsection.0.10.1}%
-\contentsline {subsection}{\numberline {10.2}Weaknesses}{7}{subsection.0.10.2}%
-\contentsline {section}{\numberline {11}Conclusion}{7}{section.0.11}%
-\contentsline {section}{Memorandum}{8}{section.0.12}%
-\contentsline {section}{References}{8}{section.1.12}%
-\contentsline {section}{Appendix A: Further on \LaTeX }{9}{section*.4}%
-\contentsline {section}{Appendix B: Program Codes}{9}{section*.5}%
+\contentsline {section}{\numberline {7}Task3}{6}{section.0.7}%
+\contentsline {section}{\numberline {8}Task4}{6}{section.0.8}%
+\contentsline {section}{\numberline {9}Sensitivity Analysis}{6}{section.0.9}%
+\contentsline {section}{\numberline {10}Model Evaluation}{6}{section.0.10}%
+\contentsline {subsection}{\numberline {10.1}Strengths}{6}{subsection.0.10.1}%
+\contentsline {subsection}{\numberline {10.2}Weaknesses}{6}{subsection.0.10.2}%
+\contentsline {section}{\numberline {11}Conclusion}{6}{section.0.11}%
+\contentsline {section}{Memorandum}{7}{section.0.12}%
+\contentsline {section}{References}{7}{section.1.12}%
+\contentsline {section}{Appendix A: Further on \LaTeX }{8}{section*.4}%
+\contentsline {section}{Appendix B: Program Codes}{8}{section*.5}%
 \contentsfinish 

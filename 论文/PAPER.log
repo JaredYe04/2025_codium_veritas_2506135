@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  24 JAN 2025 20:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  25 JAN 2025 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -606,38 +606,136 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 )
-\c@keywords=\count315
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 20
-.
- (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-)
+(C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/tabularray\tabular
+ray.sty
+(C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backen
 d-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count316
+\l__color_backend_stack_int=\count315
 \l__pdf_internal_box=\box66
-) (PAPER.aux)
+))
+Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
+\l__tblr_a_int=\count316
+\l__tblr_c_int=\count317
+\l__tblr_r_int=\count318
+\l__tblr_d_dim=\dimen256
+\l__tblr_h_dim=\dimen257
+\l__tblr_o_dim=\dimen258
+\l__tblr_p_dim=\dimen259
+\l__tblr_q_dim=\dimen260
+\l__tblr_r_dim=\dimen261
+\l__tblr_s_dim=\dimen262
+\l__tblr_t_dim=\dimen263
+\l__tblr_v_dim=\dimen264
+\l__tblr_w_dim=\dimen265
+\l__tblr_a_box=\box67
+\l__tblr_b_box=\box68
+\l__tblr_c_box=\box69
+\l__tblr_d_box=\box70
+\g__tblr_table_count_int=\count319
+\c@rownum=\count320
+\c@colnum=\count321
+\c@rowcount=\count322
+\c@colcount=\count323
+\abovesep=\dimen266
+\belowsep=\dimen267
+\leftsep=\dimen268
+\rightsep=\dimen269
+\g_tblr_level_int=\count324
+\g__tblr_data_row_key_count_int=\count325
+\g__tblr_data_column_key_count_int=\count326
+\g__tblr_data_cell_key_count_int=\count327
+\g__tblr_array_int=\count328
+\l__tblr_key_count_int=\count329
+\l__tblr_key_quotient_int=\count330
+\l__tblr_key_quotient_two_int=\count331
+\l__tblr_key_remainder_int=\count332
+\g__tblr_data_str_value_count_int=\count333
+\rulewidth=\dimen270
+\l__tblr_strut_dp_dim=\dimen271
+\l__tblr_strut_ht_dim=\dimen272
+\g__tblr_cell_wd_dim=\dimen273
+\g__tblr_cell_ht_dim=\dimen274
+\g__tblr_cell_head_dim=\dimen275
+\g__tblr_cell_foot_dim=\dimen276
+\l__column_target_dim=\dimen277
+\l__tblr_caption_box=\box71
+\l__tblr_caption_left_box=\box72
+\l__tblr_row_head_box=\box73
+\l__tblr_row_foot_box=\box74
+\l__tblr_row_head_foot_dim=\dimen278
+\tablewidth=\dimen279
+\l__tblr_table_firsthead_box=\box75
+\l__tblr_table_middlehead_box=\box76
+\l__tblr_table_lasthead_box=\box77
+\l__tblr_table_firstfoot_box=\box78
+\l__tblr_table_middlefoot_box=\box79
+\l__tblr_table_lastfoot_box=\box80
+\l__tblr_remain_height_dim=\dimen280
+\l__tblr_long_from_int=\count334
+\l__tblr_long_to_int=\count335
+\l__tblr_curr_i_int=\count336
+\l__tblr_prev_i_int=\count337
+\l__tblr_table_page_int=\count338
+\l__tblr_table_head_box=\box81
+\l__tblr_table_foot_box=\box82
+\l__tblr_table_head_foot_dim=\dimen281
+\l__tblr_table_head_body_foot_dim=\dimen282
+\l__tblr_table_box=\box83
+\l__tblr_table_hlines_box=\box84
+\l__tblr_hline_box=\box85
+\l__tblr_row_box=\box86
+\l__tblr_col_o_wd_dim=\dimen283
+\l__tblr_col_b_wd_dim=\dimen284
+\l__tblr_hline_leftskip_dim=\dimen285
+\l__tblr_hline_rightskip_dim=\dimen286
+\l__tblr_row_ht_dim=\dimen287
+\l__tblr_row_dp_dim=\dimen288
+\l__tblr_row_abovesep_dim=\dimen289
+\l__tblr_row_belowsep_dim=\dimen290
+\l__tblr_row_vlines_box=\box87
+\l__tblr_vline_box=\box88
+\l__tblr_cell_box=\box89
+\l__row_upper_dim=\dimen291
+\l__row_lower_dim=\dimen292
+\l__row_vpace_dim=\dimen293
+\l__tblr_vline_aboveskip_dim=\dimen294
+\l__tblr_vline_belowskip_dim=\dimen295
+\l__tblr_cell_wd_dim=\dimen296
+\l__tblr_cell_ht_dim=\dimen297
+\l__tblr_diag_box=\box90
+)
+\c@keywords=\count339
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 21
+.
+
+(C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(PAPER.aux)
 \openout1 = `PAPER.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -687,16 +785,16 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-p
 df.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count317
-\scratchdimen=\dimen256
-\scratchbox=\box67
-\nofMPsegments=\count318
-\nofMParguments=\count319
+\scratchcounter=\count340
+\scratchdimen=\dimen298
+\scratchbox=\box91
+\nofMPsegments=\count341
+\nofMParguments=\count342
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count320
-\MPscratchDim=\dimen257
-\MPnumerator=\count321
-\makeMPintoPDFobject=\count322
+\MPscratchCnt=\count343
+\MPscratchDim=\dimen299
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
 \everyMPtoPDFconversion=\toks36
 )
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
@@ -710,47 +808,47 @@ Package color Info: Driver file: pdftex.def on input line 149.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor
 .ltx))
-Package hyperref Info: Link coloring ON on input line 20.
+Package hyperref Info: Link coloring ON on input line 21.
  (PAPER.out) (PAPER.out)
 \@outlinefile=\write4
 \openout4 = `PAPER.out'.
 
-\c@lstlisting=\count323
+\c@lstlisting=\count346
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 32.
+ 33.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 32.
+ 33.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 32.
+ 33.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 32.
+ 33.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
-2.
+3.
  (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
  [1
 
 {C:/Users/于灏文1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users
@@ -761,7 +859,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
  [2]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
-6.
+7.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -769,58 +867,69 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [3
 
 ]
-<./img/water.png, id=163, 390.45876pt x 281.05pt>
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+
+
+Package tabularray Warning: Table width is too small, need 49.23586pt more!
+
+> Step: build the whole table.
+
+Overfull \hbox (49.23586pt too wide) detected at line 151
+ [] 
+ []
+
+[4]
+Overfull \hbox (49.23586pt too wide) detected at line 151
+ [] 
+ []
+
+<./img/water.png, id=173, 390.45876pt x 281.05pt>
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 137.
+Package pdftex.def Info: ./img/water.png  used on input line 160.
 (pdftex.def)             Requested size: 377.62642pt x 271.82478pt.
- [4] [5 <./img/water.png>]
-Underfull \hbox (badness 2150) in paragraph at lines 162--166
-\T1/ptm/m/n/12 con-ti-nen-tal land-mass of Eura-sia
- []
+[5 <./img/water.png>]
 
-
-Underfull \hbox (badness 4353) in paragraph at lines 162--166
-\T1/ptm/m/n/12 Eurasia with both Eu-rope and
- []
-
-
-Underfull \hbox (badness 1303) in paragraph at lines 177--181
-[]|\T1/ptm/m/n/12 Europe cov-ers about 10,180,000
- []
+LaTeX Warning: Reference `tb:longtable' on page 6 undefined on input line 166.
 
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 192.
+Package pdftex.def Info: ./img/water.png  used on input line 185.
 (pdftex.def)             Requested size: 188.8096pt x 135.90167pt.
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 196.
+Package pdftex.def Info: ./img/water.png  used on input line 189.
 (pdftex.def)             Requested size: 188.8096pt x 135.90167pt.
 [6
 
-] [7]
+]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 2
-48.
+41.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [8
+) [7
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 256.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 256.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 249.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 273.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 266.
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10.95> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 274.
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 267.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
@@ -839,24 +948,28 @@ ty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) 
 AED: lastpage setting LastPage
-[9
+[8
 
 ] (PAPER.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `PAPER.out' has not changed.
 (rerunfilecheck)             Checksum: F7DD41306483F37DBB7980A6674FADD0;3160.
  ) 
 Here is how much of TeX's memory you used:
- 16477 strings out of 474486
- 257860 string characters out of 5741395
- 1953542 words of memory out of 5000000
- 38423 multiletter control sequences out of 15000+600000
- 620576 words of font info for 130 fonts, out of 8000000 for 9000
+ 18505 strings out of 474486
+ 312085 string characters out of 5741395
+ 1956542 words of memory out of 5000000
+ 40446 multiletter control sequences out of 15000+600000
+ 622255 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,15n,81p,433b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,15n,110p,433b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmex10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmmi10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTe
@@ -871,9 +984,9 @@ mbol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (9 pages, 161361 bytes).
+Output written on PAPER.pdf (8 pages, 161647 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
