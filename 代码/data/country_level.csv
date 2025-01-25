@@ -1,8 +1,8 @@
 NOC,Gold,Silver,Bronze,Total,level
-United States,1105,879,780,2764,2
-Great Britain,299,339,343,981,1
-France,240,278,299,817,1
-Soviet Union,395,319,296,1010,1
+United States,1105,879,780,2764,1
+Great Britain,299,339,343,981,2
+France,240,278,299,817,2
+Soviet Union,395,319,296,1010,2
 Germany,220,225,259,704,3
 Italy,230,205,228,663,3
 Australia,182,192,226,600,3
@@ -31,135 +31,135 @@ New Zealand,63,40,54,157,4
 Norway,65,53,53,171,4
 Greece,36,46,47,129,4
 Czechoslovakia,49,50,47,146,4
-Austria,23,36,46,105,0
-Belarus,13,30,42,85,0
+Austria,23,36,46,105,5
+Belarus,13,30,42,85,5
 Kenya,39,44,41,124,4
-Turkey,41,29,41,111,0
-Kazakhstan,15,25,38,78,0
-Mexico,13,27,37,77,0
-United Team of Germany,28,54,36,118,0
-Iran,27,29,32,88,0
-Azerbaijan,9,16,31,56,0
-Argentina,22,27,31,80,0
-South Africa,28,36,31,95,0
-Unified Team,45,38,29,112,0
-Jamaica,27,39,28,94,0
-Yugoslavia,26,29,28,83,0
-Czech Republic,22,22,28,72,0
-North Korea,16,18,26,60,0
-ROC,20,28,23,71,0
-Ethiopia,24,15,23,62,0
-Uzbekistan,18,8,23,49,0
-Chinese Taipei,9,10,22,41,0
-India,10,10,21,41,0
-Egypt,9,12,20,41,0
-Thailand,11,11,19,41,0
-Georgia,13,15,19,47,0
-Estonia,10,9,17,36,0
-Ireland,15,10,17,42,0
-Mongolia,2,12,17,31,0
-Colombia,5,16,17,38,0
-Croatia,16,15,17,48,0
-Indonesia,10,14,16,40,0
-Portugal,6,11,15,32,0
-Lithuania,6,9,15,30,0
-Morocco,8,5,13,26,0
-Nigeria,3,11,13,27,0
-Serbia,9,8,12,29,0
-Slovenia,10,10,11,31,0
-Trinidad and Tobago,3,5,11,19,0
-Philippines,3,5,10,18,0
-Israel,4,6,10,20,0
-Slovakia,10,14,9,33,0
-Venezuela,3,7,9,19,0
-Armenia,2,11,9,22,0
-Algeria,7,4,9,20,0
-Mixed team,11,6,8,25,0
-Puerto Rico,2,2,8,12,0
-Kyrgyzstan,0,5,8,13,0
-Tunisia,6,4,8,18,0
-Malaysia,0,8,7,15,0
-Moldova,0,3,7,10,0
-Latvia,4,11,6,21,0
-Hong Kong,4,3,6,13,0
-Dominican Republic,4,5,6,15,0
-Bahamas,8,2,6,16,0
-Uruguay,2,2,6,10,0
-Australasia,3,4,5,12,0
-Qatar,2,2,5,9,0
-Tajikistan,1,1,5,7,0
-Pakistan,4,3,4,11,0
-Ghana,0,1,4,5,0
-Chile,3,8,4,15,0
-Singapore,1,2,3,6,0
-FR Yugoslavia,2,2,3,7,0
-Kuwait,0,0,3,3,0
-Grenada,1,1,3,5,0
-Ivory Coast,1,1,3,5,0
-Bohemia,0,1,3,4,0
-Uganda,5,5,3,13,0
-Russian Empire,1,4,3,8,0
-Afghanistan,0,0,2,2,0
-Albania,0,0,2,2,0
-British West Indies,0,0,2,2,0
-San Marino,0,1,2,3,0
-Independent Olympic Participants,0,1,2,3,0
-Ecuador,4,4,2,10,0
-Saudi Arabia,0,2,2,4,0
-Cameroon,3,1,2,6,0
-Costa Rica,1,1,2,4,0
-Panama,1,1,2,4,0
-Zambia,0,1,2,3,0
-Lebanon,0,2,2,4,0
-Iceland,0,2,2,4,0
-Syria,1,1,2,4,0
-Peru,1,3,1,5,0
-Zimbabwe,3,4,1,8,0
-Refugee Olympic Team,0,0,1,1,0
-Vietnam,1,3,1,5,0
-Bahrain,4,3,1,8,0
-Kosovo,3,1,1,5,0
-Haiti,0,1,1,2,0
-Niger,0,1,1,2,0
-Fiji,2,1,1,4,0
-Guyana,0,0,1,1,0
-Suriname,1,0,1,2,0
-United Arab Emirates,1,0,1,2,0
-Bermuda,1,0,1,2,0
-Independent Olympic Athletes,1,0,1,2,0
-Jordan,1,2,1,4,0
-Guatemala,1,1,1,3,0
-Cabo Verde,0,0,1,1,0
-Botswana,1,2,1,4,0
-Mozambique,1,0,1,2,0
-Mauritius,0,0,1,1,0
-Taiwan,0,0,1,1,0
-Macedonia,0,0,1,1,0
-Togo,0,0,1,1,0
-Eritrea,0,0,1,1,0
-Iraq,0,0,1,1,0
-Burkina Faso,0,0,1,1,0
-Barbados,0,0,1,1,0
-Djibouti,0,0,1,1,0
-Namibia,0,5,0,5,0
-Cyprus,0,2,0,2,0
-Serbia and Montenegro,0,2,0,2,0
-Burundi,1,1,0,2,0
-Tanzania,0,2,0,2,0
-Luxembourg,2,1,0,3,0
-Saint Lucia,1,1,0,2,0
-Ceylon,0,1,0,1,0
-Formosa,0,1,0,1,0
-Gabon,0,1,0,1,0
-Virgin Islands,0,1,0,1,0
-Tonga,0,1,0,1,0
-Dominica,1,0,0,1,0
-Samoa,0,1,0,1,0
-Turkmenistan,0,1,0,1,0
-Sudan,0,1,0,1,0
-Sri Lanka,0,1,0,1,0
-Paraguay,0,1,0,1,0
-North Macedonia,0,1,0,1,0
-Senegal,0,1,0,1,0
-Montenegro,0,1,0,1,0
-Netherlands Antilles,0,1,0,1,0
+Turkey,41,29,41,111,5
+Kazakhstan,15,25,38,78,5
+Mexico,13,27,37,77,5
+United Team of Germany,28,54,36,118,5
+Iran,27,29,32,88,5
+Azerbaijan,9,16,31,56,5
+Argentina,22,27,31,80,5
+South Africa,28,36,31,95,5
+Unified Team,45,38,29,112,5
+Jamaica,27,39,28,94,5
+Yugoslavia,26,29,28,83,5
+Czech Republic,22,22,28,72,5
+North Korea,16,18,26,60,5
+ROC,20,28,23,71,5
+Ethiopia,24,15,23,62,5
+Uzbekistan,18,8,23,49,5
+Chinese Taipei,9,10,22,41,5
+India,10,10,21,41,5
+Egypt,9,12,20,41,5
+Thailand,11,11,19,41,5
+Georgia,13,15,19,47,5
+Estonia,10,9,17,36,5
+Ireland,15,10,17,42,5
+Mongolia,2,12,17,31,5
+Colombia,5,16,17,38,5
+Croatia,16,15,17,48,5
+Indonesia,10,14,16,40,5
+Portugal,6,11,15,32,5
+Lithuania,6,9,15,30,5
+Morocco,8,5,13,26,5
+Nigeria,3,11,13,27,5
+Serbia,9,8,12,29,5
+Slovenia,10,10,11,31,5
+Trinidad and Tobago,3,5,11,19,5
+Philippines,3,5,10,18,5
+Israel,4,6,10,20,5
+Slovakia,10,14,9,33,5
+Venezuela,3,7,9,19,5
+Armenia,2,11,9,22,5
+Algeria,7,4,9,20,5
+Mixed team,11,6,8,25,5
+Puerto Rico,2,2,8,12,5
+Kyrgyzstan,0,5,8,13,5
+Tunisia,6,4,8,18,5
+Malaysia,0,8,7,15,5
+Moldova,0,3,7,10,5
+Latvia,4,11,6,21,5
+Hong Kong,4,3,6,13,5
+Dominican Republic,4,5,6,15,5
+Bahamas,8,2,6,16,5
+Uruguay,2,2,6,10,5
+Australasia,3,4,5,12,5
+Qatar,2,2,5,9,5
+Tajikistan,1,1,5,7,5
+Pakistan,4,3,4,11,5
+Ghana,0,1,4,5,5
+Chile,3,8,4,15,5
+Singapore,1,2,3,6,5
+FR Yugoslavia,2,2,3,7,5
+Kuwait,0,0,3,3,5
+Grenada,1,1,3,5,5
+Ivory Coast,1,1,3,5,5
+Bohemia,0,1,3,4,5
+Uganda,5,5,3,13,5
+Russian Empire,1,4,3,8,5
+Afghanistan,0,0,2,2,5
+Albania,0,0,2,2,5
+British West Indies,0,0,2,2,5
+San Marino,0,1,2,3,5
+Independent Olympic Participants,0,1,2,3,5
+Ecuador,4,4,2,10,5
+Saudi Arabia,0,2,2,4,5
+Cameroon,3,1,2,6,5
+Costa Rica,1,1,2,4,5
+Panama,1,1,2,4,5
+Zambia,0,1,2,3,5
+Lebanon,0,2,2,4,5
+Iceland,0,2,2,4,5
+Syria,1,1,2,4,5
+Peru,1,3,1,5,5
+Zimbabwe,3,4,1,8,5
+Refugee Olympic Team,0,0,1,1,5
+Vietnam,1,3,1,5,5
+Bahrain,4,3,1,8,5
+Kosovo,3,1,1,5,5
+Haiti,0,1,1,2,5
+Niger,0,1,1,2,5
+Fiji,2,1,1,4,5
+Guyana,0,0,1,1,5
+Suriname,1,0,1,2,5
+United Arab Emirates,1,0,1,2,5
+Bermuda,1,0,1,2,5
+Independent Olympic Athletes,1,0,1,2,5
+Jordan,1,2,1,4,5
+Guatemala,1,1,1,3,5
+Cabo Verde,0,0,1,1,5
+Botswana,1,2,1,4,5
+Mozambique,1,0,1,2,5
+Mauritius,0,0,1,1,5
+Taiwan,0,0,1,1,5
+Macedonia,0,0,1,1,5
+Togo,0,0,1,1,5
+Eritrea,0,0,1,1,5
+Iraq,0,0,1,1,5
+Burkina Faso,0,0,1,1,5
+Barbados,0,0,1,1,5
+Djibouti,0,0,1,1,5
+Namibia,0,5,0,5,5
+Cyprus,0,2,0,2,5
+Serbia and Montenegro,0,2,0,2,5
+Burundi,1,1,0,2,5
+Tanzania,0,2,0,2,5
+Luxembourg,2,1,0,3,5
+Saint Lucia,1,1,0,2,5
+Ceylon,0,1,0,1,5
+Formosa,0,1,0,1,5
+Gabon,0,1,0,1,5
+Virgin Islands,0,1,0,1,5
+Tonga,0,1,0,1,5
+Dominica,1,0,0,1,5
+Samoa,0,1,0,1,5
+Turkmenistan,0,1,0,1,5
+Sudan,0,1,0,1,5
+Sri Lanka,0,1,0,1,5
+Paraguay,0,1,0,1,5
+North Macedonia,0,1,0,1,5
+Senegal,0,1,0,1,5
+Montenegro,0,1,0,1,5
+Netherlands Antilles,0,1,0,1,5

@@ -10,6 +10,9 @@ data = pd.read_csv('./data/summerOly_programs.csv')
 #空值填0
 data.fillna(0, inplace=True)
 
+#首先把一个Sport里面所有的子类都合并到一起
+data = data.groupby('Sport').sum().reset_index()
+print (data)
 
 #里面记录了每个Sport项目每年的奖牌数，每一行都有从1896年到2024年的奖牌数
 #我们对每一行都进行线性回归拟合，预测2028,2032,2036年预期每个项目的奖牌数
