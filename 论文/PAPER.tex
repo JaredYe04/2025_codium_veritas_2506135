@@ -10,7 +10,7 @@
 %\usepackage{mathpazo}  % 这是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
 \usepackage{amsmath}
 \usepackage{tabularray}
-
+\usepackage{svg}
 %拉取的一些宏包
 \usepackage{graphicx} 
 %\usepackage{pdfpages}
@@ -280,16 +280,13 @@ $$\alpha$$
 \end{longtblr}
 
 
-
-
-
-
+\includesvg{filename}
 
 %奖牌榜预测图
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=12cm]{img/Medal count prediction.svg}
+	\includesvg[width=12cm]{img/predict.svg}
 	\caption{Medal count prediction}
 	\label{fig:aa}
 \end{figure}
