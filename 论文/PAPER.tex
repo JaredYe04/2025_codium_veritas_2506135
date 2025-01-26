@@ -10,7 +10,6 @@
 %\usepackage{mathpazo}  % 这是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
 \usepackage{amsmath}
 \usepackage{tabularray}
-\usepackage{svg}
 %拉取的一些宏包
 \usepackage{graphicx} 
 %\usepackage{pdfpages}
@@ -280,13 +279,12 @@ $$\alpha$$
 \end{longtblr}
 
 
-\includesvg{filename}
 
 %奖牌榜预测图
 
 \begin{figure}[htbp]
 	\centering
-	\includesvg[width=12cm]{img/predict.svg}
+	\includegraphics[width=12cm]{img/Predict.png}
 	\caption{Medal count prediction}
 	\label{fig:aa}
 \end{figure}
@@ -354,6 +352,22 @@ The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in 
 %引用图像示例Figure \ref{fig:subfigures}
 %Figure \ref{fig:subfigures} gives an example of subfigures. Figure \ref{subfig:left} is on the left, and Figure \ref{subfig:right} is on the right.
 
+
+
+% \usepackage{longtable}
+11180235239
+
+\begin{longtable}{l|l|l|l|l} 
+	\hline
+	\multicolumn{1}{c|}{\textbf{Model}} & \multicolumn{1}{c|}{\textbf{MSE}} & \multicolumn{1}{c|}{\textbf{RMSE}} & \multicolumn{1}{c|}{\textbf{MAE}} & \multicolumn{1}{c}{\(\mathbf{R}^2\)}  \endfirsthead 
+	\hline
+	Gold Prediction                     & 0.0235                            & 0.180                              & 0.030                             & 0.690                              \\ 
+	\hline
+	Silver Prediction                   & 0.0239                            & 0.185                              & 0.033                             & 0.625                              \\ 
+	\hline
+	Bronze Prediction                   & 0.0231                            & 0.187                              & 0.034                             & 0.606                              \\
+	\hline
+\end{longtable}
 
 
 \section{Task3}

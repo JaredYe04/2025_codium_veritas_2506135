@@ -12,9 +12,9 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Distribution of Countries' Strength Sports}{6}{subsubsection.0.3.2.2}%
 \contentsline {section}{\numberline {4}Task1:Medal Prediction Model Based on LightGBM}{6}{section.0.4}%
 \contentsline {subsection}{\numberline {4.1}Medal Standings}{6}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {4.2}Countries that Win Their First Medal}{8}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {4.3}Events and Medal Counts by Countries}{8}{subsection.0.4.3}%
-\contentsline {section}{\numberline {5}Task2:}{8}{section.0.5}%
+\contentsline {subsection}{\numberline {4.2}Countries that Win Their First Medal}{9}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {4.3}Events and Medal Counts by Countries}{9}{subsection.0.4.3}%
+\contentsline {section}{\numberline {5}Task2:}{9}{section.0.5}%
 \contentsline {section}{\numberline {6}Task3}{11}{section.0.6}%
 \contentsline {section}{\numberline {7}Task4}{11}{section.0.7}%
 \contentsline {section}{\numberline {8}Sensitivity Analysis}{11}{section.0.8}%
