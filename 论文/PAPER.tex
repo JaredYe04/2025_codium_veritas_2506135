@@ -115,11 +115,11 @@ We do such things ...
     \item We do ...
     \item We do ...
 \end{enumerate}
+\section{Question Preparation}
+\subsection{Assumptions}
 
-\section{Assumptions}
 
-
-\section{Notations}
+\subsection{Notations}
 
 The primary notations used in this paper are listed in Table \ref{tb:notation}.
 
@@ -196,11 +196,11 @@ $$G_{i} \cap G_{j}=\emptyset, \bigcup_{i=1}^{5} G_{i}=X$$
 % 连续插入总宽度不超过 \textwidth 的多个 \includegraphics 命令即可
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[b]{.5\textwidth}
+	\begin{subfigure}[b]{.55\textwidth}
 		\includegraphics[width=\textwidth]{img/Times.png}
 		\caption{Distribution of Serve Times}\label{subfig:left}
 	\end{subfigure}
-	\begin{subfigure}[b]{.5\textwidth}
+	\begin{subfigure}[b]{.4\textwidth}
 		\includegraphics[width=\textwidth]{img/Years.png}
 		\caption{Distribution of Serve Years}\label{subfig:right}
 	\end{subfigure}
@@ -210,13 +210,19 @@ $$G_{i} \cap G_{j}=\emptyset, \bigcup_{i=1}^{5} G_{i}=X$$
 \subsubsection{Distribution of Countries' Strength Sports}
 
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{img/Percentage.jpg}
+	\caption{Percentage of Medals of Different Sports in China}
+	\label{fig:aa}
+\end{figure}
 
 
 
 
 
 
-\section{Task1:}
+\section{Task1:Medal Prediction Model Based on LightGBM}
 \subsection{Medal Standings}
 The detail can be described by equation \eqref{eq1}:\autoref{eq1}:
 %带标签的方程
@@ -276,11 +282,39 @@ $$\alpha$$
 
 
 
+
+
+
+%奖牌榜预测图
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{img/Medal count prediction.svg}
+	\caption{Medal count prediction}
+	\label{fig:aa}
+\end{figure}
+
 \subsection{Countries that Win Their First Medal}
+
+%首奖可能性图
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=16cm]{img/First.png}
+	\caption{The Probability of First Medal in 2028}
+	\label{fig:aa}
+\end{figure}
+
+
 
 
 \subsection{Events and Medal Counts by Countries}
 
+
+
+
+
+%三个国家擅长项目的图
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{.3\textwidth}
@@ -303,7 +337,7 @@ $$\alpha$$
 
 
 \section{Task2:}
-\subsection{Conclusion of Model 2}
+
 The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in seconds, and $c$ refers to the concentration of water in the boiler.
 
 \begin{figure}[htbp]
@@ -313,35 +347,17 @@ The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in 
 \end{figure}
 
 \clearpage
-\subsection{Commetary on Model 2}
-The instance of long and wide tables are shown in Table \ref{tb:longtable}.
-
-% 长表格示例，更多用法请参考 longtable 宏包文档
-% 以下环境及对应参数可实现表格内的自动换行与表格的自动断页
-% 您也可以选择自行载入 tabularx 宏包，并通过 X 参数指定对应列自动换行
 
 
 
 
 
 
-Figure \ref{fig:subfigures} gives an example of subfigures. Figure \ref{subfig:left} is on the left, and Figure \ref{subfig:right} is on the right.
 
-% 子图（多图并列）示例，更多用法请参考 subfigure 宏包文档
-% 如果您只希望几张图并列，不需要额外的 caption，那么在 figure 环境中
-% 连续插入总宽度不超过 \textwidth 的多个 \includegraphics 命令即可
-\begin{figure}[htbp]
-\centering
-\begin{subfigure}[b]{.4\textwidth}
-\includegraphics[width=\textwidth]{water.png}
-\caption{Image on the left}\label{subfig:left}
-\end{subfigure}
-\begin{subfigure}[b]{.4\textwidth}
-\includegraphics[width=\textwidth]{water.png}
-\caption{Image on the right}\label{subfig:right}
-\end{subfigure}
-\caption{Two images}\label{fig:subfigures}
-\end{figure}
+%引用图像示例Figure \ref{fig:subfigures}
+%Figure \ref{fig:subfigures} gives an example of subfigures. Figure \ref{subfig:left} is on the left, and Figure \ref{subfig:right} is on the right.
+
+
 
 \section{Task3}
 
