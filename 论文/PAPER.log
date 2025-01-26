@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  25 JAN 2025 23:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -877,12 +877,12 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [3
 
 ]
-<img/Level1.png, id=155, 631.9861pt x 449.80547pt>
+<img/Level1.png, id=180, 631.9861pt x 449.80547pt>
 File: img/Level1.png Graphic file (type png)
 <use img/Level1.png>
 Package pdftex.def Info: img/Level1.png  used on input line 163.
 (pdftex.def)             Requested size: 341.43306pt x 243.01486pt.
-<img/Level2.png, id=156, 1606.0pt x 855.195pt>
+<img/Level2.png, id=181, 1606.0pt x 855.195pt>
 File: img/Level2.png Graphic file (type png)
 <use img/Level2.png>
 Package pdftex.def Info: img/Level2.png  used on input line 170.
@@ -901,56 +901,56 @@ Package tabularray Warning: Table width is too small, need 49.23586pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (49.23586pt too wide) detected at line 238
+Overfull \hbox (49.23586pt too wide) detected at line 236
  [] 
  []
 
 [6]
-Overfull \hbox (49.23586pt too wide) detected at line 238
+Overfull \hbox (49.23586pt too wide) detected at line 236
  [] 
  []
 
-<./img/water.png, id=188, 390.45876pt x 281.05pt>
+<./img/water.png, id=213, 390.45876pt x 281.05pt>
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 247.
+Package pdftex.def Info: ./img/water.png  used on input line 254.
 (pdftex.def)             Requested size: 377.62642pt x 271.82478pt.
-[7 <./img/water.png>]
+[7] [8 <./img/water.png>]
 
-LaTeX Warning: Reference `tb:longtable' on page 8 undefined on input line 253.
+LaTeX Warning: Reference `tb:longtable' on page 9 undefined on input line 260.
 
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 272.
+Package pdftex.def Info: ./img/water.png  used on input line 279.
 (pdftex.def)             Requested size: 188.8096pt x 135.90167pt.
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 276.
+Package pdftex.def Info: ./img/water.png  used on input line 283.
 (pdftex.def)             Requested size: 188.8096pt x 135.90167pt.
-[8
+[9
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 3
-28.
+35.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [9
+) [10
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 336.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 343.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 336.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 343.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 353.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 360.
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10.95> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 354.
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 361.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
@@ -969,7 +969,7 @@ ty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) 
 AED: lastpage setting LastPage
-[10
+[11
 
 ] (PAPER.aux)
  ***********
@@ -983,34 +983,44 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `PAPER.out' has not changed.
-(rerunfilecheck)             Checksum: 8EA1CA80AF27C97C9EF3D41255A049ED;3160.
+
+Package rerunfilecheck Warning: File `PAPER.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `PAPER.out':
+(rerunfilecheck)             Before: E00E2C74BD0EDF829ACE149040F0943F;4377
+(rerunfilecheck)             After:  BB8BCBD02E287629E1BBEEB351CED5FF;4120.
  ) 
 Here is how much of TeX's memory you used:
- 18573 strings out of 474486
- 313314 string characters out of 5741395
- 1960542 words of memory out of 5000000
- 40504 multiletter control sequences out of 15000+600000
+ 18587 strings out of 474486
+ 313573 string characters out of 5741395
+ 1956542 words of memory out of 5000000
+ 40512 multiletter control sequences out of 15000+600000
  624541 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,15n,110p,570b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmex10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/于灏文1/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/于灏文1/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/�
-�灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:
-/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xt
-t.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol
-/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/sy
-mbol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/ur
-w/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/font
-s/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (10 pages, 642774 bytes).
+
+pdfTeX warning (dest): name{subsection.0.5.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+<C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/于灏文1/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/于灏文1/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/于�
+��文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/U
+sers/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.
+pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/u
+syr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symb
+ol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
+times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on PAPER.pdf (11 pages, 647816 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 
