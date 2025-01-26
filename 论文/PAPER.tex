@@ -186,12 +186,26 @@ $$G_{i} \cap G_{j}=\emptyset, \bigcup_{i=1}^{5} G_{i}=X$$
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=12cm]{img/Level2.png}
-	\caption{aa}
+	\includegraphics[width=12cm]{img/Number.png}
+	\caption{Number of New and Leave Athletes in Each Year}
 	\label{fig:aa}
 \end{figure}
 
-
+% 子图（多图并列）示例，更多用法请参考 subfigure 宏包文档
+% 如果您只希望几张图并列，不需要额外的 caption，那么在 figure 环境中
+% 连续插入总宽度不超过 \textwidth 的多个 \includegraphics 命令即可
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\includegraphics[width=\textwidth]{img/Times.png}
+		\caption{Distribution of Serve Times}\label{subfig:left}
+	\end{subfigure}
+	\begin{subfigure}[b]{.5\textwidth}
+		\includegraphics[width=\textwidth]{img/Years.png}
+		\caption{Distribution of Serve Years}\label{subfig:right}
+	\end{subfigure}
+	\caption{Two images}\label{fig:subfigures}
+\end{figure}
 
 \subsubsection{Distribution of Countries' Strength Sports}
 
@@ -266,6 +280,25 @@ $$\alpha$$
 
 
 \subsection{Events and Medal Counts by Countries}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{.3\textwidth}
+		\includegraphics[width=\textwidth]{img/Table Tennis.png}
+		\caption{Heatmap of Correlation for Table Tennis in China}\label{subfig:1}
+	\end{subfigure}
+	\hfill 
+	\begin{subfigure}[b]{.33\textwidth}
+		\includegraphics[width=\textwidth]{img/Jamaica.png}
+		\caption{ Heatmap of Correlation for Athletics in Jamaica}\label{subfig:2}
+	\end{subfigure}
+	\hfill 
+	\begin{subfigure}[b]{.32\textwidth}
+		\includegraphics[width=\textwidth]{img/New Zealand.png}
+		\caption{Heatmap of Correlation for Rowing in New Zealand}\label{subfig:3}
+	\end{subfigure}
+	\caption{Three images}\label{fig:subfigures}
+\end{figure}
 
 
 
