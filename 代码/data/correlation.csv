@@ -1,0 +1,26 @@
+Type1,Type2,Correlation
+Year,Year,1.0
+Golds,Year,0.7538028741632801
+Total Medals,Year,0.793939393939394
+Table Tennis Medals,Year,0.38392124695842517
+World Table Tennis Awards,Year,0.6963106238227914
+Year,Golds,0.7538028741632801
+Golds,Golds,1.0
+Total Medals,Golds,0.9483326481409007
+Table Tennis Medals,Golds,0.4545324114471421
+World Table Tennis Awards,Golds,0.43651893485598636
+Year,Total Medals,0.793939393939394
+Golds,Total Medals,0.9483326481409007
+Total Medals,Total Medals,1.0
+Table Tennis Medals,Total Medals,0.3713336650909358
+World Table Tennis Awards,Total Medals,0.3481553119113957
+Year,Table Tennis Medals,0.38392124695842517
+Golds,Table Tennis Medals,0.4545324114471421
+Total Medals,Table Tennis Medals,0.3713336650909358
+Table Tennis Medals,Table Tennis Medals,1.0
+World Table Tennis Awards,Table Tennis Medals,0.3163569176522069
+Year,World Table Tennis Awards,0.6963106238227914
+Golds,World Table Tennis Awards,0.43651893485598636
+Total Medals,World Table Tennis Awards,0.3481553119113957
+Table Tennis Medals,World Table Tennis Awards,0.3163569176522069
+World Table Tennis Awards,World Table Tennis Awards,1.0

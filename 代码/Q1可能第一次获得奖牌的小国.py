@@ -76,6 +76,9 @@ sports=data['Sport'].unique()
 
 
 ranking=pd.read_csv('./data/first_medal_prob.csv')
+#把ranking归一化，但是最大值是0.8，最小值是0
+ranking['Prob'] = (ranking['Prob']-ranking['Prob'].min())/(ranking['Prob'].max()-ranking['Prob'].min())*0.8
+
 
 #取前15个国家
 ranking = ranking.head(15)
@@ -114,7 +117,7 @@ flags=['sierra-leone.png', 'antigua-and-barbuda.png', 'papua-new-guinea.png', 'l
  'myanmar.png', 'madagascar.png', 'nicaragua.png', 'samoa.png', 'seychelles.png', 
  'south-africa.png', 'el-salvador.png', 'nepal.png', 'republic-of-the-congo.png', 
  'gambia.png', 'lesotho.png']
-country_names=['Sierra Leone', 'Antigua and Barbuda', 'Papua New Guinea', 'Liberia', 
+country_names=['*Sierra Leone*', '*Antigua and Barbuda*', '*Papua New Guinea*', 'Liberia', 
  'Myanmar', 'Madagascar', 'Nicaragua', 'Samoa', 'Seychelles', 
  'South Africa', 'El Salvador', 'Nepal', 'Congo Republic', 
  'Gambia', 'Lesotho']
@@ -126,10 +129,12 @@ colors=['#e45756','#f58518','#f2cf5b','#54a24b'
 for i in range(15):
     flag = mpimg.imread(flag_folder+flags[i])
     imagebox = OffsetImage(flag, zoom=0.092)
-    ab = AnnotationBbox(imagebox, (i, ranking['Prob'].iloc[i]-1),frameon=False)
+    ab = AnnotationBbox(imagebox, (i, ranking['Prob'].iloc[i]),frameon=False)
     plt.gca().add_artist(ab)
     #在柱状图上叠加显示国家名，并且竖排展示
     plt.text(i,ranking['Prob'].iloc[i]/4,country_names[i],rotation=90,ha='center',va='bottom',fontsize=23,fontweight='bold')
+    #显示数值
+    plt.text(i,ranking['Prob'].iloc[i]/7*6,str(round(ranking['Prob'].iloc[i],2)),ha='center',va='bottom',fontsize=12,fontweight='bold')
     plt.bar(ranking['NOC'].iloc[i],ranking['Prob'].iloc[i],color=colors[i])
 #再增加一个logo.png贴图，放右上角
 img = plt.imread('logo.png')

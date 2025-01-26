@@ -1,0 +1,10 @@
+Type1,Type2,Correlation
+Total Medals,Total Medals,1.0
+Table Tennis Medals,Total Medals,0.3713336650909358
+World Table Tennis Medals,Total Medals,0.3481553119113957
+Total Medals,Table Tennis Medals,0.3713336650909358
+Table Tennis Medals,Table Tennis Medals,1.0
+World Table Tennis Medals,Table Tennis Medals,0.3163569176522069
+Total Medals,World Table Tennis Medals,0.3481553119113957
+Table Tennis Medals,World Table Tennis Medals,0.3163569176522069
+World Table Tennis Medals,World Table Tennis Medals,1.0
