@@ -101,37 +101,15 @@ There is a conception named "momentum" in tennis, which has a great impact on pl
 \subsection{Our work}
 We do such things ...
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{Level.png}
-%	\caption{Flow Chart of Our Work}
-%	\label{img}
+
+
+
+%图片示例（water.png）
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=.8\textwidth]{water.png}
+%	\caption{The result of Model 2}\label{fig:result}
 %\end{figure}
-	\caption{The result of Model 2}\label{fig:result}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{Level.png}
-	%	\caption{Flow Chart of Our Work}
-	%	\label{img}
-	%\end{figure}
-	\caption{The result of Model 2}\label{fig:result}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=12cm]{img/Level2.png}
-	\caption{aa}
-	\label{fig:aa}
-\end{figure}
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=.8\textwidth]{water.png}
-	\caption{The result of Model 2}\label{fig:result}
-\end{figure}
 \begin{enumerate}[\bfseries 1.]
     \item We do ...
     \item We do ...
@@ -154,10 +132,21 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 	\multicolumn{1}{m{3cm}}{\centering Symbol}
 	&\multicolumn{1}{m{8cm}}{\centering Definition}\\
 	\midrule
-	$A$&the first one\\
-	$b$&the second one\\
-	$\alpha$ &the last one\\
-	$\sum m_{c_{i} S_{j}}$ &the last one\\
+	$C_{i}$&the first one\\
+	$S_{i}$&the second one\\
+	$G$&the second one\\
+	$V$&the second one\\
+	$B$&the second one\\
+	$M$&the second one\\
+	$A$&the second one\\
+	$D$&the second one\\
+	$E$&the second one\\
+%	$\alpha$ &the last one\\
+    $\gamma$&Sport Advantagen Coefficient\\
+  	$ m_{c_{i}}$ &the second one\\
+	$ m_{c_{i} s_{j}}$ &the second one\\
+    $g_{i}$&the second one\\
+    $\xi$&The Probability of First Medal\\
 	\bottomrule
 \end{tabular}\label{tb:notation}
 \end{center}
@@ -165,6 +154,27 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 
 \section{Data Preprocessing}
 \subsection{Basic Data Preprocessing}
+
+$$G_{i} \cap G_{j}=\emptyset, \bigcup_{i=1}^{5} G_{i}=X$$
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{img/Level1.png}
+	\caption{Scatter plot of national level classification (based on Kmeans++clustering algorithm)}
+	\label{fig:aa}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{img/Level2.png}
+	\caption{aa}
+	\label{fig:aa}
+\end{figure}
+
+
+
+
 \subsection{Data Mining}
 \section{Task1:}
 \subsection{Details about Model 1}
@@ -179,6 +189,14 @@ The detail can be described by equation \eqref{eq1}:\autoref{eq1}:
 \]
 $$\alpha$$
 
+%$$ \gamma=\frac{$m_{c_{i} s_{j}}$}{$\sum m_{c_{i} s_{j}}$ }$$
+
+%\[
+%\gamma = \frac{$m_{c_i s_j}$}{$\sum m_{c_i s_j}$}
+%\]
+\[
+\gamma = \frac{m_{c_i s_j}}{\sum m_{c_i s_j}}
+\]
 
 %长等式
 \begin{equation}\label{eq2}

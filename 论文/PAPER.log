@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  25 JAN 2025 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  25 JAN 2025 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,13 +722,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (PAPER.aux
 
-LaTeX Warning: Label `fig:result' multiply defined.
-
-
-LaTeX Warning: Label `fig:result' multiply defined.
-
-
-LaTeX Warning: Label `fig:result' multiply defined.
+LaTeX Warning: Label `fig:aa' multiply defined.
 
 )
 \openout1 = `PAPER.aux'.
@@ -880,29 +874,20 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<./img/Level.png, id=148, 669.2503pt x 467.12016pt>
-File: ./img/Level.png Graphic file (type png)
-<use ./img/Level.png>
-Package pdftex.def Info: ./img/Level.png  used on input line 106.
-(pdftex.def)             Requested size: 472.03123pt x 329.47656pt.
-File: ./img/Level.png Graphic file (type png)
-<use ./img/Level.png>
-Package pdftex.def Info: ./img/Level.png  used on input line 115.
-(pdftex.def)             Requested size: 472.03123pt x 329.47656pt.
-<img/Level2.png, id=149, 1606.0pt x 855.195pt>
-File: img/Level2.png Graphic file (type png)
-<use img/Level2.png>
-Package pdftex.def Info: img/Level2.png  used on input line 124.
-(pdftex.def)             Requested size: 341.43306pt x 181.81462pt.
-<./img/water.png, id=151, 390.45876pt x 281.05pt>
-File: ./img/water.png Graphic file (type png)
-<use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 132.
-(pdftex.def)             Requested size: 377.62642pt x 271.82478pt.
-
 [3
 
-] [4 <./img/Level.png (PNG copy)>] [5 <./img/Level2.png>] [6 <./img/water.png>]
+]
+<img/Level1.png, id=155, 631.9861pt x 449.80547pt>
+File: img/Level1.png Graphic file (type png)
+<use img/Level1.png>
+Package pdftex.def Info: img/Level1.png  used on input line 163.
+(pdftex.def)             Requested size: 341.43306pt x 243.01486pt.
+<img/Level2.png, id=156, 1606.0pt x 855.195pt>
+File: img/Level2.png Graphic file (type png)
+<use img/Level2.png>
+Package pdftex.def Info: img/Level2.png  used on input line 170.
+(pdftex.def)             Requested size: 341.43306pt x 181.81462pt.
+ [4] [5 <./img/Level1.png (PNG copy)> <./img/Level2.png>]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -916,55 +901,56 @@ Package tabularray Warning: Table width is too small, need 49.23586pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (49.23586pt too wide) detected at line 220
+Overfull \hbox (49.23586pt too wide) detected at line 238
  [] 
  []
 
-[7]
-Overfull \hbox (49.23586pt too wide) detected at line 220
+[6]
+Overfull \hbox (49.23586pt too wide) detected at line 238
  [] 
  []
 
+<./img/water.png, id=188, 390.45876pt x 281.05pt>
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 229.
+Package pdftex.def Info: ./img/water.png  used on input line 247.
 (pdftex.def)             Requested size: 377.62642pt x 271.82478pt.
-[8]
+[7 <./img/water.png>]
 
-LaTeX Warning: Reference `tb:longtable' on page 9 undefined on input line 235.
+LaTeX Warning: Reference `tb:longtable' on page 8 undefined on input line 253.
 
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 254.
+Package pdftex.def Info: ./img/water.png  used on input line 272.
 (pdftex.def)             Requested size: 188.8096pt x 135.90167pt.
 File: ./img/water.png Graphic file (type png)
 <use ./img/water.png>
-Package pdftex.def Info: ./img/water.png  used on input line 258.
+Package pdftex.def Info: ./img/water.png  used on input line 276.
 (pdftex.def)             Requested size: 188.8096pt x 135.90167pt.
-[9
+[8
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 3
-10.
+28.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [10
+) [9
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 318.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 336.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 318.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 336.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 335.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 353.
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10.95> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 336.
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 354.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
@@ -983,7 +969,7 @@ ty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) 
 AED: lastpage setting LastPage
-[11
+[10
 
 ] (PAPER.aux)
  ***********
@@ -998,14 +984,14 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `PAPER.out' has not changed.
-(rerunfilecheck)             Checksum: 498732625CF81AF5465938517D4DC68C;3160.
+(rerunfilecheck)             Checksum: 8EA1CA80AF27C97C9EF3D41255A049ED;3160.
  ) 
 Here is how much of TeX's memory you used:
- 18576 strings out of 474486
- 313378 string characters out of 5741395
- 1956542 words of memory out of 5000000
- 40506 multiletter control sequences out of 15000+600000
- 624119 words of font info for 136 fonts, out of 8000000 for 9000
+ 18573 strings out of 474486
+ 313314 string characters out of 5741395
+ 1960542 words of memory out of 5000000
+ 40504 multiletter control sequences out of 15000+600000
+ 624541 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,15n,110p,570b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
@@ -1022,9 +1008,9 @@ mbol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (11 pages, 642265 bytes).
+Output written on PAPER.pdf (10 pages, 642774 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
