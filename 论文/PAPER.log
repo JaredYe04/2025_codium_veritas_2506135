@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,72 +954,74 @@ File: img/Predict.png Graphic file (type png)
 <use img/Predict.png>
 Package pdftex.def Info: img/Predict.png  used on input line 287.
 (pdftex.def)             Requested size: 341.43306pt x 252.10727pt.
-<img/First.png, id=219, 1232.9262pt x 618.6312pt>
+[8 <./img/Predict.png>]
+<img/First.png, id=226, 1232.9262pt x 618.6312pt>
 File: img/First.png Graphic file (type png)
 <use img/First.png>
-Package pdftex.def Info: img/First.png  used on input line 298.
+Package pdftex.def Info: img/First.png  used on input line 337.
 (pdftex.def)             Requested size: 455.24408pt x 228.41798pt.
-[8 <./img/Predict.png>]
 <img/Table Tennis.png, id=227, 797.98125pt x 557.08125pt>
 File: img/Table Tennis.png Graphic file (type png)
 <use img/Table Tennis.png>
-Package pdftex.def Info: img/Table Tennis.png  used on input line 316.
+Package pdftex.def Info: img/Table Tennis.png  used on input line 355.
 (pdftex.def)             Requested size: 141.61081pt x 98.85924pt.
 <img/Jamaica.png, id=228, 797.98125pt x 509.905pt>
 File: img/Jamaica.png Graphic file (type png)
 <use img/Jamaica.png>
-Package pdftex.def Info: img/Jamaica.png  used on input line 321.
+Package pdftex.def Info: img/Jamaica.png  used on input line 360.
 (pdftex.def)             Requested size: 155.77116pt x 99.5361pt.
 <img/New Zealand.png, id=229, 794.97pt x 522.95375pt>
 File: img/New Zealand.png Graphic file (type png)
 <use img/New Zealand.png>
-Package pdftex.def Info: img/New Zealand.png  used on input line 326.
+Package pdftex.def Info: img/New Zealand.png  used on input line 365.
 (pdftex.def)             Requested size: 151.05345pt x 99.36224pt.
 
 
-LaTeX Warning: Reference `fig:result' on page 9 undefined on input line 336.
+LaTeX Warning: Reference `fig:result' on page 9 undefined on input line 375.
 
-[9 <./img/First.png> <./img/Table Tennis.png> <./img/Jamaica.png> <./img/New Ze
-aland.png>]
-<img/Performance.png, id=241, 836.1639pt x 544.9158pt>
+[9 <./img/First.png>] [10 <./img/Table Tennis.png> <./img/Jamaica.png> <./img/N
+ew Zealand.png>]
+<img/Performance.png, id=247, 836.1639pt x 544.9158pt>
 File: img/Performance.png Graphic file (type png)
 <use img/Performance.png>
-Package pdftex.def Info: img/Performance.png  used on input line 373.
+Package pdftex.def Info: img/Performance.png  used on input line 412.
 (pdftex.def)             Requested size: 455.24408pt x 296.66972pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--398
+Underfull \hbox (badness 10000) in paragraph at lines 433--437
 
  []
 
-[10
+[11
 
- <./img/Performance.png>] [11]
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 4
-82.
+ <./img/Performance.png>] [12]
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 5
+23.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [12
+) [13
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 490.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 531.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 490.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 531.
+ [14
 
+] [15]
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 507.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 770.
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10.95> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 508.
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 771.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
+) [16]
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
@@ -1033,9 +1035,7 @@ ty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) 
 AED: lastpage setting LastPage
-[13
-
-] (PAPER.aux)
+[17] (PAPER.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1051,13 +1051,13 @@ Package rerunfilecheck Info: File `PAPER.out' has not changed.
 (rerunfilecheck)             Checksum: 1117A5C5FFF0CA8399196F0BA3AE8724;4166.
  ) 
 Here is how much of TeX's memory you used:
- 18661 strings out of 474486
- 315170 string characters out of 5741395
- 1956542 words of memory out of 5000000
- 40580 multiletter control sequences out of 15000+600000
+ 18669 strings out of 474486
+ 315223 string characters out of 5741395
+ 2114542 words of memory out of 5000000
+ 40582 multiletter control sequences out of 15000+600000
  624541 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,15n,110p,570b,1743s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,15n,110p,638b,1741s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmex10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmmi10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTe
@@ -1073,9 +1073,9 @@ ts/t1xtt.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 ype1/urw/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (13 pages, 2024333 bytes).
+Output written on PAPER.pdf (17 pages, 2043031 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
  285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

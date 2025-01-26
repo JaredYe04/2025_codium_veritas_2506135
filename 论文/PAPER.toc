@@ -15,15 +15,15 @@
 \contentsline {subsection}{\numberline {4.2}Countries that Win Their First Medal}{9}{subsection.0.4.2}%
 \contentsline {subsection}{\numberline {4.3}Events and Medal Counts by Countries}{9}{subsection.0.4.3}%
 \contentsline {section}{\numberline {5}Task2:}{9}{section.0.5}%
-\contentsline {section}{\numberline {6}Task3}{10}{section.0.6}%
-\contentsline {section}{\numberline {7}Task4}{11}{section.0.7}%
-\contentsline {section}{\numberline {8}Sensitivity Analysis}{11}{section.0.8}%
-\contentsline {section}{\numberline {9}Model Evaluation}{11}{section.0.9}%
-\contentsline {subsection}{\numberline {9.1}Strengths}{11}{subsection.0.9.1}%
-\contentsline {subsection}{\numberline {9.2}Weaknesses}{11}{subsection.0.9.2}%
-\contentsline {section}{\numberline {10}Conclusion}{11}{section.0.10}%
-\contentsline {section}{Memorandum}{12}{section.0.11}%
-\contentsline {section}{References}{12}{section.1.11}%
-\contentsline {section}{Appendix A: Further on \LaTeX }{13}{section*.11}%
-\contentsline {section}{Appendix B: Program Codes}{13}{section*.12}%
+\contentsline {section}{\numberline {6}Task3}{11}{section.0.6}%
+\contentsline {section}{\numberline {7}Task4}{12}{section.0.7}%
+\contentsline {section}{\numberline {8}Sensitivity Analysis}{12}{section.0.8}%
+\contentsline {section}{\numberline {9}Model Evaluation}{12}{section.0.9}%
+\contentsline {subsection}{\numberline {9.1}Strengths}{12}{subsection.0.9.1}%
+\contentsline {subsection}{\numberline {9.2}Weaknesses}{12}{subsection.0.9.2}%
+\contentsline {section}{\numberline {10}Conclusion}{12}{section.0.10}%
+\contentsline {section}{Memorandum}{13}{section.0.11}%
+\contentsline {section}{References}{13}{section.1.11}%
+\contentsline {section}{Appendix A: Further on \LaTeX }{14}{section*.11}%
+\contentsline {section}{Appendix B: Program Codes}{16}{section*.12}%
 \contentsfinish 
