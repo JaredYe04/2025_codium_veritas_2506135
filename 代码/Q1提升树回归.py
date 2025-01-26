@@ -120,8 +120,8 @@ def radar_chart(data, title):
         #mae越小越好，因此取1-mae
         #r2越大越好，因此取r2
         stats=np.concatenate((stats,[stats[0]]))
-        #在fill时，填充'.'符号
-        ax.fill(angles, stats, alpha=0.25,color=colors[i])
+        #在fill时，填充'.'符号，并且标出每个点的值
+        ax.fill(angles, stats, alpha=0.25,color=colors[i],label=names[i])
 
 
     ax.legend(names,loc='upper right')
