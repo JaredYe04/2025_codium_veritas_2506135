@@ -141,7 +141,7 @@ img = plt.imread('logo.png')
 plt.figimage(img, 1800, 900, zorder=3)
 plt.xticks(rotation=45)
 plt.xlabel('Country',fontsize=20)
-plt.ylabel('ξ',fontsize=20,rotation=0)
+plt.ylabel('κ',fontsize=20,rotation=0)
 #y标签也应该竖直排列，因此设置rotation
 
 plt.gca().set_facecolor('#f0f0f0')
