@@ -1,0 +1,26 @@
+,importance
+win_prob,166
+med_d_ath win_prob,157
+G_prob,142
+adept G_prob,136
+adept win_prob,135
+med_d_ath G_prob,127
+win_prob G_prob,126
+lvll win_prob,123
+med_d_ath adept,119
+adept lvll,111
+win_prob^2,106
+adept,95
+win_prob B_prob,94
+win_prob lose_prob,73
+win_prob S_prob,73
+S_prob B_prob,71
+G_prob S_prob,71
+G_prob lose_prob,70
+med_d_ath S_prob,68
+med_d_ath B_prob,65
+med_d_ath lose_prob,63
+lvll G_prob,63
+med_d_ath lvll,55
+med_d_ath,51
+G_prob B_prob,51

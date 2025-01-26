@@ -1,0 +1,32 @@
+Sensitivity Analysis是用于评估模型输出对输入特征变化的敏感程度。我们可以通过该分析，了解到最后预测结果对不同的数据特征的依赖程度，例如某国家对某sport的adeptness大小，或者是某运动员先前的获奖概率等。
+LightGBM 自带特征重要性功能，可以帮助我们理解哪些特征对模型预测影响最大。使用 plot_importance() 可以查看每个特征的重要性。
+（第一张图片）
+上图为金牌预测模型的特征重要性分布图。由于我们在训练时生成了PolynomialFeatures，因此看到的特征将会是几个单独特征的乘积。
+从图中我们可以看到，某个运动员在此前拿奖牌的概率，以及某国家对某sport的优势程度，对于最终的预测结果起到最大的影响。此外，运动员此前获得奖牌的概率，也对于预测结果有显著影响。
+
+除此之外，我们可以使用Shapley值分析模型的敏感度。SHAP（SHapley Additive exPlanations）是一种基于博弈论的模型解释方法，用于解释机器学习模型的预测。它通过分配每个特征对模型预测的贡献度，帮助我们理解每个特征在给定预测结果中的重要性和影响力。
+Shapley 值公式如下（英文解释，latex格式）
+The Shapley value formula is as follows:
+
+\[
+\phi_i(f) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|!(|N|-|S|-1)!}{|N|!} \left[ f(S \cup \{i\}) - f(S) \right]
+\]
+
+Where:
+
+\(\phi_i(f)\) is the Shapley value of feature \(x_i\).
+
+\(S\) is a subset of features, and \(S \subseteq N \setminus \{i\}\) indicates that subset \(S\) contains all features except for \(x_i\).
+
+\(f(S)\) is the model's prediction on the feature subset \(S\).
+
+\(f(S \cup \{i\})\) is the model's prediction on the subset \(S\) and feature \(x_i\).
+
+\(|S|!\) and \((|N|-|S|-1)!\) are the combinatorial coefficients of the Shapley value, used to weigh the importance of each feature in different feature subsets.
+
+\(|N|!\) is the total number of permutations of all features in the feature set \(N\), ensuring the average effect across all permutations.
+
+以下是金牌、银牌、铜牌预测模型的SHAP Summary Plot
+（三张子图）
+从图中我们可以看出，SHAP算法放大了获得某种奖牌的先验概率，也就是说，曾经获得金牌的选手继续参赛，更有概率获得金牌，这对银牌和铜牌选手也同理。这与LightGBM自我分析的结果有些出入，不过对于Adeptness与Level, Win Probability，两种分析方法均给出了较高的权重。
+
