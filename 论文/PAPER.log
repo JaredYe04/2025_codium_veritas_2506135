@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.17)  26 JAN 2025 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1066,26 +1066,27 @@ Package rerunfilecheck Info: Checksums for `PAPER.out':
  ) 
 Here is how much of TeX's memory you used:
  18657 strings out of 474486
- 313934 string characters out of 5743755
+ 315169 string characters out of 5741395
  2124542 words of memory out of 5000000
  40566 multiletter control sequences out of 15000+600000
  609096 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,13n,110p,681b,2602s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/tange/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmex10.pfb><C:/Users/tange/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><C:/Users/tange/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/tange/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tange/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/tange/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/tange/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/tange/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/tange/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/tange/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/tange/AppData/Local
-/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/tange/AppData/Local
-/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/tange/AppData/Local
-/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+<C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmex10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/于灏文1/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/于灏文1/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/于�
+�文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/U
+sers/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.
+pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfon
+ts/t1xtt.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw
+/symbol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/symbol/usyr.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fo
+nts/type1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKT
+eX/fonts/type1/urw/times/utmri8a.pfb>
 Output written on PAPER.pdf (17 pages, 2503552 bytes).
 PDF statistics:
  396 PDF objects out of 1000 (max. 8388607)
