@@ -18,7 +18,7 @@ data.dropna(inplace=True)
 #数据分析
 #不同国家擅长的体育项目
 #目标国家
-target_country='China'#对应列为Team
+target_country='United States'#对应列为Team
 
 #目标国家奖牌数
 #Medal列中，No medal表示没有奖牌，Bronze表示铜牌，Silver表示银牌，Gold表示金牌
@@ -40,7 +40,7 @@ medal_rate=medal_rate[:20]
 plt.figure(figsize=(10,6))
 sns.barplot(x=medal_rate.values,y=medal_rate.index)
 plt.title('Percentage of Medals of Different Sports in '+target_country)
-medal_rate.to_csv('./data/中国擅长的体育项目.csv')
+medal_rate.to_csv('./data/美国擅长的体育项目.csv')
 plt.show()
 
 #导出数据

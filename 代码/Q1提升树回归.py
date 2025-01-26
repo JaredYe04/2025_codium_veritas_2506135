@@ -53,7 +53,7 @@ for modelName in models:
     #评估
     from sklearn.metrics import mean_squared_error
     mse=mean_squared_error(Y_test,Y_predict)
-    print(modelName+'的均方误差为：',mse)
+    
     
     #由于获奖牌是少数，因此需要评价召回率
     #将预测值四舍五入
@@ -65,28 +65,103 @@ for modelName in models:
     #均方根误差
     from sklearn.metrics import mean_squared_error
     rmse=mean_squared_error(Y_test,Y_predict)**0.5
-    print(modelName+'的均方根误差为：',rmse)
+   
     
     #平均绝对误差
     from sklearn.metrics import mean_absolute_error
     mae=mean_absolute_error(Y_test,Y_predict)
-    print(modelName+'的平均绝对误差为：',mae)
-    
+
     #R2
     from sklearn.metrics import r2_score
     r2=r2_score(Y_test,Y_predict)
-    print(modelName+'的R2为：',r2)
+    
     
     performances.append([modelName,mse,rmse,mae,r2])
     
-    #ROC曲线
-    from sklearn.metrics import roc_curve
-    fpr,tpr,thresholds=roc_curve(Y_test,Y_predict)
-    plt.plot(fpr,tpr)
+    # print(modelName+'的均方误差为：',mse)
+    # print(modelName+'的均方根误差为：',rmse)
+    # print(modelName+'的平均绝对误差为：',mae)
+    # print(modelName+'的R2为：',r2)
+    print(modelName+' MSE:',mse)
+    print(modelName+' RMSE:',rmse)
+    print(modelName+' MAE:',mae)
+    print(modelName+' R²:',r2)
+    
+    
+    
+    
+performances=pd.DataFrame(performances,columns=['Model','MSE','RMSE','MAE','R²'])
+#可视化，使用雷达图
+import matplotlib.pyplot as plt
+from math import pi
+
+#定义雷达图的绘制函数
+
+def radar_chart(data, title):
+    # 准备数据
+    labels=np.array(data.columns[1:])
+
+
+    #设置角度
+    angles=np.linspace(0, 2*np.pi, len(labels), endpoint=False).tolist()
+    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
+    
+    
+    colors=['#FFD700','#C0C0C0','#CD7F32']
+    names=['Gold','Silver','Bronze']
+    for i in range(3):
+        stats=data.loc[i,labels].values
+        stats=stats[1:]
+        print(stats)
+        #MAE越小越好，因此取1-MAE
+        stats[0]=1-stats[0]
+        #rmse越小越好，因此取1-rmse
+        stats[1]=1-stats[1]
+        #mae越小越好，因此取1-mae
+        #r2越大越好，因此取r2
+        stats=np.concatenate((stats,[stats[0]]))
+        #在fill时，填充'.'符号
+        ax.fill(angles, stats, alpha=0.25,color=colors[i])
+
+
+    ax.legend(names,loc='upper right')
+    
+
+    # 设置标题
+    ax.set_title(title, size=20, y=1.1)
+    
+    # 设置雷达图的标签
+    ax.set_yticklabels([])
+    ax.set_xticks(angles)
+    ax.set_xticklabels(labels, size=12)
+    
+    #在环上标注0-1的数值
+    ax.set_yticks([0.2,0.4,0.6,0.8,1.0])
+    ax.set_yticklabels(['0.2','0.4','0.6','0.8','1.0'],size=12)
+    #字体为Times New Roman
+    plt.rcParams['font.sans-serif'] = ['Times New Roman']
+    plt.rcParams['font.serif'] = ['Times New Roman']
+    #设置背景色
+    plt.gca().set_facecolor('#f0f0f0')
+    #在圆心处，增加一个贴图，位于中间
+    img = plt.imread('logo.png')
+    newax = fig.add_axes([0.462, 0.45, 0.1, 0.1], anchor='C')
+    newax.imshow(img)
+    newax.axis('off')
+    
+    #在圆心下方，增加一个文字
+    plt.text(200,1200,'Citius, Altius, Fortius - Communis.',ha='center',va='bottom',fontsize=14)
+    
+    
+
+    
+    # 显示图形
     plt.show()
     
-    
-    
-    
-    
-    
+
+        
+        
+#绘制雷达图
+
+print(performances)
+radar_chart(performances,'Model Performances (LightGBM)')
