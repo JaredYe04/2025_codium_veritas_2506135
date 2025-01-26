@@ -1,0 +1,10 @@
+Type1,Type2,Correlation
+Total Medals,Total Medals,1.0
+Gymnastics Medals,Total Medals,0.08571428571428572
+World Gymnastics Medals,Total Medals,
+Total Medals,Gymnastics Medals,0.08571428571428572
+Gymnastics Medals,Gymnastics Medals,1.0
+World Gymnastics Medals,Gymnastics Medals,
+Total Medals,World Gymnastics Medals,
+Gymnastics Medals,World Gymnastics Medals,
+World Gymnastics Medals,World Gymnastics Medals,

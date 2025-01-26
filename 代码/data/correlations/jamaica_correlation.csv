@@ -1,0 +1,10 @@
+Type1,Type2,Correlation
+Total Medals,Total Medals,1.0
+Athletics Medals,Total Medals,0.8943876063312266
+World Athletics Medals,Total Medals,0.7732347943989866
+Total Medals,Athletics Medals,0.8943876063312266
+Athletics Medals,Athletics Medals,1.0
+World Athletics Medals,Athletics Medals,0.6872333741320104
+Total Medals,World Athletics Medals,0.7732347943989866
+Athletics Medals,World Athletics Medals,0.6872333741320104
+World Athletics Medals,World Athletics Medals,1.0

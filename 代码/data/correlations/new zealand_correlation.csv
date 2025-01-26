@@ -1,0 +1,10 @@
+Type1,Type2,Correlation
+Total Medals,Total Medals,1.0
+Rowing Medals,Total Medals,0.5553159283458892
+World Rowing Medals,Total Medals,0.7916424361400459
+Total Medals,Rowing Medals,0.5553159283458892
+Rowing Medals,Rowing Medals,1.0
+World Rowing Medals,Rowing Medals,0.28591513778939537
+Total Medals,World Rowing Medals,0.7916424361400459
+Rowing Medals,World Rowing Medals,0.28591513778939537
+World Rowing Medals,World Rowing Medals,1.0
