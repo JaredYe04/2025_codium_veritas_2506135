@@ -335,11 +335,6 @@ $$\alpha$$
 
 The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in seconds, and $c$ refers to the concentration of water in the boiler.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.8\textwidth]{water.png}
-\caption{The result of Model 2}\label{fig:result}
-\end{figure}
 
 \clearpage
 
@@ -355,9 +350,9 @@ The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in 
 
 
 % \usepackage{longtable}
-11180235239
 
 \begin{longtable}{l|l|l|l|l} 
+	\caption{Model Performances(LightGBM)}\\ 
 	\hline
 	\multicolumn{1}{c|}{\textbf{Model}} & \multicolumn{1}{c|}{\textbf{MSE}} & \multicolumn{1}{c|}{\textbf{RMSE}} & \multicolumn{1}{c|}{\textbf{MAE}} & \multicolumn{1}{c}{\(\mathbf{R}^2\)}  \endfirsthead 
 	\hline
@@ -370,9 +365,77 @@ The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in 
 \end{longtable}
 
 
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=16cm]{img/Performance.png}
+	\caption{Model Performance Radar Chart}
+	\label{fig:aa}
+\end{figure}
+
+
+
+
+
+
+
+
 \section{Task3}
 
+%公式代码集合
+
+\[
+\mathcal{L} = \sum_{i=1}^{n} L(y_i, \hat{y}_i^{(m-1)} + \eta f_m(x_i)) + \Omega(f_m)
+\]
+
+
+$y_i$\\
+$\hat{y}_i^{(m-1)}$\\
+$\eta f_m(x_i)$\\
+$\Omega(f_m)$\\
+
+
+
+
+\[
+\kappa = 0.8 \times \frac{\xi - \overline{\xi}}{\sigma}
+\]
+$\overline{\xi}$
+$\sigma$
+
+
+\[
+d_i = R(X_i) - R(Y_i)
+\]
+\[
+R_s = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+\]
+$d_i$
+$R_s$
+
+
+\[
+P(c_k \mid X) = \frac{P(X \mid c_k) P(c_k)}{P(X)}
+\]
+
+\[
+	C_t^+ = \max(0, C_{t-1}^+ + (X_t - \mu - k))
+\]
 \section{Task4}
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Sensitivity Analysis}
 

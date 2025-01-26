@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {4.2}Countries that Win Their First Medal}{9}{subsection.0.4.2}%
 \contentsline {subsection}{\numberline {4.3}Events and Medal Counts by Countries}{9}{subsection.0.4.3}%
 \contentsline {section}{\numberline {5}Task2:}{9}{section.0.5}%
-\contentsline {section}{\numberline {6}Task3}{11}{section.0.6}%
+\contentsline {section}{\numberline {6}Task3}{10}{section.0.6}%
 \contentsline {section}{\numberline {7}Task4}{11}{section.0.7}%
 \contentsline {section}{\numberline {8}Sensitivity Analysis}{11}{section.0.8}%
 \contentsline {section}{\numberline {9}Model Evaluation}{11}{section.0.9}%
