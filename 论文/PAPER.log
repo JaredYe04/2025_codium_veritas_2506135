@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 22:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,6 +950,13 @@ File: img/Percentage.jpg Graphic file (type jpg)
 <use img/Percentage.jpg>
 Package pdftex.def Info: img/Percentage.jpg  used on input line 214.
 (pdftex.def)             Requested size: 341.43306pt x 341.41599pt.
+
+
+LaTeX Warning: Reference `eq1' on page 6 undefined on input line 226.
+
+
+LaTeX Warning: Reference `eq1' on page 6 undefined on input line 226.
+
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -957,7 +964,6 @@ Package pdftex.def Info: img/Percentage.jpg  used on input line 214.
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-
 
 Package tabularray Warning: Table width is too small, need 49.23586pt more!
 
@@ -972,28 +978,28 @@ Overfull \hbox (49.23586pt too wide) detected at line 254
  [] 
  []
 
-<img/Predict.png, id=211, 1038.88126pt x 767.11594pt>
+<img/Predict.png, id=209, 1156.32pt x 861.2175pt>
 File: img/Predict.png Graphic file (type png)
 <use img/Predict.png>
 Package pdftex.def Info: img/Predict.png  used on input line 262.
-(pdftex.def)             Requested size: 341.43306pt x 252.10727pt.
+(pdftex.def)             Requested size: 341.43306pt x 254.2935pt.
 [8 <./img/Predict.png>]
-<img/First.png, id=220, 1232.9262pt x 618.6312pt>
+<img/First.png, id=218, 1232.9262pt x 618.6312pt>
 File: img/First.png Graphic file (type png)
 <use img/First.png>
 Package pdftex.def Info: img/First.png  used on input line 312.
 (pdftex.def)             Requested size: 455.24408pt x 228.41798pt.
-<img/Table Tennis.png, id=221, 797.98125pt x 557.08125pt>
+<img/Table Tennis.png, id=219, 797.98125pt x 557.08125pt>
 File: img/Table Tennis.png Graphic file (type png)
 <use img/Table Tennis.png>
 Package pdftex.def Info: img/Table Tennis.png  used on input line 330.
 (pdftex.def)             Requested size: 141.61081pt x 98.85924pt.
-<img/Jamaica.png, id=222, 797.98125pt x 509.905pt>
+<img/Jamaica.png, id=220, 797.98125pt x 509.905pt>
 File: img/Jamaica.png Graphic file (type png)
 <use img/Jamaica.png>
 Package pdftex.def Info: img/Jamaica.png  used on input line 335.
 (pdftex.def)             Requested size: 155.77116pt x 99.5361pt.
-<img/New Zealand.png, id=223, 794.97pt x 522.95375pt>
+<img/New Zealand.png, id=221, 794.97pt x 522.95375pt>
 File: img/New Zealand.png Graphic file (type png)
 <use img/New Zealand.png>
 Package pdftex.def Info: img/New Zealand.png  used on input line 340.
@@ -1002,22 +1008,22 @@ Package pdftex.def Info: img/New Zealand.png  used on input line 340.
 
 LaTeX Warning: Reference `fig:result' on page 9 undefined on input line 350.
 
-<img/Volleyball.png, id=224, 2108.87875pt x 1141.26375pt>
+<img/Volleyball.png, id=222, 2108.87875pt x 1141.26375pt>
 File: img/Volleyball.png Graphic file (type png)
 <use img/Volleyball.png>
 Package pdftex.def Info: img/Volleyball.png  used on input line 355.
 (pdftex.def)             Requested size: 455.24408pt x 246.35953pt.
-<img/Decline1.png, id=225, 958.58125pt x 719.68875pt>
+<img/Decline1.png, id=223, 958.58125pt x 719.68875pt>
 File: img/Decline1.png Graphic file (type png)
 <use img/Decline1.png>
 Package pdftex.def Info: img/Decline1.png  used on input line 364.
 (pdftex.def)             Requested size: 151.05345pt x 113.40648pt.
-<img/Decline2.png, id=226, 960.58875pt x 719.68875pt>
+<img/Decline2.png, id=224, 960.58875pt x 719.68875pt>
 File: img/Decline2.png Graphic file (type png)
 <use img/Decline2.png>
 Package pdftex.def Info: img/Decline2.png  used on input line 369.
 (pdftex.def)             Requested size: 151.05345pt x 113.16489pt.
-<img/Decline3.png, id=227, 961.5925pt x 720.6925pt>
+<img/Decline3.png, id=225, 961.5925pt x 720.6925pt>
 File: img/Decline3.png Graphic file (type png)
 <use img/Decline3.png>
 Package pdftex.def Info: img/Decline3.png  used on input line 374.
@@ -1025,7 +1031,7 @@ Package pdftex.def Info: img/Decline3.png  used on input line 374.
 [9 <./img/First.png>] [10 <./img/Table Tennis.png> <./img/Jamaica.png> <./img/N
 ew Zealand.png> <./img/Volleyball.png> <./img/Decline1.png> <./img/Decline2.png
 > <./img/Decline3.png>]
-<img/Performance.png, id=250, 836.1639pt x 544.9158pt>
+<img/Performance.png, id=248, 836.1639pt x 544.9158pt>
 File: img/Performance.png Graphic file (type png)
 <use img/Performance.png>
 Package pdftex.def Info: img/Performance.png  used on input line 417.
@@ -1113,10 +1119,10 @@ Package rerunfilecheck Info: File `PAPER.out' has not changed.
 (rerunfilecheck)             Checksum: 38212FEFE55A2FE616D1814126255C69;4157.
  ) 
 Here is how much of TeX's memory you used:
- 18659 strings out of 474486
- 315179 string characters out of 5741395
+ 18657 strings out of 474486
+ 315169 string characters out of 5741395
  2124542 words of memory out of 5000000
- 40568 multiletter control sequences out of 15000+600000
+ 40566 multiletter control sequences out of 15000+600000
  609096 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,13n,110p,681b,2602s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1135,9 +1141,9 @@ ts/t1xtt.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 ype1/urw/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (17 pages, 2539012 bytes).
+Output written on PAPER.pdf (17 pages, 2503552 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
+ 396 PDF objects out of 1000 (max. 8388607)
  92 named destinations out of 1000 (max. 500000)
  297 words of extra memory for PDF output out of 10000 (max. 10000000)
 
