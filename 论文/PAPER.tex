@@ -114,8 +114,8 @@ The model should also consider the number and types of events in each specific O
 We preprocess the data provided before analyzing matches and mainly utilize 3 models. The specific work was as follows
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=12cm]{img/Level1.png}
-	\caption{Scatter plot of national level classification (based on Kmeans++clustering algorithm)}
+	\includegraphics[width=16cm]{img/da.png}
+	\caption{Flow Chart of Our Work}
 	\label{fig:aa}
 \end{figure}
 
@@ -175,6 +175,7 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 		$M$&Total count of the 3 types of medals\\
 		$A$&Number of new medals\\
 		$T$&Times of Olympic participations\\
+		$T$&Total count of events\\
 		$\gamma$&Sport Advantage Coefficient\\
 		$ m_{C_{i}}$ &Total medal count of a certain country\\
 		$ m_{C_{i},E_{j}}$ &Total medal count of a certain country in a specific event\\
@@ -250,15 +251,15 @@ To predict future scenarios, we analyzed the trends in the number of participant
 Then, we compiled the distribution of the times of participations and the distribution of athlete tenure based on historical data, as shown in the figure.
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[b]{.55\textwidth}
+	\begin{subfigure}[b]{.48\textwidth}
 		\includegraphics[width=\textwidth]{img/Times.png}
 		\caption{Distribution of Serve Times}\label{subfig:left}
 	\end{subfigure}
-	\begin{subfigure}[b]{.4\textwidth}
+	\begin{subfigure}[b]{.51\textwidth}
 		\includegraphics[width=\textwidth]{img/Years.png}
 		\caption{Distribution of Serve Years}\label{subfig:right}
 	\end{subfigure}
-	\caption{Two images}\label{fig:subfigures}
+	\caption{Athlete Service Status}\label{fig:subfigures}
 \end{figure}
 
 
@@ -322,6 +323,14 @@ Additionally, as host countries typically benefit from home advantage, the facto
 	\hline
 \end{longtable}
 
+
+And the steps of our LightGBM model are as below:
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=12cm]{img/xiao.png}
+	\caption{LightGBM Model flow Chart}
+	\label{fig:aa}
+\end{figure}
 The prediction of the Olympic medal table is essentially a multi-task learning problem, with the goal of predicting the number of gold, silver, and bronze medals each country is likely to win in different events. To accomplish this task, we need to input a large and diverse set of data while outputting predictions for multiple medal categories. These features are highly suitable for the LightGBM model.
 
 Building on GBDT, LightGBM accelerates the computation using histograms, optimizing training efficiency and enabling the fast processing of high-dimensional, sparse, large-scale data. Compared to traditional logistic regression, LightGBM can capture nonlinear relationships through tree splitting, offering a performance advantage in accurately handling complex data and nonlinear relationships, significantly improving accuracy. Additionally, it can automatically handle missing values, providing great convenience for data preprocessing.
@@ -343,7 +352,7 @@ We input the previously obtained data into LightGBM for iterative model training
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=12cm]{img/Predict.png}
-	\caption{Medal count prediction}
+	\caption{Medal Count Prediction}
 	\label{fig:aa}
 \end{figure}
 
@@ -400,9 +409,10 @@ Based on the model, we predict the medal outcomes for each country in the 2028 O
 Since the model used for predicting the medal table in the previous section yields varying levels of accuracy for countries of different rankings, the predictions for higher-ranked countries, such as the United States and China, are more accurate. In contrast, the prediction errors for lower-ranked countries are larger. Clearly, countries that have not yet won medals fall into the category with higher prediction errors, so the previous model is not applicable in this case.
 
 Therefore, for countries that have never won a medal before, we calculate their first medal index $\xi$.
-%公式 未知
 
-
+\begin{equation}
+	\xi = \sum_{i=1}^{n} \left( T_{E_i} \ast A_{E_i} \right)
+\end{equation}
 
 
 
@@ -626,14 +636,14 @@ We analyzed the gender ratio in the Olympics, focusing on two aspects: the male-
 	%6.1 男女比例图
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=14cm]{img/Gender with Award.png}
+		\includegraphics[width=12cm]{img/Gender with Award.png}
 		\caption{Gender Distribution of Athletes(with Award)}
 		\label{fig:aa}
 	\end{figure}
 	
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=14cm]{img/Gender.png}
+		\includegraphics[width=12cm]{img/Gender.png}
 		\caption{Gender Distribution of Athletes}
 		\label{fig:aa}
 	\end{figure}
@@ -1116,6 +1126,36 @@ print(modelName+' MAE:',mae)
 print(modelName+' R2:',r2)
 
 \end{lstlisting}
+
+
+\clearpage
+\begin{letter}{\centering \underline{\textbf{Report on Use of AI}}}
+	
+	\begin{itemize}
+		\setlength{\parsep}{0ex} %段落间距
+		\setlength{\topsep}{2ex} %列表到上下文的垂直距离
+		\setlength{\itemsep}{1ex} %条目间距
+		\item[1.]  \textbf{OpenAI ChatGPT (Dec 1, 2022 version, ChatGPT-4)}
+		
+		
+		
+		\subitem\textbf{Query1: }What aspects should I modify the drawing logic without changing the code logic, so that the icons can be very flashy and eye-catching
+		
+		\subitem\textbf{Purpose: }Some drawing logic is based on AI suggestions, which allows us to make our drawings more beautiful.
+		
+		\subitem\textbf{Output: }To make the drawing more flashy, you can enhance the visual effect of the chart by adjusting the styles of colors, lines, markers, and other elements. Here are some modification suggestions:Color and Style: Use more vivid and contrasting colors and lines. For example, you can try using more gradients and transparency in the colors of curves and points.Marking points: You can try using larger and more eye-catching marking points, or use different marking shapes.Line type and line weight: Try using different line types and line weights to make the chart more exaggerated. You have already used dynamic line weights in the code, and you can further adjust or add other elements.Background and Grid: Modify the color and style of the background and grid lines to better match the overall style.Annotations and Text: Add more annotations, text, or arrows to highlight key information in the chart.\\
+		
+		\subitem\textbf{Query2: }Is there a recommended tennis dataset source that includes detailed information about each serve of a player, such as the first and second hand, score, running distance, and serving posture? CSV format required
+		
+		\subitem\textbf{Purpose: }We attempted to inquire with AI about machine learning datasets for tennis matches, and AI provided several related websites. Unfortunately, we ultimately did not find any high-quality data available.
+		
+		\subitem\textbf{Output: }As of my knowledge deadline (January 2022), I am unable to provide specific tennis dataset links. However, you can try searching for tennis datasets in the following places:ATP official website: ATP (Association of Tennis Professionals) may provide some official tennis datasets. You can search for relevant statistics and data on its website.The official website of ITF: The International Tennis Federation (ITF) may also provide some tennis datasets. Check their official website to see if there is any information you need.Kaggle: Kaggle is a data science competition platform where users sometimes share various datasets, including sports data. You can search for relevant tennis datasets on Kaggle.UCI Machine Learning Library: UCI machine learning libraries typically provide various types of datasets, including sports related data. You can check their website to see if there is a tennis dataset that suits your needs.GitHub: Some developers and researchers may share their collected tennis datasets on GitHub. You can search on GitHub and see if there are any projects that meet your requirements.Please ensure that you comply with relevant laws and regulations regarding data usage, and review the license agreement for the dataset to ensure that you have the right to use it. Also, remember to check if the dataset contains the specific information you need, such as first and last, score, running distance, and serving posture.
+	\end{itemize}
+\end{letter}
+
+
+
+
 
 \end{subappendices}  % 附录内容结束
 
