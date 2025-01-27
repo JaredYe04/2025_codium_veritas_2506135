@@ -43,7 +43,7 @@
 	
 	For countries yet to win medals, our research revealed that participation in high-growth potential events increases the likelihood of securing their first medal. \textbf{Spearman Correlation Analysis} further examined the degree of dependency on specific events by certain countries.
 	
-	The findings indicate that countries with strong overall sports performance exhibit lower reliance on specific events, yielding stable results, while weaker nations depend more on select events. In certain cases, the \textbf{correlation coefficient} in athletics reached \textbf{0.894}, reflecting a concentration of athletic development in specific areas.
+	The findings indicate that countries with strong overall sports performance exhibit lower reliance on specific events, yielding stable results, while weaker nations depend more on select events. In certain cases, the \textbf{correlation} in athletics reached \textbf{0.894}, reflecting a concentration of athletic development in specific areas.
 	
 	In \textbf{Task 2}, we explored the "great coach effect" by applying \textbf{Bayesian Change Point Detection (BEAST)} to analyze instances from multiple countries. The study found a significant correlation between the points of inflection in some countries' sports performance and the tenure of a "great coach," validating the importance of this effect.
 	
@@ -82,18 +82,18 @@
 % 正文开始
 \section{Introduction}
 \subsection{Problem Background}
-During the 2024 Paris Summer Olympics, fans not only paid attention to the individual events but also showed significant interest in the the ranking of countries on the medal table. Ultimately, the United States topped the medal table with a total of 126 medals, while China and the United States are tied for first place in the number of gold medals, each securing 40 golds. The host country, France ranks 5th in the total number of gold medals with 16 gold medals, but finished 4th in the total medal count. Great Britain ranked 7th on the gold medal table with 14 golds, while securing 3rd place in the overall medal count. Despite the prominence of the leading countries, the medal achievements of other nations also attracted attention. For example, Albania, Cape Verde, Dominica, and Saint Lucia each won their first-ever Olympic medal in this edition of the Games, with Dominica and Saint Lucia each earning another gold medal. However, over 60 countries have yet to win a medal in the history of the Olympics. 
+During the 2024 Paris Summer Olympics, fans not only paid attention to the individual events but also showed significant interest in the ranking of countries on the medal table. Ultimately, the United States topped the medal table with a total of 126 medals, while China and the United States are tied for first in the number of gold medals, each securing 40 golds. The host country, France ranks 5th in the total number of gold medals with 16 gold medals, but finished 4th in the total medal count. Great Britain ranked 7th on the gold medal table with 14 golds, while securing 3rd place in the overall medal count. Despite the prominence of the leading countries, the medal achievements of other nations also attracted attention. For example, Albania, Cape Verde, Dominica, and Saint Lucia each won their first-ever Olympic medal in this edition of the Games, with Dominica and Saint Lucia each earning another gold medal. However, over 60 countries have yet to win a medal in the history of the Olympics. 
 \subsection{Restatement of Problem}
-While predictions of the final medal counts at the Olympics are common, such forecasts are generally not based on historical medal tables. Instead, they are typically made before the start of the upcoming Olympic Games, once the list of competing athletes is known.To clarify the task, the problem is restated as follows:
+While predictions of the final medal counts at the Olympics are common, such forecasts are generally not based on historical medal tables. Instead, they are typically made before the start of the upcoming Olympic Games, once the list of competing athletes is known. To clarify the task, the problem is restated as follows:
 
 \begin{itemize}
 	\setlength{\parsep}{0ex} %段落间距
 	\setlength{\topsep}{2ex} %列表到上下文的垂直距离
 	\setlength{\itemsep}{1ex} %条目间距
-	\item Develop a model for each country’s medal count, which should at least include the number of gold medals and the total medal count, and estimate the uncertainty/precision of the model,also evaluate its performance.
+	\item Develop a model for each country’s medal count, which should at least include the number of gold medals and the total medal count, and estimate the uncertainty/precision of the model and evaluate its performance.
 		\begin{itemize}
 		\item[1)]
-Using the model, predict the medal standings for the 2028 Los Angeles Summer Olympics, including prediction intervals for all outcomes. Based on the model’s predictions, identify which countries are most likely to improve their performance and which countries are expected to perform worse than in the 2024.
+Using the model, predict the medal standings for the 2028 Los Angeles Summer Olympics (including prediction intervals for all outcomes). Based on the model’s predictions, identify which countries are most likely to improve their performance and which countries are expected to perform worse than in the 2024.
 	\end{itemize}
 	\begin{itemize}
 		\item[2)]
@@ -101,11 +101,11 @@ Using the model, predict the medal standings for the 2028 Los Angeles Summer Oly
 	\end{itemize}
 		\begin{itemize}
 		\item[3)]
-The model should also consider the number and types of events in each specific Olympic Games, exploring the relationship between the events and the number of medals won by each country. For each country, determine which events are most crucial and why, as well as the impact of the country’s selected events on the results.
+The model should also consider the number and types of events in each specific Olympic Games, exploring the relationship between the events and the number of medals won by each country, as well as the impact of the events selected by the country on the results.
 	\end{itemize}
 	
 	
-	\item In contrast to athletes, who must change their citizenship in order to represent different countries in competitions, coaches do not need to change their citizenship to coach, which makes it easier for them to move to other countries. As a result, the “great coach” effect may arise. For example, Lang Ping has coached the volleyball teams of both China and the U.S., leading both to championships, while Bela Karolyi coached the Romanian and U.S. women’s gymnastics teams, achieving great success. The task is to identify evidence in the data that may suggest changes driven by the "great coach" effect and estimate its impact on the medal count. Select 3 countries, determine the events in which they should consider investing in "great" coaches, and estimate the potential impact of such investments.
+	\item In contrast to athletes, who must change their citizenship in order to represent different countries in competitions, coaches do not need to change their citizenship to coach, which makes it easier for them to move to other countries. As a result, the great coach effect may arise. For example, Lang Ping has coached the volleyball teams of both China and the U.S., leading both to championships, while Bela Karolyi coached the Romanian and U.S. women’s gymnastics teams, achieving great success. The task is to identify evidence in the data that may suggest changes driven by the "great coach" effect and estimate its impact on the medal count. Select 3 countries, determine the events in which they should consider investing in "great" coaches, and estimate the impact of such investments
 	\item Explain the unique insights regarding Olympic medal counts that are included in the developed model and how these insights can provide valuable information to the National Olympic Committees of various countries.
 
 \end{itemize}
@@ -533,9 +533,9 @@ A comparison reveals that the model's prediction accuracy for gold medals is rel
 
 
 
-\section{Task2:A "Great Coach" Effect}
-\subsection{Verification of the "Great Coach" Effect}
-The "Great Coach" effect can cause significant differences in the performance of relevant countries in corresponding events. To collect evidence of changes caused by this effect, we use a Bayesian Changepoint Detection (BEAST) model.
+\section{Task2:Great Coach Effect}
+\subsection{Verification of the Great Coach Effect}
+The Great Coach effect can cause significant differences in the performance of relevant countries in corresponding events. To collect evidence of changes caused by this effect, we use a Bayesian Changepoint Detection (BEAST) model.
 
 The BEAST model uses Bayesian inference to calculate the posterior probabilities of changes occurring at different time points, determining which time points are potential change points.
 
@@ -553,7 +553,7 @@ By calculating the posterior probability for each change point, we can identify 
 
 Thus, we simply need to extract the historical award data for the relevant countries and events from the dataset and perform Bayesian Changepoint Detection.
 
-This allows us to determine how much influence these "great coaches" had on the medal counts achieved by these countries in the relevant events during the periods when Lang Ping coached the Chinese and U.S. volleyball teams, and when Bela Karolyi coached the Romanian and U.S. women's gymnastics teams.
+This allows us to determine how much influence these great coaches had on the medal counts achieved by these countries in the relevant events during the periods when Lang Ping coached the Chinese and U.S. volleyball teams, and when Bela Karolyi coached the Romanian and U.S. women's gymnastics teams.
 
 Since the value of gold, silver, and bronze medals is not the same, we standardized the data by assigning weights to the medals. The final medal count in the dataset is calculated as follows: 
 
@@ -579,11 +579,11 @@ Clearly, after Lang Ping began coaching the U.S. team in 2005, the U.S. volleyba
 
 Between 2016 and 2020, the Chinese team underwent a period of stagnation due to the retirement of key players and the lack of a strong new generation.
 
-Similarly, Bela Karolyi's coaching of the Romanian and U.S. women's gymnastics teams shows significant changes, with similar patterns to Lang Ping's coaching history. In addition, we also studied other similar cases. Therefore, we can conclude that the "great coach" effect has a significant impact on a country's medal count in the corresponding event.
+Similarly, Bela Karolyi's coaching of the Romanian and U.S. women's gymnastics teams shows significant changes, with similar patterns to Lang Ping's coaching history. In addition, we also studied other similar cases. Therefore, we can conclude that the great coach effect has a significant impact on a country's medal count in the corresponding event.
 
 
 \subsection{Countries Recommended for Hiring Coaches}
-After confirming the significant impact of the "great coach" on the medal count, we began to analyze which events a country should consider investing in "excellent coaches." For this, we use the CUSUM algorithm.
+After confirming the significant impact of the great coach on the medal count, we began to analyze which events a country should consider investing in "excellent coaches." For this, we use the CUSUM algorithm.
 
 The CUSUM method detects deviations in a data sequence by calculating the cumulative sum, which is the running total of the deviation between each data point and the expected or baseline value. It is effective at detecting small changes in the mean and has been widely used in quality control, process monitoring, and other fields.
 
@@ -684,7 +684,7 @@ Therefore, we suggest that national Olympic committees consider investing in suc
 
 Among the events commonly featured in recent Olympics, table tennis serves as a very typical example. China, with a remarkable \( 46\% \) share of table tennis medals, holds a monopoly advantage in this event. This is due to the development of a professional and efficient events system, strongly supported by the Chinese government.
 
-Based on the previously confirmed "great coach" effect, if other countries wish to enhance their capabilities in these events and win more medals, they may consider hiring coaches from these dominant countries.
+Based on the previously confirmed great coach effect, if other countries wish to enhance their capabilities in these events and win more medals, they may consider hiring coaches from these dominant countries.
 
 
 
@@ -795,7 +795,7 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 	\item \textbf{Task2}
 	
 	
- we explored the "great coach" effect using the \textbf{Bayesian Changepoint Detection} model. We found a strong correlation between coaching tenures and significant changes in a country’s sports performance. Additionally, the \textbf{CUSUM} algorithm helped identify weak events for several countries, such as France’s decline in sailing, Sweden’s waning dominance in athletics and shooting, and Germany’s emerging strength in swimming, which later showed signs of decline. Based on these findings, we recommend hiring specialized coaches to help maintain or regain competitive advantages in these events.
+ we explored the great coach effect using the \textbf{Bayesian Changepoint Detection} model. We found a strong correlation between coaching tenures and significant changes in a country’s sports performance. Additionally, the \textbf{CUSUM} algorithm helped identify weak events for several countries, such as France’s decline in sailing, Sweden’s waning dominance in athletics and shooting, and Germany’s emerging strength in swimming, which later showed signs of decline. Based on these findings, we recommend hiring specialized coaches to help maintain or regain competitive advantages in these events.
 	\item \textbf{Task3}
 	
 	
