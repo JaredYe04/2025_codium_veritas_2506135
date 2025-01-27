@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 23:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -901,7 +901,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
- [1
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[1
 
 {C:/Users/于灏文1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users
 /于灏文1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
@@ -919,33 +924,33 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [3
 
 ]
-<img/Level1.png, id=165, 631.9861pt x 449.80547pt>
+<img/Level1.png, id=160, 631.9861pt x 449.80547pt>
 File: img/Level1.png Graphic file (type png)
 <use img/Level1.png>
 Package pdftex.def Info: img/Level1.png  used on input line 162.
 (pdftex.def)             Requested size: 341.43306pt x 243.01486pt.
-<img/Level2.png, id=166, 1606.0pt x 855.195pt>
+<img/Level2.png, id=161, 1606.0pt x 855.195pt>
 File: img/Level2.png Graphic file (type png)
 <use img/Level2.png>
 Package pdftex.def Info: img/Level2.png  used on input line 169.
 (pdftex.def)             Requested size: 341.43306pt x 181.81462pt.
-<img/Number.png, id=168, 1232.9262pt x 618.6312pt>
+<img/Number.png, id=163, 1232.9262pt x 618.6312pt>
 File: img/Number.png Graphic file (type png)
 <use img/Number.png>
 Package pdftex.def Info: img/Number.png  used on input line 188.
 (pdftex.def)             Requested size: 341.43306pt x 171.3182pt.
  [4] [5 <./img/Level1.png (PNG copy)> <./img/Level2.png>]
-<img/Times.png, id=187, 1232.9262pt x 618.6312pt>
+<img/Times.png, id=183, 1232.9262pt x 618.6312pt>
 File: img/Times.png Graphic file (type png)
 <use img/Times.png>
 Package pdftex.def Info: img/Times.png  used on input line 199.
 (pdftex.def)             Requested size: 259.6186pt x 130.26564pt.
-<img/Years.png, id=188, 540.5796pt x 378.6948pt>
+<img/Years.png, id=184, 540.5796pt x 378.6948pt>
 File: img/Years.png Graphic file (type png)
 <use img/Years.png>
 Package pdftex.def Info: img/Years.png  used on input line 203.
 (pdftex.def)             Requested size: 188.8096pt x 132.26201pt.
-<img/Percentage.jpg, id=189, 2107.875pt x 2107.875pt>
+<img/Percentage.jpg, id=185, 2107.875pt x 2107.875pt>
 File: img/Percentage.jpg Graphic file (type jpg)
 <use img/Percentage.jpg>
 Package pdftex.def Info: img/Percentage.jpg  used on input line 214.
@@ -978,28 +983,28 @@ Overfull \hbox (49.23586pt too wide) detected at line 254
  [] 
  []
 
-<img/Predict.png, id=209, 1156.32pt x 861.2175pt>
+<img/Predict.png, id=205, 1156.32pt x 861.2175pt>
 File: img/Predict.png Graphic file (type png)
 <use img/Predict.png>
 Package pdftex.def Info: img/Predict.png  used on input line 262.
 (pdftex.def)             Requested size: 341.43306pt x 254.2935pt.
 [8 <./img/Predict.png>]
-<img/First.png, id=218, 1232.9262pt x 618.6312pt>
+<img/First.png, id=214, 1232.9262pt x 618.6312pt>
 File: img/First.png Graphic file (type png)
 <use img/First.png>
 Package pdftex.def Info: img/First.png  used on input line 312.
 (pdftex.def)             Requested size: 455.24408pt x 228.41798pt.
-<img/Table Tennis.png, id=219, 797.98125pt x 557.08125pt>
+<img/Table Tennis.png, id=215, 797.98125pt x 557.08125pt>
 File: img/Table Tennis.png Graphic file (type png)
 <use img/Table Tennis.png>
 Package pdftex.def Info: img/Table Tennis.png  used on input line 330.
 (pdftex.def)             Requested size: 141.61081pt x 98.85924pt.
-<img/Jamaica.png, id=220, 797.98125pt x 509.905pt>
+<img/Jamaica.png, id=216, 797.98125pt x 509.905pt>
 File: img/Jamaica.png Graphic file (type png)
 <use img/Jamaica.png>
 Package pdftex.def Info: img/Jamaica.png  used on input line 335.
 (pdftex.def)             Requested size: 155.77116pt x 99.5361pt.
-<img/New Zealand.png, id=221, 794.97pt x 522.95375pt>
+<img/New Zealand.png, id=217, 794.97pt x 522.95375pt>
 File: img/New Zealand.png Graphic file (type png)
 <use img/New Zealand.png>
 Package pdftex.def Info: img/New Zealand.png  used on input line 340.
@@ -1008,22 +1013,22 @@ Package pdftex.def Info: img/New Zealand.png  used on input line 340.
 
 LaTeX Warning: Reference `fig:result' on page 9 undefined on input line 350.
 
-<img/Volleyball.png, id=222, 2108.87875pt x 1141.26375pt>
+<img/Volleyball.png, id=218, 2108.87875pt x 1141.26375pt>
 File: img/Volleyball.png Graphic file (type png)
 <use img/Volleyball.png>
 Package pdftex.def Info: img/Volleyball.png  used on input line 355.
 (pdftex.def)             Requested size: 455.24408pt x 246.35953pt.
-<img/Decline1.png, id=223, 958.58125pt x 719.68875pt>
+<img/Decline1.png, id=219, 958.58125pt x 719.68875pt>
 File: img/Decline1.png Graphic file (type png)
 <use img/Decline1.png>
 Package pdftex.def Info: img/Decline1.png  used on input line 364.
 (pdftex.def)             Requested size: 151.05345pt x 113.40648pt.
-<img/Decline2.png, id=224, 960.58875pt x 719.68875pt>
+<img/Decline2.png, id=220, 960.58875pt x 719.68875pt>
 File: img/Decline2.png Graphic file (type png)
 <use img/Decline2.png>
 Package pdftex.def Info: img/Decline2.png  used on input line 369.
 (pdftex.def)             Requested size: 151.05345pt x 113.16489pt.
-<img/Decline3.png, id=225, 961.5925pt x 720.6925pt>
+<img/Decline3.png, id=221, 961.5925pt x 720.6925pt>
 File: img/Decline3.png Graphic file (type png)
 <use img/Decline3.png>
 Package pdftex.def Info: img/Decline3.png  used on input line 374.
@@ -1031,7 +1036,7 @@ Package pdftex.def Info: img/Decline3.png  used on input line 374.
 [9 <./img/First.png>] [10 <./img/Table Tennis.png> <./img/Jamaica.png> <./img/N
 ew Zealand.png> <./img/Volleyball.png> <./img/Decline1.png> <./img/Decline2.png
 > <./img/Decline3.png>]
-<img/Performance.png, id=248, 836.1639pt x 544.9158pt>
+<img/Performance.png, id=244, 836.1639pt x 544.9158pt>
 File: img/Performance.png Graphic file (type png)
 <use img/Performance.png>
 Package pdftex.def Info: img/Performance.png  used on input line 417.
@@ -1044,33 +1049,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 437--441
 [11
 
  <./img/Performance.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 504--508
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 513--515
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--518
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 518--520
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 521--523
+Underfull \hbox (badness 10000) in paragraph at lines 513--518
 
  []
 
 [12]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 5
-30.
+48.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1082,9 +1067,9 @@ sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 783.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 801.
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10.95> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 784.
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 802.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
@@ -1116,13 +1101,13 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `PAPER.out' has not changed.
-(rerunfilecheck)             Checksum: 38212FEFE55A2FE616D1814126255C69;4157.
+(rerunfilecheck)             Checksum: 1A4A11585DA7BFF81E7235B3F09E1141;4085.
  ) 
 Here is how much of TeX's memory you used:
- 18657 strings out of 474486
- 315169 string characters out of 5741395
+ 18659 strings out of 474486
+ 315229 string characters out of 5741395
  2124542 words of memory out of 5000000
- 40566 multiletter control sequences out of 15000+600000
+ 40567 multiletter control sequences out of 15000+600000
  609096 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,13n,110p,681b,2602s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1141,9 +1126,9 @@ ts/t1xtt.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 ype1/urw/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (17 pages, 2503552 bytes).
+Output written on PAPER.pdf (17 pages, 2504579 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
+ 289 words of extra memory for PDF output out of 10000 (max. 10000000)
 
