@@ -8,11 +8,11 @@
 \contentsline {section}{\numberline {3}Data Preprocessing}{5}{section.0.3}%
 \contentsline {subsection}{\numberline {3.1}Basic Data Preprocessing}{5}{subsection.0.3.1}%
 \contentsline {subsection}{\numberline {3.2}Data Mining}{7}{subsection.0.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Athlete Service Status}{7}{subsubsection.0.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1}Participant List Prediction}{7}{subsubsection.0.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Distribution of Countries' Adept Sports}{9}{subsubsection.0.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Changes in Medal Count}{10}{subsubsection.0.3.2.3}%
 \contentsline {section}{\numberline {4}Task1:Medal Prediction Model Based on LightGBM}{10}{section.0.4}%
-\contentsline {subsection}{\numberline {4.1}Medal Standings}{10}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {4.1}Medal Table}{10}{subsection.0.4.1}%
 \contentsline {subsection}{\numberline {4.2}Countries that Win Their First Medal}{13}{subsection.0.4.2}%
 \contentsline {subsection}{\numberline {4.3}Events and Medal Counts by Countries}{14}{subsection.0.4.3}%
 \contentsline {subsection}{\numberline {4.4}Model Performances}{15}{subsection.0.4.4}%
