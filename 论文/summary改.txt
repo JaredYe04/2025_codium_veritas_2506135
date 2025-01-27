@@ -1,0 +1,37 @@
+% 此处填写摘要内容
+\begin{abstract}
+The Olympic Games serve as a stage for athletes and a focal point for global medal table competition. This study predicts the 2028 Olympics medal distribution using a \textbf{bottom-up approach}, estimating national totals from individual athlete performance expectations.
+
+In \textbf{Task 1}, data preprocessing and feature engineering were conducted using \textbf{KMeans++} and other statistical methods. The \textbf{LightGBM} model was then used to predict the number of gold, silver, and bronze medals for each country at the 2028 Olympics. Results show that medal performance is closely linked to factors like home advantage, strength in specific events, and athlete performance. The model achieved high accuracy, with an \textbf{R²} value of \textbf{0.890} for gold medal predictions, indicating reliable results.
+
+For countries yet to win medals, our research revealed that participation in high-growth potential events increases the likelihood of securing their first medal. \textbf{Spearman Correlation Analysis} further examined the degree of dependency on specific events by certain countries.
+
+The findings indicate that countries with strong overall sports performance exhibit lower reliance on specific events, yielding stable results, while weaker nations depend more on select events. In certain cases, the \textbf{correlation coefficient} in athletics reached \textbf{0.894}, reflecting a concentration of athletic development in specific areas.
+
+In \textbf{Task 2}, we explored the "great coach effect" by applying \textbf{Bayesian Change Point Detection (BEAST)} to analyze instances from multiple countries. The study found a significant correlation between the points of inflection in some countries' sports performance and the tenure of a "great coach," validating the importance of this effect.
+
+Additionally, forward \textbf{CUSUM} analysis was used to examine medal sequence changes, identifying each country's weakest areas. The results reveal that many countries, once dominant in certain events, have seen a decline in these advantages over time. Based on these findings, targeted coach recommendations are proposed for countries requiring improvement in specific areas.
+
+In \textbf{Task 3}, we conducted in-depth \textbf{data mining} and analysis based on the models and data mentioned earlier, revealing several novel insights, such as the gender ratio of athletes, advantages derived from a country's traditional events, and changes in medal counts reflecting shifts in international political dynamics.
+
+The study found that the \textbf{gender ratio} in the Olympics is gradually balancing, with a significant increase in the proportion of female medals.
+
+Furthermore, some countries dominate traditional events, with their medal share reaching up to \textbf{\( 88\% \)}. Consequently, Olympic committees seeking to increase their medal counts should consider investing more in their national \textbf{traditional events}. 
+
+Finally, through \textbf{Time Series Analysis} of changes in medal distribution, multiple anomalies were identified, reflecting not only the evolution of the Olympics from its early stages to maturity but also their connection to the political context of the 20th century.
+
+
+    % 美赛论文中无需注明关键字。若您一定要使用，
+    % 请将以下两行的注释号 '%' 去除，以使其生效
+    % \vspace{5pt}
+    % \textbf{Keywords}: MATLAB, mathematics, LaTeX.
+    
+    
+ 
+ 
+    % 关键字Keywords
+    \vspace{5pt}
+    \textbf{Keywords}: \textbf{ KMeans++, LightGBM, Spearman Correlation, BEAST, CUSUM }
+    
+	
+\end{abstract}
