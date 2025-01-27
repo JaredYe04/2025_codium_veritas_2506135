@@ -294,7 +294,7 @@ By extracting features, we mined the level of expertise of each country in diffe
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{img/Percentage.jpg}
+	\includegraphics[width=8cm]{img/Percentage.jpg}
 	\caption{Percentage of Medals of Different Sports in China}
 	\label{fig:aa}
 \end{figure}
@@ -305,9 +305,9 @@ Since the IOC makes adjustments to events each year, the total number of medals 
 
 \section{Task1:Medal Prediction Model Based on LightGBM}
 \subsection{Medal Standings}
-Numerous factors influence the medal table. To predict the medal standings for the next Olympics, we incorporated factors identified during the data preprocessing stage, including nation level, the list of participating athletes, each country's adeptness in specific events, and adjustments to medal counts.
+The medal table is influenced by various factors. To predict the standings for the next Olympics, we considered key factors identified during data preprocessing, such as nation level, participating athletes, country-specific event strengths, and adjustments to medal counts.
 
-Additionally, as host countries typically benefit from home advantage, the factor of "whether a country is the host"or "whether hosting for the first time" was also considered. This factor was categorized into 3 categories and quantified for inclusion in the model. Ultimately, these five factors were collectively summarized as \textbf{National Background Factors}.
+Additionally, we accounted for the host country's advantage, including whether a country is the host or hosting for the first time, categorizing and quantifying this factor into three categories for the model. These five factors were collectively termed \textbf{National Background Factors}.
 
 % \usepackage{longtable}
 
@@ -328,7 +328,7 @@ Additionally, as host countries typically benefit from home advantage, the facto
 And the steps of our LightGBM model are as below:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{img/xiao.png}
+	\includegraphics[width=11cm]{img/xiao.png}
 	\caption{LightGBM Model flow Chart}
 	\label{fig:aa}
 \end{figure}
@@ -352,7 +352,7 @@ We input the previously obtained data into LightGBM for iterative model training
 %奖牌榜预测图
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{img/Predict.png}
+	\includegraphics[width=11cm]{img/Predict.png}
 	\caption{Medal Count Prediction}
 	\label{fig:aa}
 \end{figure}
@@ -725,7 +725,7 @@ LightGBM comes with a feature importance function that identifies the features w
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=14cm]{img/Sensitive Analysis 1.png}
+	\includegraphics[width=13cm]{img/Sensitive Analysis 1.png}
 	\caption{LightGBM Feature Importance}
 	\label{fig:aa}
 \end{figure}
