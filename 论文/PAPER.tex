@@ -274,7 +274,7 @@ Using the Previous Participants' Records as the basis for Monte Carlo simulation
 
 
 
-\subsubsection{Distribution of Countries' Strength Sports}
+\subsubsection{Distribution of Countries' Adept Sports}
 Due to factors such as cultural and geographical environments, countries exhibit distinct advantages in different events. For example, Kenya and Ethiopia excel in long-distance running, particularly in Athletics, largely due to the training conditions in high-altitude regions. Brazil, with its deep football culture, has produced many world-class players, a result of its warm climate and environment conducive to year-round outdoor sports.
 
 By analyzing the performance of various countries in different events across past Olympic Games, we extracted a feature variable $\gamma$(Event Adeptness Coefficient), to represent the advantages of these countries in certain events.
@@ -654,7 +654,7 @@ Moreover, the trends in the gender distribution of athletes (with awards) and th
 
 
 %6.2
-\subsection{Strength events}
+\subsection{Dominant Sports}
 
 In analyzing the national strengths in specific events, we found that certain countries have a dominant advantage, even to the point of forming a dominance, with their share of the total medal count reaching as high as \( 30\% \), \( 50\% \), or even over \( 80\% \).
 
@@ -776,21 +776,42 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 
 \section{Conclusion}
 \begin{itemize}
-		\item Task1
- we applied data preprocessing and feature engineering, using the KMeans++ clustering algorithm to rank countries based on various features, including proficiency in different sports, host nation advantages, and athlete performance levels. The LightGBM regression model predicted the medal count for each country in the 2028 Olympics. Our analysis indicated that the United States is likely to progress, while France may decline, largely due to the home-field advantage. Countries such as Australia and Japan are expected to see an increase, while Italy and South Korea may experience a decrease. China's medal count is projected to remain stable. For nations without prior medals, we identified Sierra Leone, Antigua and Barbuda, and Papua New Guinea as those with the highest probability of winning their first medal in 2028. Correlation analysis revealed that countries with strong overall performance, like China, show minimal dependence on specific events, while smaller countries are more reliant on key events for their total medal count.
+		\item \textbf{Task1}
+		
+
+ we applied data preprocessing and feature engineering, using the \textbf{KMeans++} clustering algorithm to rank countries based on various features, including proficiency in different sports, host nation advantages, and athlete performance levels. The \textbf{LightGBM} regression model predicted the medal count for each country in the 2028 Olympics. Our analysis indicated that the United States is likely to progress, while France may decline, largely due to the home-field advantage. Countries such as Australia and Japan are expected to see an increase, while Italy and South Korea may experience a decrease. China's medal count is projected to remain stable. For nations without prior medals, we identified \textbf{Sierra Leone}, \textbf{Antigua and Barbuda}, and \textbf{Papua New Guinea} as those with the highest probability of winning their first medal in 2028. Correlation analysis revealed that countries with strong overall performance, like China, show minimal dependence on specific events, while smaller countries are more reliant on key events for their total medal count.
 	
 
-	\item Task2
- we explored the "great coach" effect using the Bayesian Changepoint Detection model. We found a strong correlation between coaching tenures and significant changes in a country’s sports performance. Additionally, the CUSUM algorithm helped identify weak events for several countries, such as France’s decline in sailing, Sweden’s waning dominance in athletics and shooting, and Germany’s emerging strength in swimming, which later showed signs of decline. Based on these findings, we recommend hiring specialized coaches to help maintain or regain competitive advantages in these events.
-	\item Task3
- Using the models and data from Task 1 and Task 2, we performed a detailed analysis of several key trends in the Olympics. We found that the athlete gender ratio has become more balanced over time, reflecting increasing gender equality. Moreover, certain countries dominate niche events, such as the UK in cricket and Canada in lacrosse, which could offer opportunities for Olympic committees to enhance their medal prospects by investing in these specialized events. Lastly, our analysis of medal distribution changes over time revealed significant anomalies in 1904, 1980, 1984, and 1992, reflecting the Olympics' evolution and geopolitical shifts, particularly during the Cold War. These anomalies provide insights into broader global political and economic changes.
+	\item \textbf{Task2}
+	
+	
+ we explored the "great coach" effect using the \textbf{Bayesian Changepoint Detection} model. We found a strong correlation between coaching tenures and significant changes in a country’s sports performance. Additionally, the \textbf{CUSUM} algorithm helped identify weak events for several countries, such as France’s decline in sailing, Sweden’s waning dominance in athletics and shooting, and Germany’s emerging strength in swimming, which later showed signs of decline. Based on these findings, we recommend hiring specialized coaches to help maintain or regain competitive advantages in these events.
+	\item \textbf{Task3}
+	
+	
+ Using the models and data from Task 1 and Task 2, we performed a \textbf{detailed analysis} of several key trends in the Olympics. We found that the athlete \textbf{gender ratio} has become more balanced over time, reflecting increasing gender equality. Moreover, certain countries dominate \textbf{niche events}, such as the UK in cricket and Canada in lacrosse, which could offer opportunities for Olympic committees to enhance their medal prospects by investing in these specialized events. Lastly, our analysis of medal distribution changes over time revealed significant anomalies in 1904, 1980, 1984, and 1992, reflecting the Olympics' evolution and \textbf{geopolitical shifts}, particularly during the Cold War. These anomalies provide insights into broader global political and economic changes.
 \end{itemize}
 
 
 % 参考文献，此处以 MLA 引用格式为例
 \begin{thebibliography}{99}
-\bibitem{1} Einstein, A., Podolsky, B., \& Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. \emph{Physical review}, 47(10), 777.
-\bibitem{2} \emph{A simple, easy \LaTeX\ template for MCM/ICM: EasyMCM}. (2018). Retrieved December 1, 2019, from\url{https://www.cnblogs.com/xjtu-blacksmith/p/easymcm.html}
+\bibitem{1}R. Prescott Adams, D.J.C. MacKay Bayesian Online Changepoint Detection 
+\emph{Technical Report}, (2007)
+\bibitem{2}G. Ke, Q. Meng, T. Finley, T. Wang, W. Chen, W. Ma, et al.
+LightGBM: a highly efficient gradient boosting decision tree
+\emph{Proceedings of the 31st International Conference on Neural Information Processing Systems}. (2017), pp. 3149-3157
+\bibitem{3}Arthur, D., \& Vassilvitskii, S. . K-means++: The advantages of careful seeding.
+\emph{Proceedings of the Annuual ACM-SIAM Symposium on Discrete Algorithms}.(2007)8, 1027-1035. 10.1145/1283383.1283494.
+\bibitem{4}Mosca, Edoardo, Ferenc, Szigeti, Stella, et al.
+TragianniSHAP-based explanation methods: A review for NLP interpretability
+\emph{In Proceedings of the 29th International Conference on Computational Linguistics}.2022
+
+\bibitem{5}Seiler S. Evaluating the (your country here) Olympic medal count.
+\emph{Int J Sport Physiol Perform.}.2013;8:203–10.
+
+
+
+
 \end{thebibliography}
 
 
@@ -1042,34 +1063,58 @@ Here are the program codes we used in our research.
 % 如您的论文不需要展示代码，请删除
 % 更多用法，请参考 listings 宏包文档
 
-% Python 代码示例
-\begin{lstlisting}[language=Python, name={test.py}]
-# Python code example
-for i in range(10):
-    print('Hello, world!')
-\end{lstlisting}
-
-% MATLAB 代码示例
-\begin{lstlisting}[language=MATLAB, name={test.m}]
-% MATLAB code example
-for i = 1:10
-    disp("hello, world!");
-end
-\end{lstlisting}
-
 
 
 % C++ 代码示例
-\begin{lstlisting}[language=C++, name={test.cpp}]
-// C++ code example
-#include <iostream>
-using namespace std;
+\begin{lstlisting}[language=Python, name={LightGBM.py}]
 
-int main() {
-    for (int i = 0; i < 10; i++)
-        cout << "hello, world" << endl;
-    return 0;
-}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+data=pd.read_csv('./data/train_data.csv')
+X=data.iloc[:,0:-3]
+Y=data.iloc[:,-3:]
+
+X.fillna(0,inplace=True)
+from sklearn.preprocessing import StandardScaler
+scaler=StandardScaler()
+X=scaler.fit_transform(X)
+columns=['host','med_d_ath','adept','lvl','win_prob','G_prob','S_prob','B_prob','lose_prob']
+from sklearn.preprocessing import PolynomialFeatures
+poly=PolynomialFeatures(degree=2)
+
+X=poly.fit_transform(X)
+new_columns=poly.get_feature_names_out(input_features=columns)
+X=pd.DataFrame(X,columns=new_columns)
+import lightgbm as lgb
+from sklearn.model_selection import train_test_split
+models=['Gold','Silver','Bronze']
+performances=[]
+i=0
+for modelName in models:
+Y=data[modelName]
+X_train,X_test,Y_train,Y_test=
+(X,Y,test_size=0.2,random_state=0)
+model=lgb.LGBMRegressor()
+model.fit(X_train,Y_train)
+Y_predict=model.predict(X_test)
+from sklearn.metrics import mean_squared_error
+mse=mean_squared_error(Y_test,Y_predict)
+Y_predict=np.round(Y_predict)
+from sklearn.metrics import mean_squared_error
+rmse=mean_squared_error(Y_test,Y_predict)**0.5
+from sklearn.metrics import mean_absolute_error
+mae=mean_absolute_error(Y_test,Y_predict)
+from sklearn.metrics import r2_score
+r2=r2_score(Y_test,Y_predict)
+performances.append([modelName,mse,rmse,mae,r2])
+print(modelName+' MSE:',mse)
+print(modelName+' RMSE:',rmse)
+print(modelName+' MAE:',mae)
+print(modelName+' R2:',r2)
+
 \end{lstlisting}
 
 \end{subappendices}  % 附录内容结束
