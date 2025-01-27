@@ -63,11 +63,11 @@ peaks, _ = find_peaks(y_vals)
 
 # 在每个峰值位置绘制星号
 for peak in peaks:
-    plt.scatter(x_vals[peak], 0.76, color='#e55756', marker='*', s=200, zorder=5)
+    plt.scatter(1, 0.78, color='#e55756', marker='*', s=200, zorder=5)
 
 
 #宽度变大
-plt.xlim(0, 40)
+plt.xlim(0, 20)
 
 #添加均值线
 plt.axvline(result['Year'].mean(), linestyle='--', linewidth=2,color='#79706e')
