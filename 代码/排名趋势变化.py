@@ -32,10 +32,12 @@ import numpy as np
 data=pd.read_csv('./data/奥运排名+预测.csv')
 #将数据转换为新的格式
 #获取所有国家的名称
-countries=['United States','China','Japan','Australia','France','Netherlands','Great Britain','South Korea','Italy','Germany','New Zealand','Canada','Uzbekistan','Hungary','Spain','Sweden']
+#countries=['United States','China','Japan','Australia','France','Netherlands','Great Britain','South Korea','Italy','Germany','New Zealand','Canada','Uzbekistan','Hungary','Spain','Sweden']
+countries=list(data['NOC'].unique())
+
 #获取所有年份
 years=data['Year'].unique()
-years=years[years>=1984]
+#years=years[years>=1984]
 #创建新的数据集
 new_data=pd.DataFrame(columns=['Year']+list(countries))
 #填充数据
@@ -58,7 +60,7 @@ for year in years:
     
     
 #筛选数据
-new_data=new_data[new_data['Year']>=1980]
+#new_data=new_data[new_data['Year']>=1980]
 
 #重新排序列
 new_data=new_data[['Year']+countries]
@@ -66,6 +68,7 @@ new_data=new_data[['Year']+countries]
 #保存数据
 new_data.to_csv('./data/奥运排名+预测_新格式.csv',index=False)
 
+#new_data.to_csv('./data/奥运奖牌统计.csv',index=False)
 
 
 

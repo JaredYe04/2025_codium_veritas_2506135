@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  26 JAN 2025 23:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.20)  27 JAN 2025 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1049,13 +1049,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 437--441
 [11
 
  <./img/Performance.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 513--518
+Underfull \hbox (badness 10000) in paragraph at lines 511--516
 
  []
 
 [12]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 5
-48.
+46.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1067,9 +1067,9 @@ sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 801.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 799.
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10.95> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 802.
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 800.
 
 (C:\Users\于灏文1\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.
 sty
@@ -1126,7 +1126,7 @@ ts/t1xtt.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 ype1/urw/times/utmb8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/于灏文1/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (17 pages, 2504579 bytes).
+Output written on PAPER.pdf (17 pages, 2504590 bytes).
 PDF statistics:
  393 PDF objects out of 1000 (max. 8388607)
  93 named destinations out of 1000 (max. 500000)
