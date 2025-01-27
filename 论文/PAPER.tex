@@ -115,7 +115,7 @@ We preprocess the data provided before analyzing matches and mainly utilize 3 mo
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=16cm]{img/da.png}
-	\caption{Flow Chart of Our Work}
+	\caption{Workflow of Our Methodology}
 	\label{fig:aa}
 \end{figure}
 
@@ -127,15 +127,15 @@ We preprocess the data provided before analyzing matches and mainly utilize 3 mo
 The total medal count of a country more accurately reflects the long-term investments and developmental outcomes in sports, rather than short-term results that can be drastically altered. Furthermore, external factors that influence medal counts, such as the organization of international competitions, rule changes, and judging standards, tend to remain relatively stable in the short term.
 
 
-\textbf{Assumption 2 } \textit{Each year, a number of new athletes join the Olympic Games, some of whom may be competing for the first time. The specific proportion of these athletes will be estimated through our simulation. }
+\textbf{Assumption 2 } \textit{Each year, a number of new athletes join the Olympic Games, some of whom may be competing for the first time. The specific proportion of these athletes wDue to the systematic nature of athlete training and the relative consistency of competition environments, their performance tends to remain stable. By mitigating the impact of outliers, the model can avoid being influenced by extreme values.  ill be estimated through our simulation. }
 
-The performance variability of athletes is assumed to be limited, with minimal occurrences of exceptional overperformance or underperformance.  
+Due to the inclusion of new athletes each year and the replacement of older ones, in order to predict the medal count for the next Olympic Games, we need to simulate the new athletes based on historical athlete data using algorithms.
 
 
 \textbf{Assumption 3} \textit{ The performance variability of athletes is assumed to be limited, with minimal occurrences of exceptional overperformance or underperformance.  }
 
 The performance variability of athletes is assumed to be limited, with minimal occurrences of exceptional overperformance or underperformance.  
-Due to the systematic nature of athlete training and the relative consistency of competition environments, their performance tends to remain stable. By mitigating the impact of outliers, the model can avoid being influenced by extreme values.  
+
 
 \subsection{Notations}
 
@@ -189,9 +189,9 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 	
 \section{Data Preprocessing}
 \subsection{Basic Data Preprocessing}
-Due to various influencing factors, there are significant differences in the competitive levels of countries in the Olympic Games, which have been reflected in past competitions, specifically in the total number of gold, silver, and bronze medals won by each country. 
+Due to the diverse factors influencing competition outcomes, there are significant differences in the competitive levels of countries in the Olympic Games, which have been reflected in past competitions, specifically in the total number of gold, silver, and bronze medals won by each country. 
 
-To illustrate the differences in the levels of countries in previous Olympic Games (i.e. national level), we employed the KMeans++ clustering algorithm. Based on the number of gold, silver, and bronze medals, as well as the total medal count of each country in past Olympics, we classified the countries into five levels. These five levels, L1, L2, L3, L4, and L5, form a partition of the sample set X (the total number of gold, silver, and bronze medals won by countries in previous Olympic Games).
+To demonstrate the differences in the levels of countries in previous Olympic Games (i.e. national level), we employed the KMeans++ algorithm. Based on the number of gold, silver, and bronze medals, as well as the total medal count of each country in past Olympics, we categorized the countries into five levels. These 5 levels, L1, L2, L3, L4, and L5, form a partition of the sample set X (the total number of gold, silver, and bronze medals won by countries in previous Olympic Games).
 \begin{equation}
 G_{i} \cap G_{j}=\emptyset, \bigcup_{i=1}^{5} G_{i}=X
 \end{equation}
@@ -771,7 +771,7 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 
 \section{Model Evaluation}
 \subsection{Strengths}
-1.For medal prediction, we performed complex feature engineering and data mining, resulting in a large dataset. LightGBM is highly efficient in training, with fast processing speeds, low memory consumption, and support for parallel and distributed training, making it well-suited for handling large-scale data, aligning well with our dataset.
+1. For medal prediction, we performed complex feature engineering and data mining, resulting in a large dataset. LightGBM is highly efficient in training, with fast processing speeds, low memory consumption, and support for parallel and distributed training, making it well-suited for handling large-scale data, aligning well with our dataset.
 
 2. The model demonstrates high prediction accuracy, superior performance, and the predicted results align closely with expectations from previous years. Additionally, the predictions are consistent with common knowledge and offer high interpretability.
 
@@ -779,7 +779,7 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 
 4. The Bayesian Change Point Detection used in Task 2 accurately reflects the change points in time-series data. Our tests showed that the change points in the performance of China and the United States women's volleyball teams coincided with the coaching periods of Lang Ping, demonstrating the model's accuracy.
 \subsection{Weaknesses}
-1.Since the training data includes a large amount of historical data (spanning over 50 years), the prediction results are susceptible to the influence of historical data, leading to potential errors.
+1. Since the training data includes a large amount of historical data (spanning over 50 years), the prediction results are susceptible to the influence of historical data, leading to potential errors.
 
  	
  	
