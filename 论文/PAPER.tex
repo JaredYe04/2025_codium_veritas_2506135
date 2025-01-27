@@ -27,7 +27,9 @@
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 
 
-\title{Together, Individuals Make a Difference}  % 标题
+\title{Individuals Make a Difference:
+	
+	An Olympics Medal Prediction Model Based on LightGBM}  % 标题
 
 % 如需要修改题头（默认为 MCM/ICM），请使用以下命令（此处修改为 MCM）
 %\renewcommand{\contest}{MCM}
@@ -111,7 +113,7 @@ The model should also consider the number and types of events in each specific O
 
 \end{itemize}
 
-\subsection{Our work}
+\subsection{Our Work}
 We preprocess the data provided before analyzing matches and mainly utilize 3 models. The specific work was as follows.
 \begin{figure}[H]
 	\centering
@@ -196,6 +198,7 @@ To demonstrate the differences in the levels of countries in previous Olympic Ga
 \begin{equation}
 G_{i} \cap G_{j}=\emptyset, \bigcup_{i=1}^{5} G_{i}=X
 \end{equation}
+
 After the classification, the distribution of countries across the 5 levels is shown in the figures:
 \begin{figure}[H]
 	\centering
@@ -303,7 +306,7 @@ By extracting features, we mined the level of expertise of each country in diffe
 \subsubsection{Changes in Medal Count}
 Since the IOC makes adjustments to events each year, the total number of medals awarded in each event does not remain exactly the same each year. To address this, we applied\textbf{ Linear Regression} to fit the number of gold, silver, and bronze medals awarded in each event across past Olympic Games and predicted the medal distribution for the upcoming Olympic Games, providing a reference for subsequent operations.
 
-\section{Task 1:Medal Prediction Model Based on LightGBM}
+\section{Task 1: Medal Prediction Model Based on LightGBM}
 \subsection{Medal Table}
 The medal table is influenced by various factors. To predict the standings for the next Olympics, we considered key factors identified during data preprocessing, such as nation level, participating athletes, country-specific event strengths, and adjustments to medal counts.
 
@@ -349,7 +352,7 @@ $\hat{y}_i^{(m-1)}$ is the current model's predicted value.
 $\hat{y}_i^{(m-1)}$ +$\eta f_m(x_i)$ is the model's predicted value at the m-th step during the gradient boosting model update process.
 $\Omega(f_m)$ is the regularization term, which prevents overfitting of the model and controls the complexity of the trees.
 
-We input the previously obtained data into LightGBM for iterative model training. After training, we input the factors affecting the predictions for the next edition into the model, ultimately obtaining the predicted medal table for the 2028 Summer Olympics in Los Angeles, USA, are shown in Figure \ref{fig:aa}.
+We input the previously obtained data into LightGBM for iterative model training. After training, we input the factors affecting the predictions for the next edition into the model, ultimately obtaining the predicted medal table for the 2028 Summer Olympics in Los Angeles, USA, are shown in the figure as follows.
 %奖牌榜预测图
 \begin{figure}[H]
 	\centering
@@ -537,7 +540,7 @@ A comparison reveals that the model's prediction accuracy for gold medals is rel
 
 
 
-\section{Task 2:Great Coach Effect}
+\section{Task 2: Great Coach Effect}
 \subsection{Verification of the Great Coach Effect}
 The Great Coach effect can cause significant differences in the performance of relevant countries in corresponding events. To collect evidence of changes caused by this effect, we use a \textbf{Bayesian Changepoint Detection (BEAST)} model.
 
@@ -631,7 +634,7 @@ Germany’s swimming did not show any notable advantage before the 1990s. Howeve
 
 
 
-\section{Task 3:Other Original Insights}
+\section{Task 3: Other Original Insights}
 
 \subsection{Gender Distribution}
 
@@ -791,7 +794,7 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 
 \section{Conclusion}
 \begin{itemize}
-		\item \textbf{Task1}
+		\item \textbf{Task 1}
 		
 
 We applied data preprocessing and feature engineering, using the \textbf{KMeans++} clustering algorithm\cite{3} to rank countries based on various features, including proficiency in different sports, host nation advantages, and athlete performance levels.
@@ -801,12 +804,12 @@ The \textbf{LightGBM} regression model predicted the medal count for each countr
 China's medal count is projected to remain stable. For nations without prior medals, we identified \textbf{Sierra Leone}, \textbf{Antigua and Barbuda}, and \textbf{Papua New Guinea} as those with the highest probability of winning their first medal in 2028. Correlation analysis revealed that countries with strong overall performance, like China, show minimal dependence on specific events, while smaller countries are more reliant on key events for their total medal count.
 	
 
-	\item \textbf{Task2}
+	\item \textbf{Task 2}
 
 We explored the great coach effect using the \textbf{Bayesian Changepoint Detection} model. We found a strong correlation between coaching tenures and significant changes in a country’s sports performance.
  
 Additionally, the \textbf{CUSUM} algorithm helped identify weak events for several countries, such as France’s decline in sailing, Sweden’s waning dominance in athletics and shooting, and Germany’s emerging strength in swimming, which later showed signs of decline. Based on these findings, we recommend hiring specialized coaches to help maintain or regain competitive advantages in these events.
-	\item \textbf{Task3}
+	\item \textbf{Task 3}
 	
 The models and data from Task 1 and Task 2, we performed a \textbf{detailed analysis} of several key trends in the Olympics. We found that the athlete \textbf{gender ratio} has become more balanced over time, reflecting increasing gender equality.
  
