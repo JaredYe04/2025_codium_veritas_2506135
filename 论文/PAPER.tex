@@ -14,6 +14,7 @@
 \usepackage{graphicx} 
 %\usepackage{pdfpages}
 \usepackage{longtable}
+\usepackage{float}
 %\usepackage{tabu}
 \usepackage{threeparttable} %支持在表格中使用 \tnote 命令添加脚注，并自动编号
 \usepackage{listings} %在文档中插入代码
@@ -111,8 +112,8 @@ The model should also consider the number and types of events in each specific O
 \end{itemize}
 
 \subsection{Our work}
-We preprocess the data provided before analyzing matches and mainly utilize 3 models. The specific work was as follows
-\begin{figure}[htbp]
+We preprocess the data provided before analyzing matches and mainly utilize 3 models. The specific work was as follows.
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=16cm]{img/da.png}
 	\caption{Workflow of Our Methodology}
@@ -196,14 +197,14 @@ To demonstrate the differences in the levels of countries in previous Olympic Ga
 G_{i} \cap G_{j}=\emptyset, \bigcup_{i=1}^{5} G_{i}=X
 \end{equation}
 After the classification, the distribution of countries across the 5 levels is shown in the figures:
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/Level1.png}
 	\caption{Scatter plot of national level classification (based on Kmeans++clustering algorithm)}
 	\label{fig:aa}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/Level2.png}
 	\caption{Geographical Distribution Map of Country Level Classification}
@@ -241,7 +242,7 @@ In addition, we created 10 new features based on the original variables, which w
 \subsubsection{Athlete Service Status}
 To predict future scenarios, we analyzed the trends in the number of participants for each country, event and year, and applied \textbf{Linear Regression} for fitting.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/Number.png}
 	\caption{Number of New and Leave Athletes in Each Year}
@@ -249,7 +250,7 @@ To predict future scenarios, we analyzed the trends in the number of participant
 \end{figure}
 
 Then, we compiled the distribution of the times of participations and the distribution of athlete tenure based on historical data, as shown in the figure.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{.48\textwidth}
 		\includegraphics[width=\textwidth]{img/Times.png}
@@ -291,7 +292,7 @@ By analyzing the performance of various countries in different events across pas
 
 By extracting features, we mined the level of expertise of each country in different events within the dataset, such as China's performance across various events, as shown in the figure below:
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/Percentage.jpg}
 	\caption{Percentage of Medals of Different Sports in China}
@@ -325,7 +326,7 @@ Additionally, as host countries typically benefit from home advantage, the facto
 
 
 And the steps of our LightGBM model are as below:
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/xiao.png}
 	\caption{LightGBM Model flow Chart}
@@ -342,21 +343,21 @@ As a gradient boosting-based regression model, in LightGBM, the objective functi
 \end{equation}
 The optimized loss function based on GBDT is represented as squared error in the medal prediction regression task.
 
-$y_i$denotes the true value.
-$\hat{y}_i^{(m-1)}$is the current model's predicted value.
-$\hat{y}_i^{(m-1)}$+$\eta f_m(x_i)$is the model's predicted value at the m-th step during the gradient boosting model update process.
-$\Omega(f_m)$ Regularization term, which prevents overfitting of the model and controls the complexity of the trees.
+$y_i$ denotes the true value.
+$\hat{y}_i^{(m-1)}$ is the current model's predicted value.
+$\hat{y}_i^{(m-1)}$ +$\eta f_m(x_i)$ is the model's predicted value at the m-th step during the gradient boosting model update process.
+$\Omega(f_m)$ is the regularization term, which prevents overfitting of the model and controls the complexity of the trees.
 
 We input the previously obtained data into LightGBM for iterative model training. After training, we input the factors affecting the predictions for the next edition into the model, ultimately obtaining the predicted medal table for the 2028 Summer Olympics in Los Angeles, USA, are shown in Figure \ref{fig:USA}.
 %奖牌榜预测图
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/Predict.png}
 	\caption{Medal Count Prediction}
 	\label{fig:aa}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/OP1.png}
 	\caption{USA Medal count prediction}
@@ -427,10 +428,11 @@ In order to visualize the accuracy of a country's first medal prediction, we nor
 \begin{equation}
 	\kappa = 0.8 \times \frac{\xi - \overline{\xi}}{\sigma}
 \end{equation}
+
 Here,$\overline{\xi}$ refers to the mean of the original data, and$\sigma$refers to the standard deviation of the original data.
 The calculated results are shown in Figure \ref{fig:First Medal}:
 %首奖可能性图
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=16cm]{img/First.png}
 	\caption{The Probability of First Medal in 2028}
@@ -465,7 +467,7 @@ The absolute value of $R_s$ closer to 1 indicates a stronger correlation, while 
 
 Through extensive data analysis, we identified 3 typical examples: table tennis in China, Athletics in Jamaica, and rowing in New Zealand, as shown in the figure.
 %三个国家擅长项目的图
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{.3\textwidth}
 		\includegraphics[width=\textwidth]{img/Table Tennis.png}
@@ -512,7 +514,7 @@ Among these, smaller values for the first three metrics and a larger value for R
 
 
 %雷达图
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=8cm]{img/Performance.png}
 	\caption{Model Performance Radar Chart}
@@ -569,7 +571,7 @@ Taking Lang Ping's leadership of the Chinese and U.S. volleyball teams as an exa
 
 
 %5.1 排球
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/Volleyball.png}
 	\caption{Medal Count of Women's Volleyball Teams(CHN vs USA) Over Time}
@@ -600,7 +602,7 @@ If the curve shows a prolonged downward trend, it indicates that the event has s
 
 
 %三个国家某项目衰弱 需要教练图
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{.32\textwidth}
 		\includegraphics[width=\textwidth]{img/Decline1.png}
@@ -634,14 +636,14 @@ Germany’s swimming did not show any notable advantage before the 1990s. Howeve
 We analyzed the gender ratio in the Olympics, focusing on two aspects: the male-to-female ratio of athletes participating in the Games and the male-to-female ratio of medal winners, as shown in the figure.
 
 	%6.1 男女比例图
-	\begin{figure}[htbp]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=12cm]{img/Gender with Award.png}
 		\caption{Gender Distribution of Athletes(with Award)}
 		\label{fig:aa}
 	\end{figure}
 	
-	\begin{figure}[htbp]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=12cm]{img/Gender.png}
 		\caption{Gender Distribution of Athletes}
@@ -670,7 +672,7 @@ In analyzing the national strengths in specific events, we found that certain co
 
 
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=16cm]{img/Monopolized Sports.png}
 	\caption{Adeptness of Countries in Specitific Project}
@@ -693,7 +695,7 @@ Based on the previously confirmed great coach effect, if other countries wish to
 As of now, the Olympics has been held 33 times, spanning from 1896 to 2024, covering nearly 130 years. Thus, the Olympics has witnessed the dramatic shifts in global geopolitics throughout the 20th century. We created a stacked area chart based on each country's share of the total medals, offering a glimpse into the significant impact of world affairs on Olympic results.
 
 %6.3 花里胡哨图
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=16cm]{img/3.3-1.png}
 	\caption{Trend of Medal Proportions by Country Annually}
@@ -721,7 +723,7 @@ Sensitivity Analysis is used to evaluate the sensitivity of model outputs to cha
 LightGBM comes with a feature importance function that identifies the features with the greatest impact on the model’s predictions. By using plot\_importance() function, we can visualize the importance of each feature.
 
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{img/Sensitive Analysis 1.png}
 	\caption{LightGBM Feature Importance}
@@ -749,7 +751,7 @@ Below are the SHAP Summary Plots for the gold, silver, and bronze medal predicti
 
 
 %三个奖牌的图像
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{.32\textwidth}
 		\includegraphics[width=\textwidth]{img/shap1.png}

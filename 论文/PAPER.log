@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.17)  27 JAN 2025 21:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.17)  27 JAN 2025 22:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -656,13 +656,21 @@ Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
 \l__tblr_cell_ht_dim=\dimen297
 \l__tblr_diag_box=\box90
 )
+(C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count339
+\float@exts=\toks35
+\float@box=\box91
+\@float@everytoks=\toks36
+\@floatcapt=\box92
+)
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threepar
 ttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box91
+\@tempboxb=\box93
 )
-\c@keywords=\count339
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 36
+\c@keywords=\count340
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 37
 .
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
@@ -756,24 +764,24 @@ LaTeX Warning: Label `fig:subfigures' multiply defined.
 )
 \openout1 = `PAPER.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -810,6 +818,7 @@ LaTeX Font Info:    ... okay on input line 36.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -822,17 +831,17 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count340
+\scratchcounter=\count341
 \scratchdimen=\dimen298
-\scratchbox=\box92
-\nofMPsegments=\count341
-\nofMParguments=\count342
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count343
+\scratchbox=\box94
+\nofMPsegments=\count342
+\nofMParguments=\count343
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count344
 \MPscratchDim=\dimen299
-\MPnumerator=\count344
-\makeMPintoPDFobject=\count345
-\everyMPtoPDFconversion=\toks36
+\MPnumerator=\count345
+\makeMPintoPDFobject=\count346
+\everyMPtoPDFconversion=\toks38
 ) (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
 
@@ -842,54 +851,54 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 )
-Package hyperref Info: Link coloring ON on input line 36.
+Package hyperref Info: Link coloring ON on input line 37.
  (PAPER.out) (PAPER.out)
 \@outlinefile=\write4
 \openout4 = `PAPER.out'.
 
-\c@lstlisting=\count346
+\c@lstlisting=\count347
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-2.
+3.
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 56.
+ 57.
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 56.
+ 57.
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 56.
+ 57.
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 56.
+ 57.
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
-6.
+7.
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 
 [1
 
@@ -900,9 +909,9 @@ e/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (PAPER.toc)
 
 
 [2]
-Overfull \hbox (12.27321pt too wide) in paragraph at lines 96--97
+Overfull \hbox (9.27321pt too wide) in paragraph at lines 97--98
 []\T1/ptm/m/n/12 Using the model, pre-dict the medal stand-ings for the 2028 Lo
-s An-ge-les Sum-mer Olympics,
+s An-ge-les Sum-mer Olympics
  []
 
 [3
@@ -911,19 +920,20 @@ s An-ge-les Sum-mer Olympics,
 <img/da.png, id=191, 1413.78188pt x 651.93562pt>
 File: img/da.png Graphic file (type png)
 <use img/da.png>
-Package pdftex.def Info: img/da.png  used on input line 117.
+Package pdftex.def Info: img/da.png  used on input line 118.
 (pdftex.def)             Requested size: 455.24408pt x 209.9268pt.
  [4 <./img/da.png>] [5]
 <img/Level1.png, id=210, 631.9861pt x 449.80547pt>
 File: img/Level1.png Graphic file (type png)
 <use img/Level1.png>
-Package pdftex.def Info: img/Level1.png  used on input line 201.
+Package pdftex.def Info: img/Level1.png  used on input line 202.
 (pdftex.def)             Requested size: 341.43306pt x 243.01486pt.
 <img/Level2.png, id=211, 1606.0pt x 855.195pt>
 File: img/Level2.png Graphic file (type png)
 <use img/Level2.png>
-Package pdftex.def Info: img/Level2.png  used on input line 208.
+Package pdftex.def Info: img/Level2.png  used on input line 209.
 (pdftex.def)             Requested size: 341.43306pt x 181.81462pt.
+ [6 <./img/Level1.png (PNG copy)> <./img/Level2.png>]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -932,266 +942,270 @@ Package pdftex.def Info: img/Level2.png  used on input line 208.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-
 Package tabularray Warning: Table width is too small, need 49.23586pt more!
 
 > Step: build the whole table.
-[6 <./img/Level1.png (PNG copy)> <./img/Level2.png>]
-Overfull \hbox (49.23586pt too wide) detected at line 235
+
+Overfull \hbox (49.23586pt too wide) detected at line 236
  [] 
  []
 
 <img/Number.png, id=224, 1232.9262pt x 618.6312pt>
 File: img/Number.png Graphic file (type png)
 <use img/Number.png>
-Package pdftex.def Info: img/Number.png  used on input line 246.
+Package pdftex.def Info: img/Number.png  used on input line 247.
 (pdftex.def)             Requested size: 341.43306pt x 171.3182pt.
-<img/Times.png, id=225, 462.528pt x 346.896pt>
+[7]
+<img/Times.png, id=232, 462.528pt x 346.896pt>
 File: img/Times.png Graphic file (type png)
 <use img/Times.png>
-Package pdftex.def Info: img/Times.png  used on input line 255.
+Package pdftex.def Info: img/Times.png  used on input line 256.
 (pdftex.def)             Requested size: 226.57297pt x 169.93288pt.
-<img/Years.png, id=226, 490.7133pt x 344.0052pt>
+<img/Years.png, id=233, 490.7133pt x 344.0052pt>
 File: img/Years.png Graphic file (type png)
 <use img/Years.png>
-Package pdftex.def Info: img/Years.png  used on input line 259.
+Package pdftex.def Info: img/Years.png  used on input line 260.
 (pdftex.def)             Requested size: 240.73332pt x 168.76347pt.
-[7] [8 <./img/Number.png> <./img/Times.png> <./img/Years.png>]
+ [8 <./img/Number.png> <./img/Times.png> <./img/Years.png>]
 <img/Percentage.jpg, id=244, 2107.875pt x 2107.875pt>
 File: img/Percentage.jpg Graphic file (type jpg)
 <use img/Percentage.jpg>
-Package pdftex.def Info: img/Percentage.jpg  used on input line 296.
+Package pdftex.def Info: img/Percentage.jpg  used on input line 297.
 (pdftex.def)             Requested size: 341.43306pt x 341.41599pt.
- [9]
-<img/xiao.png, id=252, 1093.83656pt x 864.22874pt>
+ [9] [10 <./img/Percentage.jpg>]
+<img/xiao.png, id=258, 1093.83656pt x 864.22874pt>
 File: img/xiao.png Graphic file (type png)
 <use img/xiao.png>
-Package pdftex.def Info: img/xiao.png  used on input line 330.
+Package pdftex.def Info: img/xiao.png  used on input line 331.
 (pdftex.def)             Requested size: 341.43306pt x 269.76752pt.
-
-Overfull \vbox (348.80554pt too high) has occurred while \output is active []
-
-
-[10 <./img/Percentage.jpg> <./img/xiao.png>]
-<img/Predict.png, id=263, 1156.32pt x 861.2175pt>
+ [11 <./img/xiao.png>]
+<img/Predict.png, id=268, 1156.32pt x 861.2175pt>
 File: img/Predict.png Graphic file (type png)
 <use img/Predict.png>
-Package pdftex.def Info: img/Predict.png  used on input line 354.
+Package pdftex.def Info: img/Predict.png  used on input line 355.
 (pdftex.def)             Requested size: 341.43306pt x 254.2935pt.
-<img/OP1.png, id=264, 372.4314pt x 266.4354pt>
+<img/OP1.png, id=269, 372.4314pt x 266.4354pt>
 File: img/OP1.png Graphic file (type png)
 <use img/OP1.png>
-Package pdftex.def Info: img/OP1.png  used on input line 361.
+Package pdftex.def Info: img/OP1.png  used on input line 362.
 (pdftex.def)             Requested size: 341.43306pt x 244.27385pt.
- [11 <./img/Predict.png>] [12 <./img/OP1.png>]
-<img/First.png, id=283, 1232.9262pt x 618.6312pt>
+ [12 <./img/Predict.png>] [13 <./img/OP1.png>]
+<img/First.png, id=288, 1232.9262pt x 618.6312pt>
 File: img/First.png Graphic file (type png)
 <use img/First.png>
-Package pdftex.def Info: img/First.png  used on input line 435.
+Package pdftex.def Info: img/First.png  used on input line 437.
 (pdftex.def)             Requested size: 455.24408pt x 228.41798pt.
- [13]
-<img/Table Tennis.png, id=293, 797.98125pt x 557.08125pt>
+ [14] [15 <./img/First.png>]
+<img/Table Tennis.png, id=306, 797.98125pt x 557.08125pt>
 File: img/Table Tennis.png Graphic file (type png)
 <use img/Table Tennis.png>
-Package pdftex.def Info: img/Table Tennis.png  used on input line 471.
+Package pdftex.def Info: img/Table Tennis.png  used on input line 473.
 (pdftex.def)             Requested size: 141.61081pt x 98.85924pt.
-<img/Jamaica.png, id=294, 797.98125pt x 509.905pt>
+<img/Jamaica.png, id=307, 797.98125pt x 509.905pt>
 File: img/Jamaica.png Graphic file (type png)
 <use img/Jamaica.png>
-Package pdftex.def Info: img/Jamaica.png  used on input line 476.
+Package pdftex.def Info: img/Jamaica.png  used on input line 478.
 (pdftex.def)             Requested size: 155.77116pt x 99.5361pt.
-<img/New Zealand.png, id=295, 794.97pt x 522.95375pt>
+<img/New Zealand.png, id=308, 794.97pt x 522.95375pt>
 File: img/New Zealand.png Graphic file (type png)
 <use img/New Zealand.png>
-Package pdftex.def Info: img/New Zealand.png  used on input line 481.
+Package pdftex.def Info: img/New Zealand.png  used on input line 483.
 (pdftex.def)             Requested size: 151.05345pt x 99.36224pt.
- [14 <./img/First.png>]
-<img/Performance.png, id=304, 591.1686pt x 612.1269pt>
+ [16 <./img/Table Tennis.png> <./img/Jamaica.png> <./img/New Zealand.png>]
+<img/Performance.png, id=319, 591.1686pt x 612.1269pt>
 File: img/Performance.png Graphic file (type png)
 <use img/Performance.png>
-Package pdftex.def Info: img/Performance.png  used on input line 517.
+Package pdftex.def Info: img/Performance.png  used on input line 519.
 (pdftex.def)             Requested size: 227.62204pt x 235.69293pt.
- [15 <./img/Table Tennis.png> <./img/Jamaica.png> <./img/New Zealand.png>] [16 
-<./img/Performance.png>]
-<img/Volleyball.png, id=323, 2108.87875pt x 1141.26375pt>
+ [17 <./img/Performance.png>]
+<img/Volleyball.png, id=327, 2108.87875pt x 1141.26375pt>
 File: img/Volleyball.png Graphic file (type png)
 <use img/Volleyball.png>
-Package pdftex.def Info: img/Volleyball.png  used on input line 574.
+Package pdftex.def Info: img/Volleyball.png  used on input line 576.
 (pdftex.def)             Requested size: 341.43306pt x 184.76529pt.
- [17 <./img/Volleyball.png>]
-<img/Decline1.png, id=331, 958.58125pt x 719.68875pt>
+ [18 <./img/Volleyball.png>]
+<img/Decline1.png, id=336, 958.58125pt x 719.68875pt>
 File: img/Decline1.png Graphic file (type png)
 <use img/Decline1.png>
-Package pdftex.def Info: img/Decline1.png  used on input line 606.
+Package pdftex.def Info: img/Decline1.png  used on input line 608.
 (pdftex.def)             Requested size: 151.05345pt x 113.40648pt.
-<img/Decline2.png, id=332, 960.58875pt x 719.68875pt>
+<img/Decline2.png, id=337, 960.58875pt x 719.68875pt>
 File: img/Decline2.png Graphic file (type png)
 <use img/Decline2.png>
-Package pdftex.def Info: img/Decline2.png  used on input line 611.
+Package pdftex.def Info: img/Decline2.png  used on input line 613.
 (pdftex.def)             Requested size: 151.05345pt x 113.16489pt.
-<img/Decline3.png, id=333, 961.5925pt x 720.6925pt>
+<img/Decline3.png, id=338, 961.5925pt x 720.6925pt>
 File: img/Decline3.png Graphic file (type png)
 <use img/Decline3.png>
-Package pdftex.def Info: img/Decline3.png  used on input line 616.
+Package pdftex.def Info: img/Decline3.png  used on input line 618.
 (pdftex.def)             Requested size: 151.05345pt x 113.20175pt.
-<img/Gender with Award.png, id=334, 1232.9262pt x 618.6312pt>
+ [19 <./img/Decline1.png> <./img/Decline2.png> <./img/Decline3.png>]
+<img/Gender with Award.png, id=350, 1232.9262pt x 618.6312pt>
 File: img/Gender with Award.png Graphic file (type png)
 <use img/Gender with Award.png>
-Package pdftex.def Info: img/Gender with Award.png  used on input line 639.
+Package pdftex.def Info: img/Gender with Award.png  used on input line 641.
 (pdftex.def)             Requested size: 341.43306pt x 171.3182pt.
-<img/Gender.png, id=335, 1232.9262pt x 618.6312pt>
+<img/Gender.png, id=351, 1232.9262pt x 618.6312pt>
 File: img/Gender.png Graphic file (type png)
 <use img/Gender.png>
-Package pdftex.def Info: img/Gender.png  used on input line 646.
+Package pdftex.def Info: img/Gender.png  used on input line 648.
 (pdftex.def)             Requested size: 341.43306pt x 171.3182pt.
- [18 <./img/Decline1.png> <./img/Decline2.png> <./img/Decline3.png>]
-<img/Monopolized Sports.png, id=346, 2261.44875pt x 1049.9225pt>
+
+[20 <./img/Gender with Award.png> <./img/Gender.png>]
+<img/Monopolized Sports.png, id=361, 2261.44875pt x 1049.9225pt>
 File: img/Monopolized Sports.png Graphic file (type png)
 <use img/Monopolized Sports.png>
-Package pdftex.def Info: img/Monopolized Sports.png  used on input line 675.
+Package pdftex.def Info: img/Monopolized Sports.png  used on input line 677.
 (pdftex.def)             Requested size: 455.24408pt x 211.34251pt.
- [19 <./img/Gender with Award.png> <./img/Gender.png>]
-<img/3.3-1.png, id=357, 1606.0pt x 1003.75pt>
+ [21 <./img/Monopolized Sports.png>]
+<img/3.3-1.png, id=369, 1606.0pt x 1003.75pt>
 File: img/3.3-1.png Graphic file (type png)
 <use img/3.3-1.png>
-Package pdftex.def Info: img/3.3-1.png  used on input line 698.
+Package pdftex.def Info: img/3.3-1.png  used on input line 700.
 (pdftex.def)             Requested size: 455.24408pt x 284.52481pt.
- [20 <./img/Monopolized Sports.png>] [21 <./img/3.3-1.png>]
-<img/Sensitive Analysis 1.png, id=372, 1163.34625pt x 949.5475pt>
+ [22 <./img/3.3-1.png>]
+<img/Sensitive Analysis 1.png, id=377, 1163.34625pt x 949.5475pt>
 File: img/Sensitive Analysis 1.png Graphic file (type png)
 <use img/Sensitive Analysis 1.png>
-Package pdftex.def Info: img/Sensitive Analysis 1.png  used on input line 726.
+Package pdftex.def Info: img/Sensitive Analysis 1.png  used on input line 728.
 (pdftex.def)             Requested size: 398.33858pt x 325.13112pt.
- [22 <./img/Sensitive Analysis 1.png>]
-<img/shap1.png, id=381, 578.16pt x 455.301pt>
+ [23] [24 <./img/Sensitive Analysis 1.png>]
+<img/shap1.png, id=391, 578.16pt x 455.301pt>
 File: img/shap1.png Graphic file (type png)
 <use img/shap1.png>
-Package pdftex.def Info: img/shap1.png  used on input line 755.
+Package pdftex.def Info: img/shap1.png  used on input line 757.
 (pdftex.def)             Requested size: 151.05345pt x 118.95209pt.
-<img/shap2.png, id=382, 578.16pt x 455.301pt>
+<img/shap2.png, id=392, 578.16pt x 455.301pt>
 File: img/shap2.png Graphic file (type png)
 <use img/shap2.png>
-Package pdftex.def Info: img/shap2.png  used on input line 760.
+Package pdftex.def Info: img/shap2.png  used on input line 762.
 (pdftex.def)             Requested size: 151.05345pt x 118.95209pt.
-<img/shap3.png, id=383, 578.16pt x 455.301pt>
+<img/shap3.png, id=393, 578.16pt x 455.301pt>
 File: img/shap3.png Graphic file (type png)
 <use img/shap3.png>
-Package pdftex.def Info: img/shap3.png  used on input line 765.
+Package pdftex.def Info: img/shap3.png  used on input line 767.
 (pdftex.def)             Requested size: 151.05345pt x 118.95209pt.
 
-[23 <./img/shap1.png> <./img/shap2.png> <./img/shap3.png>] [24] [25] [26
+[25 <./img/shap1.png> <./img/shap2.png> <./img/shap3.png>] [26] [27] [28
 
 ]
-[27]
+[29] [30]
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
-079.
+081.
 
 (C:\Users\tange\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10.95> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 1079.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 1081.
 
 
-[28]
-Overfull \hbox (132.41365pt too wide) in paragraph at lines 1094--1095
+Overfull \hbox (132.41365pt too wide) in paragraph at lines 1096--1097
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][] 
  []
 
-[29]
+[31
+
+] [32]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1132.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1134.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1132.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 1132.
+(hyperref)                removing `\<let>-command' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1132.
+(hyperref)                removing `\\' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 1132.
+(hyperref)                removing `\@centercr' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 1132.
+(hyperref)                removing `\rightskip' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 1132.
+(hyperref)                removing `\@flushglue' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 1132.
+(hyperref)                removing `\leftskip' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 1132.
+(hyperref)                removing `\@flushglue' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 1132.
+(hyperref)                removing `\finalhyphendemerits' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1132.
+(hyperref)                removing `\z@' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 1132.
+(hyperref)                removing `\parindent' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1132.
+(hyperref)                removing `\z@' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 1132.
+(hyperref)                removing `\parfillskip' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 1132.
+(hyperref)                removing `\z@skip' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1132.
+(hyperref)                removing `math shift' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 1132.
+(hyperref)                removing `\@@underline' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 1132.
+(hyperref)                removing `\hbox' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 1132.
+(hyperref)                removing `\mathsurround' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1132.
+(hyperref)                removing `\z@' on input line 1134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1132.
+(hyperref)                removing `math shift' on input line 1134.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
 
  []
 
 
+Overfull \hbox (2.63452pt too wide) in paragraph at lines 1154--1155
+\T1/ptm/m/n/12 Use clear and con-cise lan-guage to sum-ma-rize the re-search wi
+th-out un-nec-es-sary de-tails.Clearly
+ []
+
+
 AED: lastpage setting LastPage
-[30
+[33
 
 
 ] (PAPER.aux)
@@ -1204,16 +1218,16 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `PAPER.out' has not changed.
-(rerunfilecheck)             Checksum: 9EF700AC4EA6B5A1EDCFFADF231A547D;5827.
+(rerunfilecheck)             Checksum: 1959E1EBE99D8BA93E1382AE2D9EEF46;5794.
  ) 
 Here is how much of TeX's memory you used:
- 18222 strings out of 474486
- 309601 string characters out of 5743755
+ 18282 strings out of 474486
+ 310575 string characters out of 5743755
  2127542 words of memory out of 5000000
- 40077 multiletter control sequences out of 15000+600000
+ 40130 multiletter control sequences out of 15000+600000
  613227 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,13n,102p,1508b,2232s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,13n,102p,1292b,2232s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/tange/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/tange/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/tange/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -1227,9 +1241,9 @@ ograms/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/tange/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/tange/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/tange/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on PAPER.pdf (30 pages, 4055893 bytes).
+Output written on PAPER.pdf (33 pages, 4058067 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 154 named destinations out of 1000 (max. 500000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 157 named destinations out of 1000 (max. 500000)
  408 words of extra memory for PDF output out of 10000 (max. 10000000)
 
