@@ -30,6 +30,6 @@
 \contentsline {section}{\numberline {9}Conclusion}{24}{section.0.9}%
 \contentsline {section}{References}{25}{section.0.10}%
 \contentsline {section}{Appendix A: Countries' Medal Count Prediction}{26}{section*.21}%
-\contentsline {section}{Appendix B: Program Codes}{29}{section*.22}%
+\contentsline {section}{Appendix B: LightGBM Training Codes}{29}{section*.22}%
 \contentsline {section}{\centering \underline {\textbf {Report on Use of AI}}}{31}{appendix.0.11}%
 \contentsfinish 

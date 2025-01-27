@@ -46,7 +46,7 @@
 	
 	The findings indicate that countries with strong overall sports performance exhibit lower reliance on specific events, yielding stable results, while weaker nations depend more on select events. In certain cases, the \textbf{correlation} in athletics reached \textbf{0.894}, reflecting a concentration of athletic development in specific areas.
 	
-	In \textbf{Task 2}, we explored the "great coach effect" by applying \textbf{Bayesian Change Point Detection (BEAST)} to analyze instances from multiple countries. The study found a significant correlation between the points of inflection in some countries' sports performance and the tenure of a "great coach," validating the importance of this effect.
+	In \textbf{Task 2}, we explored the "great coach" effect by applying \textbf{Bayesian Change Point Detection (BEAST)} to analyze instances from multiple countries. The study found a significant correlation between the points of inflection in some countries' sports performance and the tenure of a "great coach", validating the importance of this effect.
 	
 	Additionally, forward \textbf{CUSUM} analysis was used to examine medal sequence changes, identifying each country's weakest areas. The results reveal that many countries, once dominant in certain events, have seen a decline in these advantages over time. Based on these findings, targeted coach recommendations are proposed for countries requiring improvement in specific areas.
 	
@@ -279,7 +279,7 @@ Using the Previous Participants' Records as the basis for Monte Carlo simulation
 \subsubsection{Distribution of Countries' Adept Sports}
 Due to factors such as cultural and geographical environments, countries exhibit distinct advantages in different events. For example, Kenya and Ethiopia excel in long-distance running, particularly in Athletics, largely due to the training conditions in high-altitude regions. Brazil, with its deep football culture, has produced many world-class players, a result of its warm climate and environment conducive to year-round outdoor sports.
 
-By analyzing the performance of various countries in different events across past Olympic Games, we extracted a feature variable $\gamma$ (\textbf{Event Adeptness Coefficient}), to represent the advantages of these countries in certain events.
+By analyzing the performance of various countries in different sports across past Olympic Games, we extracted a feature variable $\gamma$ (\textbf{Event Adeptness Coefficient}), to represent the advantages of these countries in certain events.
 
 %公式
 \begin{equation}
@@ -290,7 +290,7 @@ By analyzing the performance of various countries in different events across pas
 
 
 
-By extracting features, we mined the level of expertise of each country in different events within the dataset, such as China's performance across various events, as shown in the figure below:
+By extracting features, we mined the level of expertise of each country in different events within the dataset, such as China's performance across various sports, as shown in the figure below:
 
 \begin{figure}[H]
 	\centering
@@ -303,7 +303,7 @@ By extracting features, we mined the level of expertise of each country in diffe
 \subsubsection{Changes in Medal Count}
 Since the IOC makes adjustments to events each year, the total number of medals awarded in each event does not remain exactly the same each year. To address this, we applied\textbf{ Linear Regression} to fit the number of gold, silver, and bronze medals awarded in each event across past Olympic Games and predicted the medal distribution for the upcoming Olympic Games, providing a reference for subsequent operations.
 
-\section{Task1:Medal Prediction Model Based on LightGBM}
+\section{Task 1:Medal Prediction Model Based on LightGBM}
 \subsection{Medal Table}
 The medal table is influenced by various factors. To predict the standings for the next Olympics, we considered key factors identified during data preprocessing, such as nation level, participating athletes, country-specific event strengths, and adjustments to medal counts.
 
@@ -342,7 +342,7 @@ As a gradient boosting-based regression model, in LightGBM, the objective functi
 	\mathcal{L} = \sum_{i=1}^{n} L(y_i, \hat{y}_i^{(m-1)} + \eta f_m(x_i)) + \Omega(f_m)
 \end{equation}
 
-The optimized loss function based on GBDT is represented as \textbf{squared error} in the medal prediction regression task.
+The optimized loss function based on \textbf{GBDT}\cite{2} is represented as \textbf{squared error} in the medal prediction regression task.
 
 $y_i$ denotes the true value.
 $\hat{y}_i^{(m-1)}$ is the current model's predicted value.
@@ -502,7 +502,7 @@ Among these, smaller values for the first three metrics and a larger value for R
 % \usepackage{longtable}
 
 \begin{longtable}{l|l|l|l|l} 
-	\caption{Model Performances(LightGBM)}\\ 
+	\caption{Model Performances (LightGBM)}\\ 
 	\hline
 	\multicolumn{1}{c|}{\textbf{Model}} & \multicolumn{1}{c|}{\textbf{MSE}} & \multicolumn{1}{c|}{\textbf{RMSE}} & \multicolumn{1}{c|}{\textbf{MAE}} & \multicolumn{1}{c}{\(\mathbf{R}^2\)}  \endfirsthead 
 	\hline
@@ -537,7 +537,7 @@ A comparison reveals that the model's prediction accuracy for gold medals is rel
 
 
 
-\section{Task2:Great Coach Effect}
+\section{Task 2:Great Coach Effect}
 \subsection{Verification of the Great Coach Effect}
 The Great Coach effect can cause significant differences in the performance of relevant countries in corresponding events. To collect evidence of changes caused by this effect, we use a \textbf{Bayesian Changepoint Detection (BEAST)} model.
 
@@ -545,7 +545,7 @@ The BEAST model uses Bayesian inference to calculate the posterior probabilities
 
 In the time series dataset \(X = (x_1, x_2, x_3, \ldots, x_T)\), we identify the set of change points \(C = \{c_1, c_2, \ldots, c_K\}\), where each \(c_k\) represents a change point.
 
-Using Bayes' theorem, we can compute the \textbf{posterior probability} for each possible change point $c_k$:
+Using Bayes' theorem\cite{1}, we can compute the \textbf{posterior probability} for each possible change point $c_k$:
 
 \begin{equation}
 	P(c_k \mid X) = \frac{P(X \mid c_k) P(c_k)}{P(X)}
@@ -576,7 +576,7 @@ Taking Lang Ping's leadership of the Chinese and U.S. volleyball teams as an exa
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/Volleyball.png}
-	\caption{Medal Count of Women's Volleyball Teams(CHN vs USA) Over Time}
+	\caption{Medal Count of Women's Volleyball Teams (CHN vs USA) Over Time}
 	\label{fig:aa}
 \end{figure}
 Clearly, after Lang Ping began coaching the U.S. team in 2005, the U.S. volleyball team showed remarkable improvement in the next Olympic Games, while the Chinese team experienced significant regression. However, after Lang Ping returned to coach China in 2013, the Chinese team quickly rose from the trough and regained their peak performance, while the U.S. team showed a decline.
@@ -620,7 +620,7 @@ If the curve shows a prolonged downward trend, it indicates that the event has s
 		\includegraphics[width=\textwidth]{img/Decline3.png}
 		\caption{Germany}\label{subfig:3}
 	\end{subfigure}
-	\caption{Three images}\label{fig:subfigures}
+	\caption{Declining Sports in Different Countries}\label{fig:subfigures}
 \end{figure}
 
 We observe that sailing was a dominant event for France when the earliest Olympic Games were held. Although it did not remain as developed in the subsequent years, it still maintained relatively stable results from the 1930s to the 1970s. However, after the 1970s, there was a clear downward trend, which suggests the need to hire a coach.
@@ -631,7 +631,7 @@ Germany’s swimming did not show any notable advantage before the 1990s. Howeve
 
 
 
-\section{Task3:Other Original Insights}
+\section{Task 3:Other Original Insights}
 
 \subsection{Gender Distribution}
 
@@ -722,7 +722,7 @@ From the chart, it is evident that after the 1992 Olympics, the distribution of 
 
 \textbf{Sensitivity Analysis} is used to evaluate the sensitivity of model outputs to changes in input features. Through this analysis, we can quantify the dependency of final prediction results prediction outcomes on specific data features, such as the adeptness of a particular country in a specific event or the previous award probability of an athlete.
 
-LightGBM comes with a feature importance function that identifies the features with the greatest impact on the model’s predictions. By using \textbf{\textit{plot\_importance()}} function, we can visualize the importance of each feature.
+LightGBM comes with a feature importance function that identifies the features with the greatest impact on the model’s predictions\cite{2}. By using \textbf{\textit{plot\_importance()}} function, we can visualize the importance of each feature.
 
 
 \begin{figure}[H]
@@ -736,7 +736,7 @@ The above figure shows the feature importance distribution for the gold medal pr
 
 From the figure, we can see that the probability of an athlete winning a medal in the past, as well as the degree of a country's advantage in a specific event, have the greatest influence on the final prediction results. Additionally, the athlete’s past medal-winning probability also has a significant impact on the prediction.
 
-Furthermore, we can use Shapley value analysis to assess the model's sensitivity. \textbf{SHAP} (\textbf{SH}apley \textbf{A}dditive ex\textbf{P}lanations) is a game theory-based model explanation method used to interpret machine learning model predictions. It assigns each feature a contribution to the model's prediction, helping us understand the importance and influence of each feature in the given prediction result.The formula for Shapley value is as follows:
+Furthermore, we can use Shapley value analysis\cite{4} to assess the model's sensitivity. \textbf{SHAP} (\textbf{SH}apley \textbf{A}dditive ex\textbf{P}lanations) is a game theory-based model explanation method used to interpret machine learning model predictions. It assigns each feature a contribution to the model's prediction, helping us understand the importance and influence of each feature in the given prediction result. The formula for Shapley value is as follows:
 
 
 \begin{equation}
@@ -772,7 +772,7 @@ Below are the SHAP Summary Plots for the gold, silver, and bronze medal predicti
 	\end{subfigure}
 	\caption{SHAP Summary Plots}\label{fig:subfigures}
 \end{figure}
-From the figures, we can see that the SHAP algorithm amplifies the prior probability of winning a particular medal. In other words, athletes who have previously won gold medals have a higher probability of winning gold again if they continue to compete, and the same holds true for silver and bronze medalists. This differs somewhat from the results obtained through LightGBM's self-analysis; however, both analysis methods assign relatively high weights to Adeptness, Level, and Win Probability.
+From the figures, we can see that the SHAP algorithm amplifies the prior probability of winning a particular medal\cite{4}. In other words, athletes who have previously won gold medals have a higher probability of winning gold again if they continue to compete, and the same holds true for silver and bronze medalists. This differs somewhat from the results obtained through LightGBM's self-analysis; however, both analysis methods assign relatively high weights to Adeptness, Level, and Win Probability.
 
 \section{Model Evaluation}
 \subsection{Strengths}
@@ -782,7 +782,7 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 
 3. The model takes into account various indirect factors, such as a country's ranking, the types of sports a country excels in, whether the host is the organizer, athletes' prior competition status, and more. These factors enable the model to consider a broader range of real-world conditions, making it more aligned with actual data.
 
-4. The Bayesian Change Point Detection used in Task 2 accurately reflects the change points in time-series data. Our tests showed that the change points in the performance of China and the United States women's volleyball teams coincided with the coaching periods of Lang Ping, demonstrating the model's accuracy.
+4. The Bayesian Change Point Detection used in Task 2 accurately reflects the change points in time-series data\cite{1}. Our tests showed that the change points in the performance of China and the United States women's volleyball teams coincided with the coaching periods of Lang Ping, demonstrating the model's accuracy.
 \subsection{Weaknesses}
 1. Since the training data includes a large amount of historical data (spanning over 50 years), the prediction results are susceptible to the influence of historical data, leading to potential errors.
 
@@ -794,7 +794,7 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 		\item \textbf{Task1}
 		
 
-We applied data preprocessing and feature engineering, using the \textbf{KMeans++} clustering algorithm to rank countries based on various features, including proficiency in different sports, host nation advantages, and athlete performance levels.
+We applied data preprocessing and feature engineering, using the \textbf{KMeans++} clustering algorithm\cite{3} to rank countries based on various features, including proficiency in different sports, host nation advantages, and athlete performance levels.
 
 The \textbf{LightGBM} regression model predicted the medal count for each country in the 2028 Olympics. Our analysis indicated that the United States is likely to progress, while France may decline, largely due to the home-field advantage. Countries such as Australia and Japan are expected to see an increase, while Italy and South Korea may experience a decrease.
 
@@ -1077,8 +1077,8 @@ TragianniSHAP-based explanation methods: A review for NLP interpretability
 
 
 \clearpage
-\section{Appendix B: Program Codes}
-Here are the program codes we used in our research.
+\section{Appendix B: LightGBM Training Codes}
+Here are the codes we used in our LightGBM model training.
 
 % 代码环境示例三则
 % 如您的论文不需要展示代码，请删除
@@ -1102,7 +1102,8 @@ X.fillna(0,inplace=True)
 from sklearn.preprocessing import StandardScaler
 scaler=StandardScaler()
 X=scaler.fit_transform(X)
-columns=['host','med_d_ath','adept','lvl','win_prob','G_prob','S_prob','B_prob','lose_prob']
+columns=['host','med_d_ath','adept','lvl','win_prob',
+'G_prob','S_prob','B_prob','lose_prob']
 from sklearn.preprocessing import PolynomialFeatures
 poly=PolynomialFeatures(degree=2)
 
