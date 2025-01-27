@@ -119,14 +119,7 @@ We preprocess the data provided before analyzing matches and mainly utilize 3 mo
 	\label{fig:aa}
 \end{figure}
 
-s
 
-
-\begin{enumerate}[\bfseries 1.]
-    \item We do ...
-    \item We do ...
-    \item We do ...
-\end{enumerate}
 \section{Question Preparation}
 \subsection{Assumptions}
 \textbf{Assumption 1 } \textit{The number of medals won by each country typically fluctuates only slightly from year to year, without significant increases or decreases.}
@@ -149,36 +142,50 @@ Due to the systematic nature of athlete training and the relative consistency of
 The primary notations used in this paper are listed in Table \ref{tb:notation}.
 
 % 三线表示例
-\begin{table}[!htbp]
-\begin{center}
-\caption{Notations}
-\begin{tabular}{cl}
-	\toprule
-	\multicolumn{1}{m{3cm}}{\centering Symbol}
-	&\multicolumn{1}{m{8cm}}{\centering Definition}\\
-	\midrule
-	$C_{i}$&Certain country\\
-	$E_{i}$&Specific event\\
-	$G$&Gold medal count\\
-	$V$&Silver medal count\\
-	$B$&Bronze medal count\\
-	$M$&Total count of the 3 types of medals\\
-	$A$&Number of new athletes\\
-	$T$&Times of Olympic participations\\
-    $\gamma$&Sport Advantage Coefficient\\
-  	$ m_{c_{i}}$ &Total medal count of a certain country\\
-	$ m_{c_{i},e_{j}}$ &Total medal count of a certain country in a specific event\\
-	$L_{i}$&Country clustering level\\
-    $g_{i}$&the second one\\
-    $X$&Historical total medal counts (gold, silver, and bronze) of all countries\\
-    $\xi$&The Probability of First Medal\\
-    $\sigma$&                        \\
-    $   $&Normalized version of probability of first medal         \\
-	\bottomrule
-\end{tabular}\label{tb:notation}
-\end{center}
-\end{table}
 
+	
+	\begin{longtable}{cl}
+		\caption{Notations}\label{tb:notation} \\
+		\toprule
+		\multicolumn{1}{m{3cm}}{\centering Symbol}
+		&\multicolumn{1}{m{8cm}}{\centering Definition}\\
+		\midrule
+		\endfirsthead
+		
+		\multicolumn{2}{c}%
+		{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+		\toprule
+		\multicolumn{1}{m{3cm}}{\centering Symbol}
+		&\multicolumn{1}{m{8cm}}{\centering Definition}\\
+		\midrule
+		\endhead
+		
+		\midrule
+		\multicolumn{2}{r}{\textit{Continued on next page}} \\
+		\endfoot
+		
+		\bottomrule
+		\endlastfoot
+		
+		$C_{i}$&Certain country\\
+		$E_{i}$&Specific event\\
+		$G$&Gold medal count\\
+		$V$&Silver medal count\\
+		$B$&Bronze medal count\\
+		$M$&Total count of the 3 types of medals\\
+		$A$&Number of new medals\\
+		$T$&Times of Olympic participations\\
+		$\gamma$&Sport Advantage Coefficient\\
+		$ m_{C_{i}}$ &Total medal count of a certain country\\
+		$ m_{C_{i},E_{j}}$ &Total medal count of a certain country in a specific event\\
+		$L_{i}$&Country clustering level\\
+		$g_{i}$&the second one\\
+		$X$&Historical total medal counts (gold, silver, and bronze) of all countries\\
+		$\xi$&The Probability of First Medal\\
+		$\sigma$&Standard deviation\\
+		$\kappa$&Normalized version of probability of first medal\\
+	\end{longtable}
+	
 \section{Data Preprocessing}
 \subsection{Basic Data Preprocessing}
 Due to various influencing factors, there are significant differences in the competitive levels of countries in the Olympic Games, which have been reflected in past competitions, specifically in the total number of gold, silver, and bronze medals won by each country. 
@@ -255,13 +262,13 @@ Then, we compiled the distribution of the times of participations and the distri
 \end{figure}
 
 
-From the distribution chart, it can be seen that nearly 80% of athletes have participated in 1 or 2 matches, with the average number of serve times being 1.94, meaning each athlete participates in approximately 2 matches. Based on this assumption, we consider that each participating athlete will compete in 2 matches on average. Additionally, around 80% of athletes have participated in only 1 Olympic Games, while nearly 20% have participated in 2. Therefore, we can assume that 20% of the veteran athletes will continue to compete in the next Olympic Games, providing a basis for determining which athletes will continue to participate.
+From the distribution chart, it can be seen that nearly \( 80\% \)of athletes have participated in 1 or 2 matches, with the average number of serve times being 1.94, meaning each athlete participates in approximately 2 matches. Based on this assumption, we consider that each participating athlete will compete in 2 matches on average. Additionally, around \( 80\% \) of athletes have participated in only 1 Olympic Games, while nearly \( 20\% \) have participated in 2. Therefore, we can assume that \( 20\% \) of the veteran athletes will continue to compete in the next Olympic Games, providing a basis for determining which athletes will continue to participate.
 
-To predict the Participant List, we employed Monte Carlo simulation, which consisted of two parts: the first part involved selecting 20% of veteran athletes to continue competing (20% conforming to the original data distribution), while the second part generated new random athletes based on historical athlete data.
+To predict the Participant List, we employed Monte Carlo simulation, which consisted of two parts: the first part involved selecting \( 20\% \)of veteran athletes to continue competing (\( 20\% \) conforming to the original data distribution), while the second part generated new random athletes based on historical athlete data.
 
 In the previous sections, we determined which athletes will continue to compete. To simulate new random athletes, we simplified each individual into three parameters: the probabilities of winning a gold, silver, or bronze medal.
 
-For a given country in a specific event, the average number of medals won by all athletes serves as the standard number of medals for a representative athlete. The medal expectations were categorized into 3 scenarios: optimistic, moderate, and pessimistic. The optimistic expectation was calculated by averaging the top 50% of the team, the moderate expectation by averaging all team members, and the pessimistic expectation by averaging the bottom 50%. 
+For a given country in a specific event, the average number of medals won by all athletes serves as the standard number of medals for a representative athlete. The medal expectations were categorized into 3 scenarios: optimistic, moderate, and pessimistic. The optimistic expectation was calculated by averaging the top \( 50\% \) of the team, the moderate expectation by averaging all team members, and the pessimistic expectation by averaging the bottom \( 50\% \).
 
 Using the Previous Participants' Records as the basis for Monte Carlo simulation, we ultimately determined the Participant List Prediction.
 
@@ -270,11 +277,11 @@ Using the Previous Participants' Records as the basis for Monte Carlo simulation
 \subsubsection{Distribution of Countries' Strength Sports}
 Due to factors such as cultural and geographical environments, countries exhibit distinct advantages in different events. For example, Kenya and Ethiopia excel in long-distance running, particularly in Athletics, largely due to the training conditions in high-altitude regions. Brazil, with its deep football culture, has produced many world-class players, a result of its warm climate and environment conducive to year-round outdoor sports.
 
-By analyzing the performance of various countries in different events across past Olympic Games, we extracted a feature variable $\gamma$(Event Adeptness Coefficient), to represent the advantages of these countries in certain events..
+By analyzing the performance of various countries in different events across past Olympic Games, we extracted a feature variable $\gamma$(Event Adeptness Coefficient), to represent the advantages of these countries in certain events.
 
 %公式
 \begin{equation}
-	\gamma = \frac{m_{c_i,e_j}}{\sum m_{c_i,e_j}}
+	\gamma = \frac{m_{C_i,E_j}}{\sum m_{C_i,E_j}}
 \end{equation}
 
 
@@ -331,7 +338,7 @@ $\hat{y}_i^{(m-1)}$is the current model's predicted value.
 $\hat{y}_i^{(m-1)}$+$\eta f_m(x_i)$is the model's predicted value at the m-th step during the gradient boosting model update process.
 $\Omega(f_m)$ Regularization term, which prevents overfitting of the model and controls the complexity of the trees.
 
-We input the previously obtained data into LightGBM for iterative model training. After training, we input the factors affecting the predictions for the next edition into the model, ultimately obtaining the predicted medal table for the 2028 Summer Olympics in Los Angeles, USA, as follows:
+We input the previously obtained data into LightGBM for iterative model training. After training, we input the factors affecting the predictions for the next edition into the model, ultimately obtaining the predicted medal table for the 2028 Summer Olympics in Los Angeles, USA, are shown in Figure \ref{fig:USA}.
 %奖牌榜预测图
 \begin{figure}[htbp]
 	\centering
@@ -344,7 +351,7 @@ We input the previously obtained data into LightGBM for iterative model training
 	\centering
 	\includegraphics[width=12cm]{img/OP1.png}
 	\caption{USA Medal count prediction}
-	\label{fig:aa}
+	\label{fig:USA}
 \end{figure}
 
 
@@ -411,13 +418,13 @@ In order to visualize the accuracy of a country's first medal prediction, we nor
 	\kappa = 0.8 \times \frac{\xi - \overline{\xi}}{\sigma}
 \end{equation}
 Here,$\overline{\xi}$ refers to the mean of the original data, and$\sigma$refers to the standard deviation of the original data.
-The calculated results are as follows:
+The calculated results are shown in Figure \ref{fig:First Medal}:
 %首奖可能性图
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=16cm]{img/First.png}
 	\caption{The Probability of First Medal in 2028}
-	\label{fig:aa}
+	\label{fig:First Medal}
 \end{figure}
 
 
@@ -746,7 +753,7 @@ Below are the SHAP Summary Plots for the gold, silver, and bronze medal predicti
 	\hfill 
 	\begin{subfigure}[b]{.32\textwidth}
 		\includegraphics[width=\textwidth]{img/shap3.png}
-		\caption{Bronze SHAP Summary Ploty}\label{subfig:3}
+		\caption{Bronze SHAP Summary Plot}\label{subfig:3}
 	\end{subfigure}
 	\caption{SHAP Summary Plots}\label{fig:subfigures}
 \end{figure}
@@ -770,34 +777,13 @@ From the figures, we can see that the SHAP algorithm amplifies the prior probabi
 \section{Conclusion}
 \begin{itemize}
 		\item Task1
- We performed data preprocessing and feature engineering on the provided dataset, using the KMeans++ clustering algorithm to determine the ranking of each country. We calculated various feature variables, including each country's proficiency in different sports, the host nation advantage, and the performance level of different athletes.
-
- \qquad Ultimately, we used the LightGBM gradient boosting regression algorithm to predict the expected medal count for each athlete from each country participating in the 2028 Olympics. By aggregating these predictions, we obtained the total medal count for each country.
-
-\qquad The model indicates that the United States is expected to show progress, while France will experience a significant decline, likely due to the home-field advantage of the host nation. Additionally, due to annual fluctuations in events, countries like Australia and Japan are expected to see an increase in their medal count, while Italy and South Korea will experience a decrease. China's medal count is projected to remain stable.
-
-\qquad For countries that have never won a medal, we analyzed past events in which these countries participated but did not secure any medals. If future events are expected to expand the number of available medals, we reason that these countries may have a higher probability of winning their first medal in 2028. Through quantitative analysis, we identified Sierra Leone, Antigua and Barbuda, and Papua New Guinea as the countries with the highest likelihood of winning their first medal in 2028.
-
-\qquad For events where certain countries have clear advantages, we performed a correlation analysis across countries at different levels and calculated the Spearman correlation coefficient between changes in total medal count and medal distribution, as well as changes in the medal structure for those events. We found that for countries with strong overall events adeptness, such as China, the influence of dominant events on their total ranking and medal count is minimal, resulting in relatively stable performances. However, for smaller countries, their dependence on dominant events is stronger, and their total medal count largely depends on performance in these key events.
-	
+ we applied data preprocessing and feature engineering, using the KMeans++ clustering algorithm to rank countries based on various features, including proficiency in different sports, host nation advantages, and athlete performance levels. The LightGBM regression model predicted the medal count for each country in the 2028 Olympics. Our analysis indicated that the United States is likely to progress, while France may decline, largely due to the home-field advantage. Countries such as Australia and Japan are expected to see an increase, while Italy and South Korea may experience a decrease. China's medal count is projected to remain stable. For nations without prior medals, we identified Sierra Leone, Antigua and Barbuda, and Papua New Guinea as those with the highest probability of winning their first medal in 2028. Correlation analysis revealed that countries with strong overall performance, like China, show minimal dependence on specific events, while smaller countries are more reliant on key events for their total medal count.
 	
 
 	\item Task2
-	To explore the "great coach" effect, we used the Bayesian Changepoint Detection model to analyze the impact of Lang Ping on the Chinese and U.S. women's volleyball teams, Béla Károlyi on the U.S. and Romanian women's gymnastics teams, and other similar examples. By comparing the historical coaching tenure of a coach with the predicted changepoints identified by the model, we found a strong correlation between the changepoints in a country's sports performance and the tenure of a great coach, indicating the significant impact of such coaches.\\
-	
-	\qquad 	After establishing the importance of hiring coaches, we selected three representative countries from the level 1 to level 3 countries and applied the CUSUM algorithm to assess their weakest events.
-
-	\qquad We found that sailing was once a strong event for France in early Olympics, with stable results from 1930 to 1970, but a significant decline after the 1970s. Sweden dominated athletics and shooting from the 1920s to the 1950s, but these events declined over time, likely due to a decrease in the country's emphasis on sports. German swimming, which was not dominant before the 1990s, emerged as a strong contender in the early 21st century, but showed signs of decline in the 2010s and 2020s. Based on these findings, we recommend that these countries hire coaches to maintain their competitive edge.
-
-	\item Task3 
-	Using the models and data derived from Task 1 and Task 2, we conducted in-depth data mining and analysis, leading to several key conclusions about the Olympics, including athlete gender ratio, the dominance of certain countries in specific Olympic events, and how changes in medal distribution reflect global geopolitical shifts.
-	
-	\qquad Regarding the athlete gender ratio, we found that in the earliest Olympic Games, male athletes and their proportion of total medals dominated. However, as gender equality awareness grew, more women began participating in the Olympics, leading to a significant yearly increase in the number of female athletes and a more balanced gender ratio.
-	
-	\qquad In terms of the dominance of certain countries in specific Olympic events, we observed that some niche events, unique to particular countries, tend to be dominated by these countries. For example, the UK has a dominant position in cricket and motorboating, while Canada excels in lacrosse. Thus, national Olympic committees seeking to win more medals should consider investing in these distinctive events, expand their influence, and lobby the International Olympic Committee to include these events in the Olympic program, strengthening their competitive advantage.
-	
-	\qquad Moreover, by examining the changes in medal distribution across countries over time, we identified several distinct anomalies, occurring in 1904, 1980, 1984, and 1992. These anomalies reflect the evolution of the Olympics from its infancy to maturity, and also highlight the intense geopolitical rivalry during the Cold War. From the changes in medal counts across countries, we can gain indirect insights into global political and economic developments.
-
+ we explored the "great coach" effect using the Bayesian Changepoint Detection model. We found a strong correlation between coaching tenures and significant changes in a country’s sports performance. Additionally, the CUSUM algorithm helped identify weak events for several countries, such as France’s decline in sailing, Sweden’s waning dominance in athletics and shooting, and Germany’s emerging strength in swimming, which later showed signs of decline. Based on these findings, we recommend hiring specialized coaches to help maintain or regain competitive advantages in these events.
+	\item Task3
+ Using the models and data from Task 1 and Task 2, we performed a detailed analysis of several key trends in the Olympics. We found that the athlete gender ratio has become more balanced over time, reflecting increasing gender equality. Moreover, certain countries dominate niche events, such as the UK in cricket and Canada in lacrosse, which could offer opportunities for Olympic committees to enhance their medal prospects by investing in these specialized events. Lastly, our analysis of medal distribution changes over time revealed significant anomalies in 1904, 1980, 1984, and 1992, reflecting the Olympics' evolution and geopolitical shifts, particularly during the Cold War. These anomalies provide insights into broader global political and economic changes.
 \end{itemize}
 
 

@@ -2,15 +2,15 @@
 \contentsline {subsection}{\numberline {1.1}Problem Background}{3}{subsection.0.1.1}%
 \contentsline {subsection}{\numberline {1.2}Restatement of Problem}{3}{subsection.0.1.2}%
 \contentsline {subsection}{\numberline {1.3}Our work}{4}{subsection.0.1.3}%
-\contentsline {section}{\numberline {2}Question Preparation}{5}{section.0.2}%
-\contentsline {subsection}{\numberline {2.1}Assumptions}{5}{subsection.0.2.1}%
+\contentsline {section}{\numberline {2}Question Preparation}{4}{section.0.2}%
+\contentsline {subsection}{\numberline {2.1}Assumptions}{4}{subsection.0.2.1}%
 \contentsline {subsection}{\numberline {2.2}Notations}{5}{subsection.0.2.2}%
 \contentsline {section}{\numberline {3}Data Preprocessing}{5}{section.0.3}%
 \contentsline {subsection}{\numberline {3.1}Basic Data Preprocessing}{5}{subsection.0.3.1}%
-\contentsline {subsection}{\numberline {3.2}Data Mining}{8}{subsection.0.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Athlete Service Status}{8}{subsubsection.0.3.2.1}%
+\contentsline {subsection}{\numberline {3.2}Data Mining}{7}{subsection.0.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Athlete Service Status}{7}{subsubsection.0.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Distribution of Countries' Strength Sports}{9}{subsubsection.0.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Changes in Medal Count}{9}{subsubsection.0.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3}Changes in Medal Count}{10}{subsubsection.0.3.2.3}%
 \contentsline {section}{\numberline {4}Task1:Medal Prediction Model Based on LightGBM}{10}{section.0.4}%
 \contentsline {subsection}{\numberline {4.1}Medal Standings}{10}{subsection.0.4.1}%
 \contentsline {subsection}{\numberline {4.2}Countries that Win Their First Medal}{13}{subsection.0.4.2}%
@@ -19,16 +19,16 @@
 \contentsline {section}{\numberline {5}Task2:A "Great Coach" Effect}{16}{section.0.5}%
 \contentsline {subsection}{\numberline {5.1}Verification of the "Great Coach" Effect}{16}{subsection.0.5.1}%
 \contentsline {subsection}{\numberline {5.2}Countries Recommended for Hiring Coaches}{17}{subsection.0.5.2}%
-\contentsline {section}{\numberline {6}Task3:Other Original Insights}{19}{section.0.6}%
-\contentsline {subsection}{\numberline {6.1}Gender Distribution}{19}{subsection.0.6.1}%
+\contentsline {section}{\numberline {6}Task3:Other Original Insights}{18}{section.0.6}%
+\contentsline {subsection}{\numberline {6.1}Gender Distribution}{18}{subsection.0.6.1}%
 \contentsline {subsection}{\numberline {6.2}Strength events}{20}{subsection.0.6.2}%
-\contentsline {subsection}{\numberline {6.3}Global Geopolitics}{21}{subsection.0.6.3}%
+\contentsline {subsection}{\numberline {6.3}Global Geopolitics}{20}{subsection.0.6.3}%
 \contentsline {section}{\numberline {7}Sensitivity Analysis}{22}{section.0.7}%
-\contentsline {section}{\numberline {8}Model Evaluation}{24}{section.0.8}%
-\contentsline {subsection}{\numberline {8.1}Strengths}{24}{subsection.0.8.1}%
+\contentsline {section}{\numberline {8}Model Evaluation}{23}{section.0.8}%
+\contentsline {subsection}{\numberline {8.1}Strengths}{23}{subsection.0.8.1}%
 \contentsline {subsection}{\numberline {8.2}Weaknesses}{24}{subsection.0.8.2}%
 \contentsline {section}{\numberline {9}Conclusion}{24}{section.0.9}%
-\contentsline {section}{References}{26}{section.0.10}%
-\contentsline {section}{Appendix A: Countries' Medal Count Prediction}{27}{section*.21}%
-\contentsline {section}{Appendix B: Program Codes}{29}{section*.22}%
+\contentsline {section}{References}{25}{section.0.10}%
+\contentsline {section}{Appendix A: Countries' Medal Count Prediction}{26}{section*.20}%
+\contentsline {section}{Appendix B: Program Codes}{28}{section*.21}%
 \contentsfinish 
