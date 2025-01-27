@@ -1,15 +1,38 @@
-在奥运会比赛中，除了运动员的表现情况，各国的奖牌榜也是粉丝们最关心的问题。我们的总体思路是自底向上地预测，通过预测每个运动员的获奖期望，推算出国家的总奖牌数。本文建立了几个模型，用于分析各国的奥运奖牌榜信息、预测2028年可能的奥运奖牌榜，并提取了深层次的数据特征，以供各国奥委会的决策参考。
-对于Task 1，首先，我们进行了数据预处理和特征工程，通过KMeans++聚类算法以及其他的数理统计方法，得到了数据的一些深层次特征。然后，我们使用了LightGBM梯度提升回归算法，预测了每个国家每名预期参加2028年奥运会的运动员预期得到的奖牌数，经过累加就得到了一个国家的总奖牌数。根据预测结果，国家的获奖情况，与主场优势、优势events、运动员个人水平有显著关系。
-对于从未获得过奖牌的国家，我们统计了这些国家曾经参与过，但没有拿奖牌的events。对于这些events，如果在未来，获奖名额有扩招的趋势，我们就有理由相信，这些国家有较大可能在2028年有较大的首次获奖odds。经过量化的统计，塞拉利昂、安提瓜和巴布达、巴布亚新几内亚这三个国家，具有最显著的优势，最有可能在2028年获得首块奖牌。
-对于某些国家具有明显优势的events，我们对不同等级的国家进行了相关性分析，计算了总奖牌数量变化趋势，与该event的奖牌数量、该event奖项设置变化的斯皮尔曼相关系数。我们发现，对于体育综合实力较强的国家，例如中国，其总排名与奖牌数，受到优势events的影响是较小的，发挥较为稳定。而对于一些较小的国家，他们对一些优势events的依赖项较强，最终的总奖牌数很大程度上取决于他们在优势events上的表现。
+在奥运会比赛中，除了运动员的表现情况，各国的奖牌榜也是粉丝们最关心的问题。为了预测2028年奖牌榜，我们的思路是自底向上地预测，通过预测每个个体的获奖期望，从而推算出国家的总奖牌数。本文建立了几个模型，用于分析各国的奥运奖牌榜信息、预测2028年可能的奥运奖牌榜，并提取了深层次的数据特征，以供各国奥委会的决策参考。
 
-Task 2：
-为了探寻“great coach” effect，我们使用了Bayesian Changepoint Detection model，分析了郎平对中国和美国女子排球的影响，Béla Károlyi对美国和罗马尼亚女子体操的影响，以及其他的great coach实例。我们将历史上某教练的真实执教时间，与该模型预测的Changepoint进行比较，结果发现某国家体育成绩的突变点，与一个great coach的执教时间有很大关系 ，足以说明一个great coach的重要性。
-在确定了聘请教练的重要性后，我们决定从level1-level3的国家中，抽取三个最典型的国家，使用CUSUM算法， 评估他们最薄弱的events。
-我们发现，帆船曾是法国在早期奥运会的强项，虽在后期有所下滑，但1930-1970年代成绩稳定，1970年代后明显衰退；瑞典的田径和射击在1920-1950年代占优，随时间推移下滑，可能与国家对体育重视减少有关；德国游泳在1990年代前不占优势，但21世纪初崛起，2010-2020年代出现衰退。综上所述，建议上述国家聘请教练以保持竞争力。
+对于Task 1，首先，我们进行了数据预处理和特征工程，通过KMeans++聚类算法以及其他的数理统计方法，得到了数据的一些深层次特征。然后，我们使用了LightGBM梯度提升回归算法，预测了2028年奥运会每个国家的金牌、银牌、铜牌数。
+根据预测结果，国家的获奖情况，与主场优势、优势events、运动员个人水平有显著关系。模型的性能十分优越，其中金牌预测模型的R²达到了0.890，说明预测的可信度较高。
+对于从未获得过奖牌的国家，经过我们研究得出，对于未来奖项有增长势头的events，曾参与过的国家更有odds拿到第一枚奖牌。
+对于某些国家的特色events，我们进行了斯皮尔曼相关性分析。经过研究后，我们发现，体育综合实力较强的国家，对优势events的依赖不显著，发挥较为稳定。而对于一些体育较为弱小的国家，对优势events的依赖项较强，有国家对田径运动依赖的相关系数甚至达到了0.894，说明本国体育过于集中于某些特定的events。
 
-Task 3：
-从Task 1和Task2得到的模型和数据中，我们进行了深度的数据挖掘与数据分析，从而得到了几个关于奥运会的深层次结论，分别关于运动员性别比例、不同国家对某些奥运events的主宰优势、奖牌数量变化反映的世界局势变化。
-关于运动员性别比例，我们发现，在最早的几届奥运会中，男性运动员所占比例，以及男性获得奖牌的所占比例，是压倒性的，然而随着平权意识慢慢兴起，越来越多女性也参与了奥运会，女性运动员的数量逐年显著增长，性别比例越来越均衡。
-关于不同国家对某些奥运events的主宰优势，我们发现，对于一些小众的，仅限于某些国家的特色events。这些国家往往能取得主宰性的优势，例如英国的Cricket和Motorboating，加拿大的Lacrosse。因此对于一个国家的奥委会来说，如果想更取得更多奖牌，可以考虑大力发展本国具有特色的events，扩大影响力，并向国际奥委会提出申请，从而使自己擅长的events加入奥运会的events序列中，增强自己的优势。
-此外，通过观察对各国奖牌占比随时间的变化，我们找到了几个很明显的异常点，分别是1904年，1980年，1984年和1992年。这些异常点反映了奥运会举办从幼稚到成熟的变化历程，也反映了20世纪美苏冷战的激烈较量，我们可以从各国的奖牌数变化，侧面地一窥世界发展变化。
+对于Task 2，为了探究"great coach" effect的效果，我们使用了Bayesian Changepoint Detection (BEAST) model，分析了不同国家的多个great coach实例。研究指出，某国家体育成绩的突变点，与great coach的任教时间高度重叠，这验证了"great coach" effect的重要性。
+然后，我们使用正向CUSUM算法，通过分析奖牌变化序列，列出了每个国家最薄弱的events。经研究发现，许多国家在久远的奥运会中，曾在某些events上很有竞争力，但随时间退役，优势逐渐不显著，因此我们进行了相应的教练推荐。
+
+对于Task 3，我们从先前得到的模型和数据中，进行了深度的数据挖掘与数据分析，发现了几条分别关于：运动员性别比例、不同国家对某些奥运events的主宰优势、奖牌数量变化反映的世界政治局势变化的original insights。
+我们发现，奥运会的运动员分布，逐渐从由男运动员占主导，变成了男女比例越来越均衡的局面，女性获得奖牌的比例也逐年有显著增长。
+此外，数据显示，一些国家在某些本国传统的运动项目中占有主宰性的优势，奖牌占比高达88%。因此，对于一个国家的奥委会来说，如果想更取得更多奖牌，可以考虑投资本国的传统项目，扩大影响力，使其加入奥运会的比赛序列。
+最后，我们观察了各国奖牌占比随时间的变化序列，发现其中存在几个与众不同的异常点。这些异常点反映了奥运会举办从幼稚到成熟的变化历程，也反映了20世纪美苏冷战的历史。
+
+
+
+
+——————————————————————————————————————————————————————————————————————————————————————
+摘要
+奥运会不仅是运动员表现的舞台，也是各国medal table竞争的焦点。本文旨在通过自底向上的预测方法，依据个体的获奖期望推算各国的总奖牌数，从而预测2028年奥运会的奖牌分布。为此，本文构建了多个预测模型，预测未来medal table情况，并挖掘深层数据特征，从而为各国奥委会提供决策参考。
+
+Task 1 中，我们首先进行了数据预处理和特征工程，通过KMeans++算法和其他数理统计方法提取数据深层特征。随后，采用LightGBM模型对2028年奥运会各国金、银、铜牌数量进行了预测。
+结果表明，国家的获奖情况与主场优势、优势项目和运动员个人水平密切相关。模型表现出色，金牌预测模型的R²值达0.890，表明预测结果具有较高可信度。针对尚未获得奖牌的国家，我们的研究发现，参与某些具有增长潜力的项目的国家，更有可能赢得首枚奖牌。通过斯皮尔曼相关性分析，进一步探讨了特定国家在优势项目中的依赖程度。研究发现，综合体育实力较强的国家对优势项目的依赖较弱，表现较为稳定；而体育较弱的国家则在特定项目上依赖性较强，部分国家在田径项目上的相关系数高达0.894，表明其体育发展较为集中于少数项目。
+
+Task 2 中，为了研究“great coach effect”，我们使用了贝叶斯变点检测（BEAST），分析了多个国家的“great coach effect”实例。研究表明，某些国家的体育成绩突变点与“伟大教练”执教时间高度重合，验证了这一效应的重要性。接着，应用正向CUSUM分析奖牌变化序列，识别出各国最薄弱的项目。结果显示，许多国家在历史奥运会中曾在某些项目中具备竞争力，但随着时间推移，这些优势逐渐消退，基于此，提出了针对性教练推荐。
+
+Task 3 中，我们基于前述模型和数据进行了深入的数据挖掘与分析，揭示了若干新颖的洞察：包括运动员性别比例、本国传统项目带来的优势以及奖牌数量变化反映的国际政治格局变化。研究发现，奥运会运动员的性别比例逐渐趋于平衡，女性奖牌的比例呈现显著增长。此外，一些国家在传统项目中占据主导地位，奖牌占比高达88%。因此，奥委会若希望增加奖牌数，可考虑加大对本国传统项目的投资。最后，通过对各国奖牌占比随时间变化的序列分析，识别出多个异常点，这些异常点不仅反映了奥运会从初期到成熟的演变，还与20世纪世界历史背景密切相关。
+
+————————————————————————————————————————————————————
+Abstract
+The Olympic Games serve as both a stage for athletes' performances and a focal point for global competition in the medal table. This study aims to predict the medal distribution for the 2028 Olympics using a bottom-up approach, estimating the total medal count for each country based on individual athletes' expected performance. To achieve this, multiple predictive models were developed to forecast the future medal table and uncover deeper data features, providing valuable decision-making insights for national Olympic committees.
+In Task 1, data preprocessing and feature engineering were first performed, utilizing KMeans++ and other statistical methods to extract latent features. Subsequently, the LightGBM model was employed to predict the number of gold, silver, and bronze medals for each country at the 2028 Olympics. The results indicate that a country's medal performance is closely related to factors such as home advantage, strength in specific events, and the individual performance levels of athletes. The model demonstrated high accuracy, with an R² value of 0.890 for the gold medal prediction, suggesting the reliability of the results. For countries yet to win medals, our research revealed that participation in high-growth potential events increases the likelihood of securing their first medal. Spearman correlation analysis further examined the degree of dependency on specific events by certain countries. The findings show that countries with strong overall sports performance exhibit a lower dependency on specific events, maintaining stable results, while weaker sports nations tend to rely more on select events. In some cases, the correlation coefficient in athletics events was as high as 0.894, indicating a concentration of athletic development in a few specific areas.
+In Task 2, we explored the "great coach effect" by applying Bayesian Change Point Detection (BEAST) to analyze instances from multiple countries. The study found a significant correlation between the points of inflection in some countries' sports performance and the tenure of a "great coach," validating the importance of this effect. Additionally, forward CUSUM analysis was employed to examine changes in medal sequences, identifying the weakest areas for each country. The results show that many countries, which once had competitive advantages in certain events, have seen a decline in these advantages over time. Based on this, we propose targeted coach recommendations for countries in need of improvement in specific areas.
+In Task 3, we conducted in-depth data mining and analysis based on the models and data mentioned earlier, revealing several novel insights, such as the gender ratio of athletes, advantages derived from a country's traditional events, and changes in medal counts reflecting shifts in international political dynamics. The study found that the gender ratio in the Olympics is gradually balancing, with a significant increase in the proportion of female medals. Furthermore, some countries dominate traditional events, with their medal share reaching up to 88%. Consequently, Olympic committees seeking to increase their medal counts should consider investing more in their national traditional events. Finally, through time-series analysis of changes in medal distribution, multiple anomalies were identified, reflecting not only the evolution of the Olympics from its early stages to maturity but also their connection to the political context of the 20th century.
+
+
+
