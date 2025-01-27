@@ -37,18 +37,14 @@
 
 % 此处填写摘要内容
 \begin{abstract}
-    Here is the abstract of your paper.
+The Olympic Games are not only a stage for athletes to showcase their performance but also a focal point for the competition on the medal table among nations. This paper aims to predict the distribution of medals at the 2028 Olympic Games through a bottom-up approach, estimating each nation’s total medal count based on individual athletes' winning expectations. To achieve this, multiple predictive models were developed to analyze historical Olympic medal data, forecast future trends, and uncover deep data features, providing decision-making references for National Olympic Committees (NOCs).
 
-    Firstly, that is ...
+In Task 1, we first conducted data preprocessing and feature engineering, extracting deep data features using the KMeans++ clustering algorithm and other statistical methods. Subsequently, the LightGBM gradient boosting regression algorithm was employed to predict the number of gold, silver, and bronze medals for each country in the 2028 Olympics. The results demonstrate that medal outcomes are closely linked to factors such as home-field advantage, advantageous events, and athletes' individual performance levels. The models performed well, with the R² value of the gold medal prediction model reaching 0.890, indicating high reliability. For countries that have never won a medal, our analysis revealed that nations participating in events with growth potential are more likely to secure their first medal. Spearman correlation analysis further explored the dependency of specific countries on advantageous events. The findings indicate that countries with stronger overall athletic capabilities exhibit less reliance on advantageous events and perform more consistently, while countries with weaker athletic capabilities show a stronger dependence on specific events. For example, some countries have a correlation coefficient as high as 0.894 in athletics, suggesting their sports development is concentrated in a limited number of disciplines.
 
-    Secondly, that is ...
+In Task 2, to investigate the "great coach effect," we applied the Bayesian Changepoint Detection (BEAST) model to analyze case studies of notable coaches across various countries. The analysis revealed that performance shifts in certain countries coincide significantly with the tenure of great coaches, underscoring the critical role of coaching. Subsequently, the forward CUSUM algorithm was used to analyze medal variation sequences, identifying the weakest events for each country. The results indicate that while many countries had competitive advantages in specific events during earlier Olympic Games, these strengths have diminished over time. Based on this, targeted recommendations for coach assignments were proposed.
 
-    Finally, that is ...
+In Task 3, we conducted in-depth data mining and analysis based on the aforementioned models and data, uncovering several novel insights, including gender ratios among athletes, the dominance of certain nations in specific Olympic events, and how changes in medal distributions reflect shifts in global political landscapes. The study found that the gender ratio of Olympic athletes is gradually reaching parity, with the proportion of women’s medals showing significant growth. Additionally, some nations maintain dominance in traditional events, with medal shares as high as 88%. To increase their medal count, NOCs could consider investing more heavily in their traditional strengths to enhance their influence in the Olympic Games. Finally, a time-series analysis of nations’ medal shares identified several anomalies. These anomalies not only reflect the evolution of the Olympic Games from their inception to maturity but also correlate with historical events, such as the Cold War between the United States and the Soviet Union in the 20th century.
 
-$F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i \omega t} \, dt$
-
-
-$f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\omega$
 
     % 美赛论文中无需注明关键字。若您一定要使用，
     % 请将以下两行的注释号 '%' 去除，以使其生效
@@ -56,7 +52,7 @@ $f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\ome
     % \textbf{Keywords}: MATLAB, mathematics, LaTeX.
     
     
-    \textbf{PCA}\\
+ 
  
     % 关键字Keywords
     \vspace{5pt}
